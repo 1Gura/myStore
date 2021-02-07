@@ -10,13 +10,11 @@
     <?php
         require('./links.php');
     ?>
-    <title>Document</title>
+    <title>Личный кабинет</title>
 </head>
 <body>
     <?php
         require('./header.php');
-        require('./up-menu.php');
-        require('../components/products.php');
     ?>
 
     <div class="container">
@@ -53,9 +51,6 @@
                     </td>
                 </tr>
             </table>
-
-
-
         </form>
 
     </div>
@@ -64,5 +59,6 @@
         require('./foot.php');
         require('./scripts.php');
     ?>
+    <script src="../sripts/script.js"></script>
 </body>
 </html>

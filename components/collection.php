@@ -10,13 +10,11 @@
     <?php
         require('./links.php');
     ?>
-    <title>Document</title>
+    <title>Каталог</title>
 </head>
 <body>
     <?php
         require('./header.php');
-        require('./up-menu.php');
-        require('../components/products.php');
     ?>
 
     <div class="collection container">
@@ -124,6 +122,6 @@
         require('./scripts.php');
     ?>
 
-
+    <script src="../sripts/script.js"></script>
 </body>
 </html>

@@ -13,15 +13,12 @@
 <body>
     <?php
         require('./components/header.php');
-        require('./components/up-menu.php');
-        require('./components/products.php');
         require('./components/slider.php');
         require('./components/catalog.php');
         require('./components/news.php');
         require('./components/foot.php');
         require('./components/scripts.php');
     ?>
-
     <script src="./sripts/script.js"></script>
 </body>
 </html>
