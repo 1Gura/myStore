@@ -20,6 +20,11 @@ require('../components/products.php');
 ?>
 
 <div class="container">
+    <div class="links">
+        <span class="link"><a href="../index.php">Главная</a></span>
+        <span><img src="../img/strlka.png" alt="стрелка"></span>
+        <span class="link"><a href="../components/about.php">О нас</a></span>
+    </div>
     <div class="intro">
         <h1>
             Добро пожаловать на BrandLook
