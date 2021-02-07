@@ -25,14 +25,18 @@
                 <li class="footer__item-list social-network">
                     <a href="https://www.instagram.com/i._gura/?hl=ru" target="_blank"><img src="../img/inst.png" alt=""></a>
                 </li>
-                <div class="footer__item-list item__flex">
+                <address class="footer__item-list item__flex">
                     <img src="../img/phone.png" alt="">
-                    <span>+7(999)123-11-22</span>
-                </div>
-                <div class="footer__item-list item__flex">
+                    <span>
+                        <a href="tel:+79511575115">+7(999)123-11-22</a>
+                    </span>
+                </address>
+                <address class="footer__item-list item__flex">
                     <img src="../img/mail.png" alt="">
-                    <span>gura.ilya2011@yandex.ru</span>
-                </div>
+                    <span>
+                        <a href="mailto:gura.ilya2011@yandex.ru">gura.ilya2011@yandex.ru</a>
+                    </span>
+                </address>
             </ul>
         </ul>
         <div class="info__line"></div>

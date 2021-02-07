@@ -6,10 +6,12 @@
                 <img src="../img/icon.png" alt="иконка">
             </a>
         </div>
-        <div class="info__telephone">
+        <address class="info__telephone">
             <img src="../img/phone.png" alt="">
-            <span>+7(999)123-11-22</span>
-        </div>
+            <span>
+                <a href="tel:+79511575115">+7(999)123-11-22</a>
+            </span>
+        </address>
     </div>
 
     <div class="info__right-side item__flex">
