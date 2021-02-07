@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding:0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+.me {
+    color: #C0BABD;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*Стили для хедера*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #121212;
+    height: 75px;
+
+}
+
+.header .header__nav {
+    height: 100%;
+}
+
+.header .header__nav .header__menu {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .header__item a{
+    color: #FFFFFF;
+     font-size: 18px;
+}
+
+ /*верхнее меню*/
+
+ .info {
+     width: 100%;
+     height: 130px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+
+ }
+
+.info__line {
+     height: 1px;
+     margin: 0 auto;
+     border-bottom: 1px solid black;
+     opacity: 0.4;
+ }
+
+ .item__flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+ }
+
+ .info__left-side {
+     width: 380px;
+ }
+
+ .info__telephone {
+     display: flex;
+     align-items: center;
+ }
+
+.info__telephone img{
+   width: 20px;
+}
+
+ .info__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+ }
+
+.info__search input{
+    padding: 5px;
+}
+
+.info__search button{
+    width: 20px;
+    position: absolute;
+    left: 86%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.info__search img{
+    width: 100%;
+}
+
+ .info .info__img {
+     width: 180px;
+ }
+
+.info .info__img img{
+    width: 100%;
+}
+
+.info__account {
+    width: 100px;
+    position: relative;
+}
+
+.info__account a{
+    font-size: 14px;
+}
+
+.info__account img{
+    width: 30px;
+}
+
+.info .info__right-side {
+    width: 450px;
+
+}
+
+.info .info__basket {
+    width: 100px;
+    position: relative;
+
+}
+
+.info .info__basket img{
+    width: 30px;
+}
+
+
+/*product-list*/
+
+.products {
+    height: 80px;
+}
+
+.products .products__product-list {
+    height: 100%;
+}
+
+.products .products__product-list .products__item{
+
+}
+
+.products .products__product-list .products__item a{
+    position: relative;
+    color: black; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+}
+
+.products .products__product-list .products__item a:after{
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: #95C5F6; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.products .products__product-list .products__item a:hover:after, a:focus:after {
+    width: 100%;
+}
+
+/*Стили для слайдера*/
+/* Слайдер */
+.slider {
+    position: relative;
+    height: 620px;
+}
+
+/*.slider{*/
+/*    height: 100%;*/
+/*}*/
+
+.slider .slider__item {
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider .slider__item h1{
+    text-align: center;
+    font-size: 40px;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 999;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.slider .slider__item a{
+    background-color: #FAFAFA;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 999;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
+
+.slider .slider__item a:hover{
+    opacity: 1;
+}
+
+
+.slider .slider__item img{
+    width: 100%;
+
+    filter: brightness(60%);
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top:50%;
+    margin: -50px 0 0 0;
+    z-index:10;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+.slider .slick-arrow:hover{
+    opacity: 1;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../img/1.png") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("../img/2.png") 0 0 / 100% no-repeat;
+}
+
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slider .slick-list {
+    overflow: hidden;
+    height: 100%;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+
+
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 999;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+
+}
+
+.slider .slick-dots li.slick-active button{
+    background: #95C5F6;
+    border: 1px solid #95C5F6;
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+    font-size: 0;
+    width:15px;
+    height: 15px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+}
+/* Активная точка */
+.slick-dots li.slick-active{}
+
+
+/*Стили для каталога*/
+/* Слайдер */
+.store__catalog {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.store__catalog h1 {
+    text-align: center;
+}
+.catalog {
+    position: relative;
+    height: 300px;
+}
+
+.store__catalog h1   {
+    margin-bottom: 30px;
+}
+
+.catalog .slider__item {
+    position: relative;
+    cursor: pointer;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.catalog .slider__item img{
+    width:245px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.catalog .slider__item a:hover{
+    opacity: 1;
+}
+
+
+.catalog .slider__item img{
+    object-fit: cover;
+}
+
+.catalog .slick-arrow {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index:10;
+    font-size: 0;
+    width: 20px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.catalog .slick-arrow:hover{
+    opacity: 1;
+}
+
+.catalog .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+}
+
+.catalog .slick-arrow.slick-next {
+    right: 0;
+    background: url("../img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+}
+
+
+.catalog .slick-list {
+    overflow: hidden;
+    height: 100%;
+    padding: 0 50px;
+} {
+    overflow: hidden;
+    height: 100%;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+/* Слайд */
+
+.catalog .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 999;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.catalog .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+
+}
+
+.catalog .slick-dots li.slick-active button{
+    background: #95C5F6;
+    border: 1px solid #95C5F6;
+}
+/* Элемент точки */
+.catalog .slick-dots li button{
+    font-size: 0;
+    width:15px;
+    height: 15px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+}
+/* Активная точка */
+.slick-dots li.slick-active{}
+
+
+/*footer*/
+
+.footer {
+    margin-top: 30px;
+    height: 500px;
+    align-items: normal;
+    padding-top: 20px;
+    background-color: #FAFAFA;
+}
+.footer .footer__main-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+.footer .footer__main-list .footer__list {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footer__main-list .footer__list li {
+    width: 100%;
+    text-align: center;
+}
+.footer .footer__main-list .footer__list .social-network {
+    width: 60px;
+}
+
+.footer .footer__main-list .footer__list li a{
+    text-align: center;
+}
+
+.footer .footer__main-list .footer__list li a img{
+    width: 100%;
+}
+
+.footer .footer__main-list .footer__list .footer__item-list{
+    padding: 10px;
+}
+
+.footer .footer__main-list .footer__list .footer__item-list >img{
+    width: 25px;
+    padding-right: 5px;
+}
+
+.footer__info-store {
+    display: flex;
+    justify-content: start;
+    margin-top: 30px;
+    align-items: center;
+}
+
+
+.footer__info-store li{
+    position: relative;
+    width: 170px;
+    padding: 0 20px 0 20px;
+}
+
+.footer__info-store li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__info-store li a img{
+    width: 100%;
+}
+
+/*блок с текстом новостей*/
+
+.news {
+    height: fit-content;
+    background-color: #FAFAFA;
+    padding: 30px;
+}
+
+.news h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.news .news__block1 {
+}
+
+.news >* p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news .news__block1 img{
+
+    padding: 10px;
+}
+
+/*стили ссылок "хлебная крошка"*/
+
+.links {
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.links * {
+    padding: 0 5px;
+}
+.links img {
+
+    width: 30px;
+}
+
+/*стили каталога*/
+
+.collection .collection__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #FAFAFA;
+}
+
+.collection .collection__list .collection__item{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+}
+
+.collection .collection__list .collection__item .collection__info{
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection .collection__list .collection__item .collection__info .collection__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection .collection__list .collection__item .collection__info .collection__container *{
+    padding: 10px;
+}
+
+.collection .collection__list .collection__item .collection__info a{
+    background-color: #95C5F6;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.collection .collection__list .collection__item .collection__info a:hover{
+    background-color:#3E65D2;
+}
+
+
+
+.collection .collection__list .collection__item .collection__info:hover{
+    opacity: 0.9;
+}
+
+.collection .collection__list .collection__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*личный кабинет*/
+
+.personal-area {
+    width: 550px;
+    height: 250px;
+    padding:20px;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    border: 1px solid #E6E9EA;
+}
+
+.personal-area .personal-area__table {
+    width: 100%;
+}
+
+.personal-area .personal-area__table tr{
+    height: 50px;
+}
+
+
+
+.personal-area .personal-area__table .personal-area__tr input {
+    width: 100%;
+    height: 30px;
+}
+
+.personal-area .personal-area__table .personal-area__tr .label {
+    width: 80px;
+}
+
+.personal-area .personal-area__table .personal-area__tr .personal-area__btn {
+    background-color: #4399EF;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.personal-area .personal-area__table .personal-area__tr .personal-area__btn:hover {
+    background-color: #1982EB;
+}
+
+.title {
+    text-align: center;
+    font-size: 34px;
+}
