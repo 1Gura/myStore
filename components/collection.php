@@ -16,7 +16,9 @@
     <?php
         require('./header.php');
     ?>
-
+    <?php
+    require('./table.php');
+    ?>
     <div class="collection container">
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>

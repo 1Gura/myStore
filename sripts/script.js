@@ -28,3 +28,14 @@ $(document).ready(() => {
     );
 })
 //Слайдер
+
+const btnTable = document.querySelector('.table__btn');
+
+const showHideTable = () => {
+    const tableSize = document.querySelector('.table-size');
+    tableSize.classList.toggle('show-hide');
+}
+
+btnTable.addEventListener('click', showHideTable);
+
+
