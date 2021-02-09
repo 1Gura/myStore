@@ -47,6 +47,8 @@ button {
 .container {
     width: 80%;
     margin: 0 auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .display-flex-center {
@@ -740,7 +742,9 @@ button {
     height: 54px;
     background-color: white;
     border: 1px solid black;
-    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(-250%);
+    position: absolute;
 }
 
  .table-size * {
@@ -786,5 +790,8 @@ button {
 }
 
 .show-hide {
-    display: none;
+    transform: translateY(0);
+    position: relative;
+    transition: .5s;
+    opacity: 1;
 }

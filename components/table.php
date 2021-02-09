@@ -1,17 +1,5 @@
-<?php?>
-
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>О нас</title>
-</head>
-<body>
 <div class="container">
-    <table class="table-size show-hide">
+    <table class="table-size">
         <button class="table__btn">Показать/скрыть таблицу размеров</button>
         <tr class="tr__head">
             <td>Таблица размеров</td>
@@ -53,6 +41,3 @@
         </tr>
     </table>
 </div>
-</body>
-<script src = "scripts.php"></script>
-</html>
