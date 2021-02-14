@@ -586,7 +586,7 @@ button {
     position: relative;
     width: 350px;
     height: 350px;
-    padding: 10px;
+    margin: 10px;
 }
 
 .collection .collection__list .collection__item .collection__info{
@@ -647,38 +647,63 @@ button {
     margin: 50px auto;
     background-color: #FFFFFF;
     border: 1px solid #E6E9EA;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.personal-area .personal-area__table {
-    width: 100%;
+.personal-area * {
+    margin: 5px;
 }
 
-.personal-area .personal-area__table tr{
-    height: 50px;
+.personal-area label {
+
 }
 
-
-
-.personal-area .personal-area__table .personal-area__tr input {
-    width: 100%;
-    height: 30px;
+.personal-area input {
+     height: 30px;
+     font-size: 20px;
+     padding: 10px;
+     width: 100%;
 }
 
-.personal-area .personal-area__table .personal-area__tr .label {
-    width: 80px;
+.personal-area button {
+    background-color: #95C5F6;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
 }
 
-.personal-area .personal-area__table .personal-area__tr .personal-area__btn {
+.personal-area button:hover {
     background-color: #4399EF;
-    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
     color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 10px;
 }
 
-.personal-area .personal-area__table .personal-area__tr .personal-area__btn:hover {
-    background-color: #1982EB;
+.personal-area a{
+    position: relative;
+    color: black; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+}
+
+.personal-area a:after{
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: #95C5F6; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.personal-area a:hover:after, a:focus:after {
+    width: 100%;
 }
 
 .title {

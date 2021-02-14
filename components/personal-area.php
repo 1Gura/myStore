@@ -25,34 +25,17 @@
         </div>
         <h1 class="title">Вход в кабинет покупателя</h1>
         <form class="personal-area">
-            <table class="personal-area__table">
-                <tr class="personal-area__tr">
-                    <td class="label" style="width: 40px" ><label for="">Email:</label></td>
-                    <td class="input"><input required maxlength="40" type="text"></td>
-
-                </tr>
-                <tr class="personal-area__tr">
-                    <td class="label" ><label for="">Пароль:</label></td>
-                    <td class="input"><input required maxlength="40" type="text"></td>
-                </tr>
-
-                <tr class="personal-area__tr">
-                    <td>
-                        <button class="personal-area__btn">
-                            Войти
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="#">
-                            Зарегистрироваться
-                        </a>
-                    </td>
-                </tr>
-            </table>
+            <label  for="">Email</label>
+            <input required maxlength="40" type="text">
+            <label for="">Пароль</label>
+            <input required maxlength="40" type="text">
+            <button class="personal-area__btn">
+                Войти
+            </button>
+            <a href="#">
+                Зарегистрироваться
+            </a>
         </form>
-
     </div>
 
     <?php
