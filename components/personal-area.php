@@ -25,10 +25,10 @@
         </div>
         <h1 class="title">Вход в кабинет покупателя</h1>
         <form class="personal-area">
-            <label  for="">Email</label>
-            <input required maxlength="40" type="text">
-            <label for="">Пароль</label>
-            <input required maxlength="40" type="text">
+            <label  for="input1">Email</label>
+            <input id="input1" required maxlength="40" type="text">
+            <label for="input2">Пароль</label>
+            <input id="input2" required maxlength="40" type="text">
             <button class="personal-area__btn">
                 Войти
             </button>

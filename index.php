@@ -13,6 +13,7 @@
 <body>
     <?php
         require('./components/header.php');
+        require('./components/drop-down-menu.php');
         require('./components/slider.php');
         require('./components/catalog.php');
         require('./components/news.php');

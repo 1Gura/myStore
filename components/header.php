@@ -1,6 +1,11 @@
 <?php?>
 
 <header class = "header wow fadeInDown">
+    <button class="header_btn-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav class = "header__nav container">
         <ul class = "header__menu">
             <li class = "header__item"><a href="../components/collection.php">Каталог</a></li>
