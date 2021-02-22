@@ -865,39 +865,100 @@ button {
     opacity: 0.7;
 }
 
-.drop-active {
-    display: block;
-}
-
-body-block {
-    overflow: hidden;
-}
 
 .drop-down-menu {
-    display: none;
+    display: flex;
     position: fixed;
     height: 100%;
-    width: 100%;
+    width: 0%;
     color: black;
     z-index: 999;
     top: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.drop-down-menu > *{
+    padding-top: 20px;
 }
 
 .drop-down-menu .drop-down-menu__list {
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 300px;
     display: flex;
     background-color: white;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+.drop-down-menu .drop-down-menu__list li{
+    padding: 15px 0;
+}
+
+.drop-down-menu__container {
+    width: 40%;
+
+    height: fit-content;
+}
+
+.drop-down-menu__container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+body .drop-active {
+    width: 100%;
+}
+
+body .background-active {
+ display: block;
+}
+
+.drop-down-menu .drop-down-menu__main-content{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-left:1px solid black;
+    transition: all .3s ease-in-out;
+}
+
+.drop-down-menu__active{
+    width: 50%;
+}
+
+.drop-down-menu .drop-down-menu__list .drop-down-menu__item a{
+    position: relative;
+    color: black; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+}
+
+.drop-down-menu .drop-down-menu__list .drop-down-menu__item  a:after{
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: #95C5F6; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.drop-down-menu .drop-down-menu__list .drop-down-menu__item  a:hover:after, a:focus:after {
+    width: 100%;
 }
 
 .drop-down-menu .drop-down-menu__btn {
     width: 40px;
     height: 40px;
     background-size: 100%;
-    background-image: url("../img/crest.png");
+    background-image: url("../img/close.png");
+    background-repeat: no-repeat;
+    background-color:transparent;
     z-index: 999;
 }
 
