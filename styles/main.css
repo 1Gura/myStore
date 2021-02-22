@@ -42,6 +42,30 @@ button {
     margin-top: 30px;
 }
 
+/*Кастомное подчёркивание*/
+
+.el-hover a{
+    position: relative;
+    color: black; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+}
+
+.el-hover a:after{
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: #95C5F6; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.el-hover a:hover:after, a:focus:after {
+    width: 100%;
+}
+
 /*Стили для хедера*/
 
 .container {
@@ -218,32 +242,6 @@ button {
 
 .products .products__product-list {
     height: 100%;
-}
-
-.products .products__product-list .products__item{
-
-}
-
-.products .products__product-list .products__item a{
-    position: relative;
-    color: black; /*задаём цвет ссылки*/
-    cursor: pointer;
-    line-height: 1; /*задаём высоту строки*/
-}
-
-.products .products__product-list .products__item a:after{
-    display: block;
-    position: absolute;
-    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    width: 0;/*задаём длинну линии до наведения курсора*/
-    height: 2px; /*задаём ширину линии*/
-    background-color: #95C5F6; /*задаём цвет линии*/
-    content: "";
-    transition: width 0.3s ease-out; /*задаём время анимации*/
-}
-
-.products .products__product-list .products__item a:hover:after, a:focus:after {
-    width: 100%;
 }
 
 /*Стили для слайдера*/
@@ -716,27 +714,6 @@ button {
     color: white;
 }
 
-.personal-area a{
-    position: relative;
-    color: black; /*задаём цвет ссылки*/
-    cursor: pointer;
-    line-height: 1; /*задаём высоту строки*/
-}
-
-.personal-area a:after{
-    display: block;
-    position: absolute;
-    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    width: 0;/*задаём длинну линии до наведения курсора*/
-    height: 2px; /*задаём ширину линии*/
-    background-color: #95C5F6; /*задаём цвет линии*/
-    content: "";
-    transition: width 0.3s ease-out; /*задаём время анимации*/
-}
-
-.personal-area a:hover:after, a:focus:after {
-    width: 100%;
-}
 
 .title {
     text-align: center;
@@ -943,10 +920,4 @@ body .background-active {
     background-repeat: no-repeat;
     background-color:transparent;
     z-index: 999;
-}
-
-
-
-.drop-down-menu .drop-down-menu__list .drop-down-menu__item {
-
 }

@@ -64,7 +64,7 @@
 </div>
 
 <div class="products container wow fadeInDown">
-    <ul class="products__product-list item__flex">
+    <ul class="products__product-list item__flex el-hover">
         <li class="products__item"><a href="#">Свитшоты</a></li>
         <li class="products__item"><a href="#">Брюки</a></li>
         <li class="products__item"><a href="#">Кроссовки</a></li>

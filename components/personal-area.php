@@ -24,7 +24,7 @@
             <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
         </div>
         <h1 class="title">Вход в кабинет покупателя</h1>
-        <form class="personal-area">
+        <form class="personal-area el-hover">
             <label  for="input1">Email</label>
             <input id="input1" required maxlength="40" type="text">
             <label for="input2">Пароль</label>
