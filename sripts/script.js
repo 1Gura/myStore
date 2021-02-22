@@ -113,11 +113,18 @@ const selectItem = (item) => {
         item.classList.add('active-link');
         const dropDownMenuContent = document.querySelector('.drop-down-menu__main-content');
         dropDownMenuContent.innerHTML = '';
+        /* Правильный вывод, но не получилось избавиться от запятой
+        ${links.map((item, index) => (
+                        `<li class="drop-down-menu__item"><a href="#">${links[index]}</a></li>`
+                   ))}*/
         dropDownMenuContent.innerHTML = `
                 <ul class="drop-down-menu__list">
-                    ${links.map((item, index) => (
-                        `<li class="drop-down-menu__item"><a href="#">${links[index]}</a></li>`
-                    ))}
+                    <li class="drop-down-menu__item"><a href="#">${links[0]}</a></li>
+                    <li class="drop-down-menu__item"><a href="#">${links[1]}</a></li>
+                    <li class="drop-down-menu__item"><a href="#">${links[2]}</a></li>
+                    <li class="drop-down-menu__item"><a href="#">${links[3]}</a></li>
+                    <li class="drop-down-menu__item"><a href="#">${links[4]}</a></li>
+                    <li class="drop-down-menu__item"><a href="#">${links[5]}</a></li>
                 </ul>
                 <div class="drop-down-menu__container">
                     <img src="../img/${img}.jpg" alt="Картинка одежды">
