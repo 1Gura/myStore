@@ -118,18 +118,18 @@ const selectItem = (item) => {
                         `<li class="drop-down-menu__item"><a href="#">${links[index]}</a></li>`
                    ))}*/
         dropDownMenuContent.innerHTML = `
-                <ul class="drop-down-menu__list">
-                    <li class="drop-down-menu__item"><a href="#">${links[0]}</a></li>
-                    <li class="drop-down-menu__item"><a href="#">${links[1]}</a></li>
-                    <li class="drop-down-menu__item"><a href="#">${links[2]}</a></li>
-                    <li class="drop-down-menu__item"><a href="#">${links[3]}</a></li>
-                    <li class="drop-down-menu__item"><a href="#">${links[4]}</a></li>
-                    <li class="drop-down-menu__item"><a href="#">${links[5]}</a></li>
-                </ul>
+                <ul class="drop-down-menu__list" id="content-list"></ul>
                 <div class="drop-down-menu__container">
                     <img src="../img/${img}.jpg" alt="Картинка одежды">
                 </div>
             `;
+        const contentList = document.querySelector('#content-list');
+        links.map((item) => {
+            contentList.insertAdjacentHTML(
+                'beforeend',
+                `<li className="drop-down-menu__item"><a href="#">${item}</a></li>`
+                )
+        })
     })
 }
 
