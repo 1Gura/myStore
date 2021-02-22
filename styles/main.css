@@ -919,7 +919,7 @@ body .background-active {
     display: flex;
     justify-content: space-around;
     position: relative;
-    width: 50%;
+    width: 0;
     height: 100%;
     background-color: white;
     border-left:1px solid black;
@@ -930,27 +930,10 @@ body .background-active {
     width: 50%;
 }
 
-.drop-down-menu .drop-down-menu__list .drop-down-menu__item a{
-    position: relative;
-    color: black; /*задаём цвет ссылки*/
-    cursor: pointer;
-    line-height: 1; /*задаём высоту строки*/
+.active-link a{
+    border-bottom: 2px solid #95C5F6;
 }
 
-.drop-down-menu .drop-down-menu__list .drop-down-menu__item  a:after{
-    display: block;
-    position: absolute;
-    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    width: 0;/*задаём длинну линии до наведения курсора*/
-    height: 2px; /*задаём ширину линии*/
-    background-color: #95C5F6; /*задаём цвет линии*/
-    content: "";
-    transition: width 0.3s ease-out; /*задаём время анимации*/
-}
-
-.drop-down-menu .drop-down-menu__list .drop-down-menu__item  a:hover:after, a:focus:after {
-    width: 100%;
-}
 
 .drop-down-menu .drop-down-menu__btn {
     width: 40px;

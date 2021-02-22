@@ -32,6 +32,7 @@ $(document).ready(() => {
 const btnTable = document.querySelector('.table__btn');
 const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
+const dropDownMenu = document.querySelector('.drop-down-menu');
 const woman = document.querySelector("#woman");
 const men = document.querySelector("#men");
 
@@ -45,7 +46,6 @@ if(btnTable) {
 }
 
 const showMenu = () => {
-    const dropDownMenu = document.querySelector('.drop-down-menu');
     const background = document.querySelector('.background');
     if(document.body.style.overflow === 'hidden') {
         document.body.style.overflow = '';
@@ -85,37 +85,68 @@ if(dropDownMenuBtn) {
     dropDownMenuBtn.addEventListener('click', showMenu)
 }
 
-if(woman) {
-    woman.addEventListener('mouseover', (event) => {
+const showMainContent = (item) => {
+    if(item.classList.contains('active-link') && document.querySelector('.drop-down-menu__main-content').style.width !== '50%')
+        document.querySelector('.drop-down-menu__main-content').style.width = '50%';
+}
+
+const selectItem = (item) => {
+    item.addEventListener('mouseover', (event) => {
+        let links = [];
+        let img = '';
+        switch (item.id) {
+            case 'woman' :
+                links = ['Блузки и рубашки', 'Брюки', 'Верхняя одежда', 'Водолазки', 'Джемперы и кардиганы', 'Все категории'];
+                img = 'wom';
+                break;
+            case 'men' :
+                links = ['Брюки', 'Верхняя одежда', 'Водолазки', 'Джемперы и кардиганы', 'Джинсы', 'Все категории'];
+                img = 'men';
+                break;
+        }
+
         event.preventDefault();
+        const temp = document.querySelector('.active-link')
+        if(temp) {
+            document.querySelector('.active-link').classList.remove('active-link');
+        }
+        item.classList.add('active-link');
         const dropDownMenuContent = document.querySelector('.drop-down-menu__main-content');
         dropDownMenuContent.innerHTML = '';
-
         dropDownMenuContent.innerHTML = `
                 <ul class="drop-down-menu__list">
-                    <li class="drop-down-menu__item"><a href="#">Блузки и рубашки</a></li>
-                    <li class="drop-down-menu__item"><a href="#">Брюки</a></li>
-                    <li class="drop-down-menu__item"><a href="#">Верхняя одежда</a></li>
-                    <li class="drop-down-menu__item"><a href="#">Водолазки</a></li>
-                    <li class="drop-down-menu__item"><a href="#">Джемперы и кардиганы</a></li>
-                    <li class="drop-down-menu__item"><a href="#">Все категории</a></li>
+                    ${links.map((item, index) => (
+                        `<li class="drop-down-menu__item"><a href="#">${links[index]}</a></li>`
+                    ))}
                 </ul>
                 <div class="drop-down-menu__container">
-                    <img src="../img/wom.jpg" alt="Картинка одежды">
+                    <img src="../img/${img}.jpg" alt="Картинка одежды">
                 </div>
             `;
     })
 }
 
+const selectMenuItem = () => {
+    if(woman) {
+        showMainContent(woman);
+        selectItem(woman);
 
-if(men) {
-    men.addEventListener('mouseover', (event) => {
-        event.preventDefault();
-        const dropDownMenuContent = document.querySelector('.drop-down-menu__main-content');
-        dropDownMenuContent.innerHTML = '';
+    }
+    if(men) {
+        showMainContent(men);
+        selectItem(men);
+    }
 
-    })
 }
+
+if(dropDownMenu) {
+    dropDownMenu.addEventListener('mouseover', selectMenuItem);
+}
+
+
+
+
+
 
 
 
