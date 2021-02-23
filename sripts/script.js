@@ -95,6 +95,7 @@ const showMainContent = (item) => {
 }
 
 const selectItem = (item) => {
+    showMainContent(item);
     item.addEventListener('mouseover', (event) => {
         let itemMenu = {};
         switch (item.id) {
@@ -191,19 +192,15 @@ const selectItem = (item) => {
 
 const selectMenuItem = () => {
     if(woman) {
-        showMainContent(woman);
         selectItem(woman);
     }
     if(men) {
-        showMainContent(men);
         selectItem(men);
     }
     if(children) {
-        showMainContent(children);
         selectItem(children);
     }
     if(shoes) {
-        showMainContent(shoes);
         selectItem(shoes);
     }
 
