@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b141831-1066-4a7a-a205-f30332b0e6be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/components/drop-down-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/drop-down-menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/sripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
