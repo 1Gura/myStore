@@ -879,7 +879,10 @@ button {
 }
 
 .drop-down-menu .drop-down-menu__list li{
-    padding: 15px 0;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
 }
 
 .drop-down-menu__container {
@@ -917,8 +920,12 @@ body .background-active {
     width: 50%;
 }
 
+.active-link {
+    color: white;
+    background:#95C5F6 ;
+}
 .active-link a{
-    border-bottom: 2px solid #95C5F6;
+    color: white;
 }
 
 

@@ -34,6 +34,7 @@ const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
 const background = document.querySelector(".background");
 const dropDownMenu = document.querySelector('.drop-down-menu');
+const dropMenu = document.querySelector('#drop-menu');
 const dropDownMenuList = document.querySelector('.drop-down-menu__list');
 const woman = document.querySelector("#woman");
 const men = document.querySelector("#men");
@@ -96,6 +97,7 @@ const showMainContent = (item) => {
 }
 
 const selectItem = (item) => {
+    console.log(item)
     item.addEventListener('mouseover', (event) => {
         let flag = false;
         if(item.id !== '' && item.id !== undefined && item.id !== null){
@@ -103,7 +105,7 @@ const selectItem = (item) => {
         }
         let itemMenu = {};
         if(flag){
-            showMainContent(woman);
+            showMainContent(event.target);
             switch (item.id) {
                 case 'woman' :
                     itemMenu = {
