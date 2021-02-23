@@ -34,6 +34,7 @@ const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
 const background = document.querySelector(".background");
 const dropDownMenu = document.querySelector('.drop-down-menu');
+const dropMenu = document.querySelector('#drop-menu-list');
 const woman = document.querySelector("#woman");
 const men = document.querySelector("#men");
 const children = document.querySelector("#children");
@@ -203,11 +204,10 @@ const selectMenuItem = () => {
     if(shoes) {
         selectItem(shoes);
     }
-
 }
 
-if(dropDownMenu) {
-    dropDownMenu.addEventListener('mouseover', selectMenuItem);
+if(dropMenu) {
+    dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
 
