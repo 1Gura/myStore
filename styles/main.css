@@ -866,6 +866,16 @@ button {
     background-color: white;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
+}
+
+.drop-down-menu__main-content .drop-down-menu__list {
+    width: 50%;
+}
+
+.drop-down-menu__title {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .drop-down-menu .drop-down-menu__list li{
@@ -873,9 +883,9 @@ button {
 }
 
 .drop-down-menu__container {
-    width: 40%;
-
+    width: 50%;
     height: fit-content;
+    padding: 0 10px 10px 10px;
 }
 
 .drop-down-menu__container img{

@@ -1,19 +1,15 @@
-<div class="background"></div>
-
+<div class="background" id="back"></div>
 <div class="drop-down-menu">
-
     <ul class="drop-down-menu__list">
         <li class="drop-down-menu__item" id="woman"><a href="#">Женщинам</a></li>
         <li class="drop-down-menu__item" id="men"><a href="#">Мужчинам</a></li>
-        <li class="drop-down-menu__item"><a href="#">Детям</a></li>
-        <li class="drop-down-menu__item"><a href="#">Обувь</a></li>
+        <li class="drop-down-menu__item" id="children"><a href="#">Детям</a></li>
+        <li class="drop-down-menu__item" id="shoes"><a href="#">Обувь</a></li>
         <li class="drop-down-menu__item"><a href="#">Аксессуары</a></li>
     </ul>
+    <div class="drop-down-menu__main-content">
 
-        <div class="drop-down-menu__main-content">
-
-        </div>
-
+    </div>
     <button class="drop-down-menu__btn">
 
     </button>
