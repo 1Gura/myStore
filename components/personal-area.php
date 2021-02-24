@@ -24,19 +24,11 @@
             <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
         </div>
         <h1 class="title">Вход в кабинет покупателя</h1>
-<<<<<<< Updated upstream
-        <form class="personal-area el-hover">
-            <label  for="input1">Email</label>
-            <input id="input1" required maxlength="40" type="text">
-            <label for="input2">Пароль</label>
-            <input id="input2" required maxlength="40" type="text">
-=======
         <form id='personal-area-form' class="personal-area el-hover">
             <label  for="email">Email</label>
             <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)" onkeydown="validationEmail(event)" required maxlength="40" type="text">
             <label for="password">Пароль</label>
             <input id="password" placeholder="Введите пароль" type = "password"  required maxlength="40" type="text">
->>>>>>> Stashed changes
             <button class="personal-area__btn">
                 Войти
             </button>
