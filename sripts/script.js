@@ -1,4 +1,5 @@
 /*Константы содержащие ссылки на дом элементы*/
+// Решить проблему с объявлением переменных
 const btnTable = document.querySelector('.table__btn');
 const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
