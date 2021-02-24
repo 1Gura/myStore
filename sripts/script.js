@@ -1,41 +1,9 @@
-//Слайдер
-$(document).ready(() => {
-    $('.slider').slick(
-        {
-            arrows:true,
-            dots: true,
-            speed: 1000,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            pauseOnFocus: false,
-            pauseOnHover: true,
-        }
-    );
-    $('.catalog').slick(
-        {
-            arrows:true,
-            dots: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            autoplay: false,
-            autoplaySpeed: 1,
-            pauseOnFocus: false,
-            pauseOnHover: true,
-            variableWidth: true,
-            centerMode: true
-        }
-    );
-})
-//Слайдер
-/*Константы содержащие ссылки на дом элементы*/
 const btnTable = document.querySelector('.table__btn');
 const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
 const background = document.querySelector(".background");
 const dropDownMenu = document.querySelector('.drop-down-menu');
-const dropMenu = document.querySelector('#drop-menu');
-const dropDownMenuList = document.querySelector('.drop-down-menu__list');
+const dropMenu = document.querySelector('#drop-menu-list');
 const woman = document.querySelector("#woman");
 const men = document.querySelector("#men");
 const children = document.querySelector("#children");
@@ -97,115 +65,141 @@ const showMainContent = (item) => {
 }
 
 const selectItem = (item) => {
-    console.log(item)
+    showMainContent(item);
     item.addEventListener('mouseover', (event) => {
-        let flag = false;
-        if(item.id !== '' && item.id !== undefined && item.id !== null){
-            flag = true;
-        }
         let itemMenu = {};
-        if(flag){
-            showMainContent(event.target);
-            switch (item.id) {
-                case 'woman' :
-                    itemMenu = {
-                        list: [
-                            {
-                                title: 'Одежда',
-                                links: ['Блузки и рубашки', 'Брюки', 'Верхняя одежда', 'Водолазки',
-                                    'Джемперы и кардиганы', 'Все категории']
-                            }
-                        ],
+        switch (item.id) {
+            case 'woman' :
+                itemMenu = {
+                    list: [
+                        {
+                            title: 'Одежда',
+                            links : ['Блузки и рубашки', 'Брюки', 'Верхняя одежда', 'Водолазки',
+                                'Джемперы и кардиганы', 'Все категории']
+                        }
+                    ],
 
-                        img: 'wom'
-                    }
-                    break;
-                case 'men' :
-                    itemMenu = {
-                        list: [
+                    img: 'wom'
+                }
+                break;
+            case 'men' :
+                itemMenu = {
+                    list: [
                             {
                                 title: 'Одежда',
-                                links: ['Брюки', 'Верхняя одежда', 'Водолазки',
+                                links : ['Брюки', 'Верхняя одежда', 'Водолазки',
                                     'Джемперы и кардиганы', 'Джинсы', 'Все категории']
                             }
-                        ],
-                        img: 'men'
-                    }
+                          ],
+                    img : 'men'
+                }
 
-                    break;
-                case 'children' :
-                    itemMenu = {
-                        list: [
-                            {
-                                title: 'Для мальчиков',
-                                links: ['Белье', 'Брюки и шорты', 'Рубашки',
-                                    'Верхняя одежда', 'Водолазки', 'Все категории']
-                            },
-                            {
-                                title: 'Для девочек',
-                                links: ['Белье', 'Блузки и рубашки', 'Брюки и шорты',
-                                    'Верхняя одежда', 'Водолазки', 'Все категории']
-                            }
-                        ],
-                        img: 'children'
-                    }
-                    break;
-                case 'shoes' :
-                    itemMenu = {
-                        list: [
-                            {
-                                title: 'Мужская',
-                                links: ['Ботинки полуботинки', 'Кеды и кросовки', 'Мокасины',
-                                    'Сапоги', 'Тапочки']
-                            },
-                            {
-                                title: 'Женская',
-                                links: ['Балетки и чешки', 'Босоножки и сандали', 'Кеды и кросовки',
-                                    'Сапоги', 'Тапочки']
-                            }
-                        ],
-                        img: 'shoes'
-                    }
-                    break;
-            }
-            const temp = document.querySelector('.active-link')
-            if(temp) {
-                document.querySelector('.active-link').classList.remove('active-link');
-            }
-            item.classList.add('active-link');
-            const dropDownMenuContent = document.querySelector('.drop-down-menu__main-content');
-            dropDownMenuContent.innerHTML = '';
-            dropDownMenuContent.innerHTML = `
+                break;
+            case 'children' :
+                itemMenu = {
+                    list: [
+                        {
+                            title: 'Для мальчиков',
+                            links : ['Белье', 'Брюки и шорты', 'Рубашки',
+                                'Верхняя одежда', 'Водолазки', 'Все категории']
+                        },
+                        {
+                            title: 'Для девочек',
+                            links : ['Белье', 'Блузки и рубашки', 'Брюки и шорты',
+                                'Верхняя одежда', 'Водолазки', 'Все категории']
+                        }
+                    ],
+                    img : 'children'
+                }
+                break;
+            case 'shoes' :
+                itemMenu = {
+                    list: [
+                        {
+                            title: 'Мужская',
+                            links : ['Ботинки полуботинки', 'Кеды и кросовки', 'Мокасины',
+                                'Сапоги', 'Тапочки']
+                        },
+                        {
+                            title: 'Женская',
+                            links : ['Балетки и чешки', 'Босоножки и сандали', 'Кеды и кросовки',
+                                'Сапоги', 'Тапочки']
+                        }
+                    ],
+                    img : 'shoes'
+                }
+                break;
+        }
+
+        event.preventDefault();
+        const temp = document.querySelector('.active-link')
+        if(temp) {
+            document.querySelector('.active-link').classList.remove('active-link');
+        }
+        item.classList.add('active-link');
+        const dropDownMenuContent = document.querySelector('.drop-down-menu__main-content');
+        dropDownMenuContent.innerHTML = '';
+        dropDownMenuContent.innerHTML = `
                 <ul class="drop-down-menu__list el-hover" id="content-list"></ul>
                 <div class="drop-down-menu__container">
                     <img src="../img/${itemMenu.img}.jpg" alt="Картинка одежды">
                 </div>
             `;
-            const contentList = document.querySelector('#content-list');
-            itemMenu.list.map((item)=> {
+        const contentList = document.querySelector('#content-list');
+        itemMenu.list.map((item)=> {
+            contentList.insertAdjacentHTML(
+                'beforeend',
+                `<li className="drop-down-menu__item"><span class="drop-down-menu__title">${item.title}</span></li>`)
+            item.links.map((element) => {
                 contentList.insertAdjacentHTML(
                     'beforeend',
-                    `<li className="drop-down-menu__item"><span class="drop-down-menu__title">${item.title}</span></li>`)
-                item.links.map((element) => {
-                    contentList.insertAdjacentHTML(
-                        'beforeend',
-                        `<li className="drop-down-menu__item"><a href="#">${element}</a></li>`
-                    )
-                })
+                    `<li className="drop-down-menu__item"><a href="#">${element}</a></li>`
+                )
             })
-        }
+        })
     })
 }
 
-const selectMenuItem = (event) => {
-    selectItem(event.target);
+const selectMenuItem = () => {
+    if(woman) {
+        selectItem(woman);
+    }
+    if(men) {
+        selectItem(men);
+    }
+    if(children) {
+        selectItem(children);
+    }
+    if(shoes) {
+        selectItem(shoes);
+    }
 }
 
-if(dropDownMenu) {
-    dropDownMenuList.addEventListener('mouseover', selectMenuItem);
+if(dropMenu) {
+    dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
+// Маска ввода для email
 
+const validation = () => {
+    const form = document.querySelector('#personal-area-form');
+    const email = document.querySelector('#email');
+    const password = document.querySelector('#password');
+    //const pattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
+    const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+
+    if(email.value.match(pattern)) {
+        email.classList.add('valid');
+        email.classList.remove('invalid');
+        // password.classList.add('valid');
+        // password.classList.remove('invalid');
+    } else {
+        email.classList.remove('valid');
+        email.classList.add('invalid');
+        // password.classList.remove('valid');
+        // password.classList.add('invalid');
+    }
+}
 
 
 

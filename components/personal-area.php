@@ -17,18 +17,18 @@
         require('./header.php');
     ?>
 
-    <div class="container">
+    <div class="container wow fadeInDown">
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>
             <span><img src="../img/strlka.png" alt="стрелка"></span>
             <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
         </div>
         <h1 class="title">Вход в кабинет покупателя</h1>
-        <form class="personal-area el-hover">
-            <label  for="input1">Email</label>
-            <input id="input1" required maxlength="40" type="text">
-            <label for="input2">Пароль</label>
-            <input id="input2" required maxlength="40" type="text">
+        <form id='personal-area-form' class="personal-area el-hover">
+            <label  for="email">Email</label>
+            <input id="email" placeholder="Введите @email" onkeyup="validation()" onkeydown="validation()" required maxlength="40" type="text">
+            <label for="password">Пароль</label>
+            <input id="password" placeholder="Введите пароль" type = "password"  required maxlength="40" type="text">
             <button class="personal-area__btn">
                 Войти
             </button>
@@ -42,6 +42,5 @@
         require('./foot.php');
         require('./scripts.php');
     ?>
-    <script src="../sripts/script.js"></script>
 </body>
 </html>

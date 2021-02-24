@@ -123,7 +123,5 @@
         require('./foot.php');
         require('./scripts.php');
     ?>
-
-    <script src="../sripts/script.js"></script>
 </body>
 </html>
