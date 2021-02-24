@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b141831-1066-4a7a-a205-f30332b0e6be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
+    <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
-=======
-      <change beforePath="$PROJECT_DIR$/components/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/collection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/scripts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/table.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/sripts/script.js" afterDir="false" />
->>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,85 +15,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1o6nQbhNaGA9qRa1a9y15nUMb4A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\osPanel\OpenServer\domains\myStore" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6b141831-1066-4a7a-a205-f30332b0e6be" name="Default Changelist" comment="" />
-      <created>1612615896205</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1612615896205</updated>
-      <workItem from="1612615898262" duration="39821000" />
-      <workItem from="1612891315908" duration="3864000" />
-      <workItem from="1613305027280" duration="111000" />
-      <workItem from="1613305148063" duration="1545000" />
-      <workItem from="1613306949088" duration="260000" />
-      <workItem from="1613709836294" duration="136000" />
-      <workItem from="1613928251548" duration="5453000" />
-      <workItem from="1613998144554" duration="605000" />
-      <workItem from="1613999065681" duration="119000" />
-      <workItem from="1613999203752" duration="1057000" />
-      <workItem from="1614003776893" duration="4311000" />
-      <workItem from="1614008430531" duration="1163000" />
-      <workItem from="1614016027988" duration="6410000" />
-      <workItem from="1614023913651" duration="966000" />
-<<<<<<< Updated upstream
-      <workItem from="1614059194723" duration="5945000" />
-=======
-      <workItem from="1614059194723" duration="8353000" />
-      <workItem from="1614182425135" duration="10122000" />
->>>>>>> Stashed changes
-    </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

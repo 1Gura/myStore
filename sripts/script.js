@@ -210,9 +210,7 @@ if(dropMenu) {
     dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
-<<<<<<< Updated upstream
 
-=======
 // Маска ввода для email
 
 const validationEmail = (event) => {
@@ -236,7 +234,6 @@ const validationTel = (event) => {
         event.target.classList.add('invalid');
     }
 }
->>>>>>> Stashed changes
 
 const validation = (target,pattern = '') => {
     if(target.value.match(pattern)) {

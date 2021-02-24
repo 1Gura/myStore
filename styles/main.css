@@ -693,13 +693,9 @@ button {
 }
 
 .personal-area input {
-<<<<<<< Updated upstream
-     height: 30px;
-=======
     position: relative;
      height: 50px;
      border: 1px solid black;
->>>>>>> Stashed changes
      font-size: 20px;
      padding: 10px;
      width: 100%;
@@ -945,8 +941,6 @@ body .background-active {
     background-color:transparent;
     z-index: 999;
 }
-<<<<<<< Updated upstream
-=======
 
 
 #personal-area-form .invalid {
@@ -960,4 +954,3 @@ body .background-active {
     background-position: 98%;
 }
 
->>>>>>> Stashed changes
