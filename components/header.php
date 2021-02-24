@@ -18,7 +18,9 @@
         </ul>
     </nav>
 </header>
-
+<?php
+    include_once __DIR__ . './drop-down-menu.php';
+?>
 <div class="up-menu container wow fadeInDown">
     <div class="info">
         <div class="info__left-side item__flex">

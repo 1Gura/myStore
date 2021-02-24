@@ -210,10 +210,84 @@ if(dropMenu) {
     dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
+<<<<<<< Updated upstream
 
+=======
+// Маска ввода для email
 
+const validationEmail = (event) => {
+    const target = event.target;
+    const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    validation(target, pattern);
+}
 
+const validationName = (event) => {
+    const target = event.target;
+    const patternName = /^[a-zа-яA-ZА-Я0-9_-]{3,16}$/;
+   validation(target, patternName);
+}
 
+const validationTel = (event) => {
+    if (event.target.value.length === 18) {
+        event.target.classList.add('valid');
+        event.target.classList.remove('invalid');
+    } else {
+        event.target.classList.remove('valid');
+        event.target.classList.add('invalid');
+    }
+}
+>>>>>>> Stashed changes
+
+const validation = (target,pattern = '') => {
+    if(target.value.match(pattern)) {
+        target.classList.add('valid');
+        target.classList.remove('invalid');
+    } else {
+        target.classList.remove('valid');
+        target.classList.add('invalid');
+    }
+}
+
+/*Маска для телефона*/
+const selector = document.querySelectorAll('input[type="tel"]');
+const im = new Inputmask('+7 (999) 999-99-99');
+im.mask(selector);
+/*Маска для телефона*/
+
+/*Обработка отправки*/
+if(document.querySelectorAll('#personal-area-form')) {
+    let validateForms = (selector, rules, successModal, yaGoal) => {
+        new window.JustValidate(selector, {
+            rules: rules,
+            submitHandler: (form) => {
+
+            }
+        })
+    }
+
+    validateForms('#personal-area-form',
+        {
+            email: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true
+            },
+            name: {
+                required: true,
+                minLength: 3
+            },
+            surname: {
+                required: true,
+                minLength: 3
+            }
+        },
+        '.thanks-popup',
+        'send goal'
+    );
+}
+/*Обработка отправки*/
 
 
 

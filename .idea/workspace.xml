@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b141831-1066-4a7a-a205-f30332b0e6be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/components/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/table.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/sripts/script.js" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +77,12 @@
       <workItem from="1614008430531" duration="1163000" />
       <workItem from="1614016027988" duration="6410000" />
       <workItem from="1614023913651" duration="966000" />
+<<<<<<< Updated upstream
       <workItem from="1614059194723" duration="5945000" />
+=======
+      <workItem from="1614059194723" duration="8353000" />
+      <workItem from="1614182425135" duration="10122000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

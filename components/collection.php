@@ -19,7 +19,7 @@
     <?php
     require('./table.php');
     ?>
-    <div class="collection container">
+    <div class="collection container wow fadeInDown">
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>
             <span><img src="../img/strlka.png" alt="стрелка"></span>

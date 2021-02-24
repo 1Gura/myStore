@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container wow fadeInDown">
     <table class="table-size">
-        <button class="table__btn">Показать/скрыть таблицу размеров</button>
+        <button class="table__btn wow fadeInDown">Показать/скрыть таблицу размеров</button>
         <tr class="tr__head">
             <td>Таблица размеров</td>
         </tr>
