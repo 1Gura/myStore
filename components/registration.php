@@ -36,11 +36,11 @@ require('./header.php');
         <label  for="email">Email</label>
         <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)" onkeydown="validationEmail(event)"  maxlength="40" type="text">
         <label for="password">Пароль</label>
-        <input id="password" placeholder="Введите пароль" type = "password"   maxlength="40">
+        <input id="password" placeholder="Введите пароль" data-validate-field="password" onkeyup="validationPassword(event)" onkeydown="validationPassword(event)" type = "password"   maxlength="40">
         <label for="password2">Подтвердите пароль</label>
-        <input id="password2" placeholder="Введите пароль" type = "password"   maxlength="40">
+        <input id="password2" placeholder="Введите пароль" data-validate-field="repeatPassword" onkeyup="validationPassword(event)" onkeydown="validationPassword(event)" type = "password"   maxlength="40">
 
-        <button class="personal-area__btn">
+        <button class="personal-area__btn" onclick="comparisonPasswords()">
             Регистрация
         </button>
     </form>

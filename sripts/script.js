@@ -10,6 +10,25 @@ const woman = document.querySelector("#woman");
 const men = document.querySelector("#men");
 const children = document.querySelector("#children");
 const shoes = document.querySelector("#shoes");
+const advertising = document.querySelector('.advertising');
+
+/*Реклама*/
+const appearanceAdvertising = () => {
+    setTimeout(()=> {
+        advertising.classList.remove('display-none')
+    },3000)
+}
+
+const advertisingBtn = document.querySelector('.advertising__btn');
+
+if(advertisingBtn) {
+    advertisingBtn.addEventListener('click', ()=>{
+        advertising.remove();
+    })
+}
+
+appearanceAdvertising();
+/*Реклама*/
 
 const showHideTable = () => {
     const tableSize = document.querySelector('.table-size');
@@ -181,13 +200,28 @@ if(dropMenu) {
     dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
-
-// Маска ввода для email
+// Валидация email
 
 const validationEmail = (event) => {
     const target = event.target;
     const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
     validation(target, pattern);
+}
+
+const validationPassword = (event) => {
+    const target = event.target;
+    const pattern = /[0-9a-zA-Z!@#$%^&*]{6,}/;
+    validation(target, pattern);
+}
+
+const comparisonPasswords = () => {
+    const pas1 = document.querySelector('#password');
+    const pas2 = document.querySelector('#password2');
+    if(pas1 && pas2) {
+        if(pas1.value !== pas2.value) {
+            alert('Пароли не совпадают!')
+        }
+    }
 }
 
 const validationName = (event) => {
@@ -249,6 +283,14 @@ if(document.querySelectorAll('#personal-area-form')) {
             surname: {
                 required: true,
                 minLength: 3
+            },
+            password: {
+                required: true,
+                minLength: 6
+            },
+            repeatPassword: {
+                required: true,
+                minLength: 6
             }
         },
         '.thanks-popup',
@@ -256,6 +298,8 @@ if(document.querySelectorAll('#personal-area-form')) {
     );
 }
 /*Обработка отправки*/
+
+
 
 
 

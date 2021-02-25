@@ -17,7 +17,7 @@
         require('./header.php');
     ?>
 
-    <div class="container">
+    <div class="container wow fadeInDown">
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>
             <span><img src="../img/strlka.png" alt="стрелка"></span>
@@ -28,7 +28,7 @@
             <label  for="email">Email</label>
             <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)" onkeydown="validationEmail(event)" required maxlength="40" type="text">
             <label for="password">Пароль</label>
-            <input id="password" placeholder="Введите пароль" type = "password"  required maxlength="40" type="text">
+            <input id="password" placeholder="Введите пароль" data-validate-field="password" type = "password"  required maxlength="40" type="text">
             <button class="personal-area__btn">
                 Войти
             </button>
