@@ -9,6 +9,7 @@ const men = document.querySelector("#men");
 const children = document.querySelector("#children");
 const shoes = document.querySelector("#shoes");
 const advertising = document.querySelector('.advertising');
+const dateTime = document.querySelector('.date-time');
 
 /*Реклама*/
 const appearanceAdvertising = () => {
@@ -16,6 +17,8 @@ const appearanceAdvertising = () => {
         advertising.classList.remove('display-none')
     },3000)
 }
+
+interval();
 
 const advertisingBtn = document.querySelector('.advertising__btn');
 
@@ -298,11 +301,51 @@ if(document.querySelectorAll('#personal-area-form')) {
     );
 }
 /*Обработка отправки*/
+/*Дата, интервал*/
+
+function printDate() {
+    let d = new Date();
+
+    let mounth = ['Января', 'Февраля',
+        'Марта', 'Апреля', 'Мая',
+        'Июня', 'Июля', 'Августа',
+        'Сентября', 'Октября', 'Ноября', 'Декабря'];
+
+    let days = [
+        'Понедельник', 'Вторник',
+        'Среда','Четверг', 'Пятница',
+        'Суббота','Воскресенье'
+    ];
+
+    let day = d.getDay();
+    let date = d.getDate();
+    let mount = d.getMonth();
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
+    let year = d.getFullYear();
+
+    //Склонение часов
+    let hour = declOfNum(hours, ['Час', 'Часа', 'Часов']);
+
+    //Склонение минут
+    let minute = declOfNum(minutes, ['Минута', 'Минуты', 'Минут']);
+
+    //Склонение секунд
+    let second = declOfNum(seconds, ['Секунда',  'Секунды', 'Секунд']);
+
+    dateTime.innerHTML = 'Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day - 1] +  ', '+ '<br>'  + hours + ' ' + hour + ' '
+        + minutes + ' ' + minute + ' ' + seconds + ' ' + second;
 
 
+}
 
+function declOfNum(number, titles) {
+    let cases = [2, 0, 1, 1, 1, 2];
+    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5]];
+}
 
-
-
-
+function interval () {
+    setInterval(printDate, 1000);
+}
 
