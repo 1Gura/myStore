@@ -20,6 +20,5 @@
         require('./components/foot.php');
         require('./components/scripts.php');
     ?>
-    <script src="./sripts/script.js"></script>
 </body>
 </html>

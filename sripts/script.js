@@ -1,5 +1,3 @@
-/*Константы содержащие ссылки на дом элементы*/
-// Решить проблему с объявлением переменных
 const btnTable = document.querySelector('.table__btn');
 const btnMenu = document.querySelector(".header_btn-menu");
 const dropDownMenuBtn = document.querySelector(".drop-down-menu__btn");
@@ -26,8 +24,10 @@ if(advertisingBtn) {
         advertising.remove();
     })
 }
+if(advertising) {
+    appearanceAdvertising();
+}
 
-appearanceAdvertising();
 /*Реклама*/
 
 const showHideTable = () => {
@@ -262,7 +262,7 @@ if(document.querySelectorAll('#personal-area-form')) {
         new window.JustValidate(selector, {
             rules: rules,
             submitHandler: (form) => {
-
+                alert('Форма была отправлена!')
             }
         })
     }
