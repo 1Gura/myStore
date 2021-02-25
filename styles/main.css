@@ -940,6 +940,7 @@ body .background-active {
     background-repeat: no-repeat;
     background-color:transparent;
     z-index: 999;
+    margin: 5px;
 }
 
 

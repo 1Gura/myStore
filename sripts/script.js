@@ -336,8 +336,6 @@ function printDate() {
 
     dateTime.innerHTML = 'Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day - 1] +  ', '+ '<br>'  + hours + ' ' + hour + ' '
         + minutes + ' ' + minute + ' ' + seconds + ' ' + second;
-
-
 }
 
 function declOfNum(number, titles) {
@@ -348,4 +346,3 @@ function declOfNum(number, titles) {
 function interval () {
     setInterval(printDate, 1000);
 }
-
