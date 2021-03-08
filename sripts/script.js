@@ -10,24 +10,25 @@ const children = document.querySelector("#children");
 const shoes = document.querySelector("#shoes");
 const advertising = document.querySelector('.advertising');
 const dateTime = document.querySelector('.date-time');
+const personalAreaBtn = document.querySelector('.personal-area__btn');
 
 /*Реклама*/
 const appearanceAdvertising = () => {
-    setTimeout(()=> {
+    setTimeout(() => {
         advertising.classList.remove('display-none')
-    },3000)
+    }, 3000)
 }
 
 interval();
 
 const advertisingBtn = document.querySelector('.advertising__btn');
 
-if(advertisingBtn) {
-    advertisingBtn.addEventListener('click', ()=>{
+if (advertisingBtn) {
+    advertisingBtn.addEventListener('click', () => {
         advertising.remove();
     })
 }
-if(advertising) {
+if (advertising) {
     appearanceAdvertising();
 }
 
@@ -38,17 +39,17 @@ const showHideTable = () => {
     tableSize.classList.toggle('show-hide');
 }
 
-if(btnTable) {
+if (btnTable) {
     btnTable.addEventListener('click', showHideTable);
 }
 
 const showMenu = () => {
-    if(document.body.style.overflow === 'hidden') {
+    if (document.body.style.overflow === 'hidden') {
         document.body.style.overflow = '';
     } else {
         document.body.style.overflow = 'hidden'
     }
-    if(dropDownMenu.classList.contains('drop-active')) {
+    if (dropDownMenu.classList.contains('drop-active')) {
         dropDownMenu.classList.remove('drop-active');
         background.classList.remove('background-active');
     } else {
@@ -57,16 +58,16 @@ const showMenu = () => {
     }
 }
 
-if(btnMenu) {
-    btnMenu.addEventListener('mouseover', ()=>{
-        if(btnMenu.classList.contains('btn-checked')) {
+if (btnMenu) {
+    btnMenu.addEventListener('mouseover', () => {
+        if (btnMenu.classList.contains('btn-checked')) {
             btnMenu.classList.remove('btn-checked');
         } else {
             btnMenu.classList.add('btn-checked');
         }
     })
-    btnMenu.addEventListener('mouseout', ()=>{
-        if(btnMenu.classList.contains('btn-checked')) {
+    btnMenu.addEventListener('mouseout', () => {
+        if (btnMenu.classList.contains('btn-checked')) {
             btnMenu.classList.remove('btn-checked');
         } else {
             btnMenu.classList.add('btn-checked');
@@ -75,16 +76,16 @@ if(btnMenu) {
     btnMenu.addEventListener('click', showMenu)
 }
 
-if(dropDownMenuBtn) {
+if (dropDownMenuBtn) {
     dropDownMenuBtn.addEventListener('click', showMenu)
 }
 
-if(background) {
+if (background) {
     background.addEventListener('click', showMenu)
 }
 
 const showMainContent = (item) => {
-    if(item.classList.contains('active-link') && document.querySelector('.drop-down-menu__main-content').style.width !== '50%')
+    if (item.classList.contains('active-link') && document.querySelector('.drop-down-menu__main-content').style.width !== '50%')
         document.querySelector('.drop-down-menu__main-content').style.width = '50%';
 }
 
@@ -98,7 +99,7 @@ const selectItem = (item) => {
                     list: [
                         {
                             title: 'Одежда',
-                            links : ['Блузки и рубашки', 'Брюки', 'Верхняя одежда', 'Водолазки',
+                            links: ['Блузки и рубашки', 'Брюки', 'Верхняя одежда', 'Водолазки',
                                 'Джемперы и кардиганы', 'Все категории']
                         }
                     ],
@@ -109,13 +110,13 @@ const selectItem = (item) => {
             case 'men' :
                 itemMenu = {
                     list: [
-                            {
-                                title: 'Одежда',
-                                links : ['Брюки', 'Верхняя одежда', 'Водолазки',
-                                    'Джемперы и кардиганы', 'Джинсы', 'Все категории']
-                            }
-                          ],
-                    img : 'men'
+                        {
+                            title: 'Одежда',
+                            links: ['Брюки', 'Верхняя одежда', 'Водолазки',
+                                'Джемперы и кардиганы', 'Джинсы', 'Все категории']
+                        }
+                    ],
+                    img: 'men'
                 }
 
                 break;
@@ -124,16 +125,16 @@ const selectItem = (item) => {
                     list: [
                         {
                             title: 'Для мальчиков',
-                            links : ['Белье', 'Брюки и шорты', 'Рубашки',
+                            links: ['Белье', 'Брюки и шорты', 'Рубашки',
                                 'Верхняя одежда', 'Водолазки', 'Все категории']
                         },
                         {
                             title: 'Для девочек',
-                            links : ['Белье', 'Блузки и рубашки', 'Брюки и шорты',
+                            links: ['Белье', 'Блузки и рубашки', 'Брюки и шорты',
                                 'Верхняя одежда', 'Водолазки', 'Все категории']
                         }
                     ],
-                    img : 'children'
+                    img: 'children'
                 }
                 break;
             case 'shoes' :
@@ -141,23 +142,23 @@ const selectItem = (item) => {
                     list: [
                         {
                             title: 'Мужская',
-                            links : ['Ботинки полуботинки', 'Кеды и кросовки', 'Мокасины',
+                            links: ['Ботинки полуботинки', 'Кеды и кросовки', 'Мокасины',
                                 'Сапоги', 'Тапочки']
                         },
                         {
                             title: 'Женская',
-                            links : ['Балетки и чешки', 'Босоножки и сандали', 'Кеды и кросовки',
+                            links: ['Балетки и чешки', 'Босоножки и сандали', 'Кеды и кросовки',
                                 'Сапоги', 'Тапочки']
                         }
                     ],
-                    img : 'shoes'
+                    img: 'shoes'
                 }
                 break;
         }
 
         event.preventDefault();
         const temp = document.querySelector('.active-link')
-        if(temp) {
+        if (temp) {
             document.querySelector('.active-link').classList.remove('active-link');
         }
         item.classList.add('active-link');
@@ -170,7 +171,7 @@ const selectItem = (item) => {
                 </div>
             `;
         const contentList = document.querySelector('#content-list');
-        itemMenu.list.map((item)=> {
+        itemMenu.list.map((item) => {
             contentList.insertAdjacentHTML(
                 'beforeend',
                 `<li className="drop-down-menu__item"><span class="drop-down-menu__title">${item.title}</span></li>`)
@@ -185,21 +186,21 @@ const selectItem = (item) => {
 }
 
 const selectMenuItem = () => {
-    if(woman) {
+    if (woman) {
         selectItem(woman);
     }
-    if(men) {
+    if (men) {
         selectItem(men);
     }
-    if(children) {
+    if (children) {
         selectItem(children);
     }
-    if(shoes) {
+    if (shoes) {
         selectItem(shoes);
     }
 }
 
-if(dropMenu) {
+if (dropMenu) {
     dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
@@ -217,20 +218,26 @@ const validationPassword = (event) => {
     validation(target, pattern);
 }
 
-const comparisonPasswords = () => {
+const comparisonPasswords = (ev) => {
     const pas1 = document.querySelector('#password');
     const pas2 = document.querySelector('#password2');
-    if(pas1 && pas2) {
-        if(pas1.value !== pas2.value) {
+    if (pas1 && pas2) {
+        if (pas1.value !== pas2.value) {
+            ev.preventDefault();
             alert('Пароли не совпадают!')
+            return false;
+        } else {
+            return true;
         }
     }
 }
 
+personalAreaBtn.addEventListener('click', comparisonPasswords);
+
 const validationName = (event) => {
     const target = event.target;
     const patternName = /^[a-zа-яA-ZА-Я0-9_-]{3,16}$/;
-   validation(target, patternName);
+    validation(target, patternName);
 }
 
 const validationTel = (event) => {
@@ -243,8 +250,8 @@ const validationTel = (event) => {
     }
 }
 
-const validation = (target,pattern = '') => {
-    if(target.value.match(pattern)) {
+const validation = (target, pattern = '') => {
+    if (target.value.match(pattern)) {
         target.classList.add('valid');
         target.classList.remove('invalid');
     } else {
@@ -257,16 +264,15 @@ const validation = (target,pattern = '') => {
 const selector = document.querySelectorAll('input[type="tel"]');
 const im = new Inputmask('+7 (999) 999-99-99');
 im.mask(selector);
+
 /*Маска для телефона*/
 
 /*Обработка отправки*/
-if(document.querySelectorAll('#personal-area-form')) {
-    let validateForms = (selector, rules, successModal, yaGoal) => {
+const personalArea = document.querySelectorAll('#personal-area-form');
+if (personalArea) {
+    let validateForms = (selector, rules) => {
         new window.JustValidate(selector, {
             rules: rules,
-            submitHandler: (form) => {
-                alert('Форма была отправлена!')
-            }
         })
     }
 
@@ -301,6 +307,7 @@ if(document.querySelectorAll('#personal-area-form')) {
     );
 }
 /*Обработка отправки*/
+
 /*Дата, интервал*/
 
 function printDate() {
@@ -313,8 +320,8 @@ function printDate() {
 
     let days = [
         'Понедельник', 'Вторник',
-        'Среда','Четверг', 'Пятница',
-        'Суббота','Воскресенье'
+        'Среда', 'Четверг', 'Пятница',
+        'Суббота', 'Воскресенье'
     ];
 
     let day = d.getDay();
@@ -332,17 +339,17 @@ function printDate() {
     let minute = declOfNum(minutes, ['Минута', 'Минуты', 'Минут']);
 
     //Склонение секунд
-    let second = declOfNum(seconds, ['Секунда',  'Секунды', 'Секунд']);
+    let second = declOfNum(seconds, ['Секунда', 'Секунды', 'Секунд']);
 
-    dateTime.innerHTML = 'Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day - 1] +  ', '+ '<br>'  + hours + ' ' + hour + ' '
+    dateTime.innerHTML = 'Сегодня ' + date + ' ' + mounth[mount] + ' ' + year + ', ' + days[day - 1] + ', ' + '<br>' + hours + ' ' + hour + ' '
         + minutes + ' ' + minute + ' ' + seconds + ' ' + second;
 }
 
 function declOfNum(number, titles) {
     let cases = [2, 0, 1, 1, 1, 2];
-    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5]];
+    return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 }
 
-function interval () {
+function interval() {
     setInterval(printDate, 1000);
 }

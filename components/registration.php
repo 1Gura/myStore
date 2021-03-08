@@ -40,7 +40,7 @@ require('./header.php');
         <label for="password2">Подтвердите пароль</label>
         <input id="password2" placeholder="Введите пароль" data-validate-field="repeatPassword" onkeyup="validationPassword(event)" onkeydown="validationPassword(event)" type = "password"   maxlength="40">
 
-        <button class="personal-area__btn" onclick="comparisonPasswords()">
+        <button class="personal-area__btn">
             Регистрация
         </button>
     </form>
