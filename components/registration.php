@@ -26,13 +26,13 @@ require('./header.php');
         <span class="link"><a href="./registration.php">Регистрация</a></span>
     </div>
     <h1 class="title">Регистрация</h1>
-    <form id='personal-area-form' class="personal-area el-hover">
+    <form id='personal-area-form' action="/" class="personal-area el-hover">
         <label  for="name">Имя</label>
         <input id="name" placeholder="Введите Имя" data-validate-field="name" onkeyup="validationName(event)" onkeydown="validationName(event)"  maxlength="40" type="text">
         <label for="surname">Фамилия</label>
         <input id="surname" placeholder="Введите Фамилию" data-validate-field="surname" onkeyup="validationName(event)" onkeydown="validationName(event)" type = "text"   maxlength="40">
         <label  for="phone">Телефон</label>
-        <input id="phone" placeholder="+7(999)-999-99-99" data-validate-field="tel"  onkeyup="validationTel(event)" onkeydown="validationTel(event)" maxlength="40" type="tel">
+        <input id="phone" required placeholder="+7(999)-999-99-99" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" data-validate-field="tel"  onkeyup="validationTel(event)" onkeydown="validationTel(event)" maxlength="40" type="tel">
         <label  for="email">Email</label>
         <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)" onkeydown="validationEmail(event)"  maxlength="40" type="text">
         <label for="password">Пароль</label>

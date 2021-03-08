@@ -241,13 +241,9 @@ const validationName = (event) => {
 }
 
 const validationTel = (event) => {
-    if (event.target.value.length === 18) {
-        event.target.classList.add('valid');
-        event.target.classList.remove('invalid');
-    } else {
-        event.target.classList.remove('valid');
-        event.target.classList.add('invalid');
-    }
+    const target = event.target;
+    const patternName = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    validation(target, patternName);
 }
 
 const validation = (target, pattern = '') => {
@@ -262,9 +258,8 @@ const validation = (target, pattern = '') => {
 
 /*Маска для телефона*/
 const selector = document.querySelectorAll('input[type="tel"]');
-const im = new Inputmask('+7 (999) 999-99-99');
+const im = new Inputmask('+7 (999) 999 99 99');
 im.mask(selector);
-
 /*Маска для телефона*/
 
 /*Обработка отправки*/
@@ -283,7 +278,10 @@ if (personalArea) {
                 email: true
             },
             tel: {
-                required: true
+                required: true,
+                strength: {
+                    custom: '^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$'
+                }
             },
             name: {
                 required: true,

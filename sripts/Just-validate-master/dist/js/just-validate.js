@@ -402,7 +402,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             minLength: 'Минимальная длина :value символа',
             password: 'Password is not valid',
             remote: 'Email already exists',
-            strength: 'Password must contents at least one uppercase letter, one lowercase letter and one number',
+            strength: 'Неверный формат!',
             function: 'Function returned false'
         },
 
