@@ -1007,3 +1007,9 @@ body .background-active {
 .advertising .advertising__content .advertising__btn:hover {
     opacity: 1;
 }
+
+/*Новые стили для 3 лабы*/
+
+.error {
+    color: red;
+}
