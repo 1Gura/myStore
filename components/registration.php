@@ -1,4 +1,4 @@
-<?php?>
+<? php ?>
 
 <!doctype html>
 <html lang="ru">
@@ -26,19 +26,22 @@ require('./header.php');
         <span class="link"><a href="./registration.php">Регистрация</a></span>
     </div>
     <h1 class="title">Регистрация</h1>
-    <form id='personal-area-form' action="/" class="personal-area el-hover">
-        <label  for="name">Имя</label>
-        <input id="name" placeholder="Введите Имя" data-validate-field="name" onkeyup="validationName(event)" onkeydown="validationName(event)"  maxlength="40" type="text">
+    <?php
+    var_dump($_POST);
+    ?>
+    <form id='personal-area-form' action="./registration.php" method="post" class="personal-area el-hover">
+        <label for="name">Имя</label>
+        <input id="name" name="id" placeholder="Введите Имя" maxlength="40" type="text">
         <label for="surname">Фамилия</label>
-        <input id="surname" placeholder="Введите Фамилию" data-validate-field="surname" onkeyup="validationName(event)" onkeydown="validationName(event)" type = "text"   maxlength="40">
-        <label  for="phone">Телефон</label>
-        <input id="phone" required placeholder="+7(999)-999-99-99" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" data-validate-field="tel"  onkeyup="validationTel(event)" onkeydown="validationTel(event)" maxlength="40" type="tel">
-        <label  for="email">Email</label>
-        <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)" onkeydown="validationEmail(event)"  maxlength="40" type="text">
+        <input id="surname" name='surname' placeholder="Введите Фамилию" type="text" maxlength="40">
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" required placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="Введите @email" maxlength="40" type="text">
         <label for="password">Пароль</label>
-        <input id="password" placeholder="Введите пароль" data-validate-field="password" onkeyup="validationPassword(event)" onkeydown="validationPassword(event)" type = "password"   maxlength="40">
+        <input id="password" name="password" placeholder="Введите пароль" type="password" maxlength="40">
         <label for="password2">Подтвердите пароль</label>
-        <input id="password2" placeholder="Введите пароль" data-validate-field="repeatPassword" onkeyup="validationPassword(event)" onkeydown="validationPassword(event)" type = "password"   maxlength="40">
+        <input id="password2" name="password2" placeholder="Введите пароль" type="password" maxlength="40">
 
         <button class="personal-area__btn">
             Регистрация

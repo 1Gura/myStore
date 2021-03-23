@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sripts/Just-validate-master/dist/js/just-validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/sripts/Just-validate-master/dist/js/just-validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/sripts/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,9 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -62,24 +61,24 @@
       <workItem from="1615135351753" duration="93000" />
       <workItem from="1615135458859" duration="19000" />
       <workItem from="1615195305881" duration="4343000" />
+      <workItem from="1616522407251" duration="647000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1615197232118">

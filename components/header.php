@@ -1,4 +1,6 @@
-<?php?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
+?>
 
 <header class = "header wow fadeInDown">
     <button class="header_btn-menu">
