@@ -40,8 +40,14 @@ require('./header.php');
         <input id="name" name="name" placeholder="Введите Имя" maxlength="40" type="text"
                value="<?=!empty($_POST['name']) ? $_POST['name'] : '' ?>"
         >
-        <label for="surname">Фамилия</label>
-        <input id="surname" name='surname' placeholder="Введите Фамилию" type="text" maxlength="40">
+        <?php
+        $surnameStr = checkRegularSurName();
+        if(strlen($surnameStr) > 0) {?>
+            <label class="error" for="name"><?= $surnameStr ?></label>
+        <?php } else {?>
+            <label for="name">Фамилия</label>
+        <?php } ?>
+        <input id="surname" name='surname' value="<?=!empty($_POST['surname']) ? $_POST['surname'] : '' ?>" placeholder="Введите Фамилию" type="text" maxlength="40">
         <label for="phone">Телефон</label>
         <input id="phone" name="phone" placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
         <label for="email">Email</label>
