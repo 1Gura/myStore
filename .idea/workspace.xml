@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logic/fileSize.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/fileSize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logic/temp/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/temp/text.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
       <workItem from="1615135458859" duration="19000" />
       <workItem from="1615195305881" duration="4343000" />
       <workItem from="1616522407251" duration="2846000" />
+      <workItem from="1616603244854" duration="5932000" />
     </task>
     <servers />
   </component>
@@ -78,11 +80,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1615197232118">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="125" width="607" height="789" key="find.popup/-1440.261.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1615197232118" />
   </component>
 </project>

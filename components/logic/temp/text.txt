@@ -1,20 +1,18 @@
-adsld;alsdas
-da
-sd
-a
-sd
-as
-d
-a
-sd
-as
-d
-as
-da
-s
-da
-sd
-a
-sd
-as
+<?php
+function getFilesSize($path = '')
+{
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $fullPath = $root . $path;
+    if (strlen($fullPath) > 0) {
+        $fileSize = 0;
+        $dir = scandir($root);
+        foreach ($dir as $file) {
+            var_dump($file);
+            $fileSize += filesize($file);
+        }
+        return "Путь к папке (${fullPath}), размер файлов в байтах:${fileSize}";
+//    return "Путь к папке " . $root . ", размер файлов в байтах: " . $fileSize;
+    }
+}
 
+?>

@@ -1,4 +1,4 @@
-<?php?>
+<? php ?>
 
 <!doctype html>
 <html lang="ru">
@@ -8,7 +8,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
-        require('./links.php');
+    require('./links.php');
     ?>
     <title>О нас</title>
 </head>
@@ -67,15 +67,14 @@ require('./header.php');
         <h1>Подсчёт размера файла</h1>
         <form action="" method="GET">
             <label for="">Введите путь</label>
-            <input type="text" value = "<?=$_GET['path'] ?? ''?>" name = "path" placeholder="path...">
+            <input type="text" value="<?= $_GET['path'] ?? '' ?>" name="path" placeholder="/path...">
             <input type="submit">
         </form>
         <div>
-        <?var_dump($_GET)?>
-        <span>Результат: </span>
-        <?= !empty($_GET['path']) ?  getFilesSize($_GET['path']) : ''?>
+            <span>Результат: </span>
+            <?= !empty($_GET) ? getRes($_GET['path'])  : '' ?>
         </div>
-        
+
     </div>
 </div>
 
