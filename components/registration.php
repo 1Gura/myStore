@@ -36,8 +36,8 @@ require('./header.php');
         <input id="surname" name='surname' value="<?=!empty($_POST['surname']) ? $_POST['surname'] : '' ?>" placeholder="Введите Фамилию" type="text" maxlength="40">
         <label class = "<?=checkRegularPhone() ? 'error' : '' ?>" for="phone"><?=checkRegularPhone() ?? 'Телефон' ?></label>
         <input id="phone" name="phone" value = '<?=!empty($_POST['phone']) ? $_POST['phone'] : '' ?>' placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
-        <label for="email">Email</label>
-        <input id="email" name="email" placeholder="Введите @email" maxlength="40" type="text">
+        <label class = "<?=checkRegularEmail() ? 'error' : '' ?>" for="email"><?=checkRegularEmail() ?? 'email' ?></label>
+        <input id="email" name="email" value="<?=!empty($_POST['email']) ? $_POST['email'] : '' ?>" placeholder="Введите @email" maxlength="40" type="text">
         <label for="password">Пароль</label>
         <input id="password" name="password" placeholder="Введите пароль" type="password" maxlength="40">
         <label for="password2">Подтвердите пароль</label>

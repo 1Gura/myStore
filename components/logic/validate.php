@@ -25,4 +25,13 @@ function checkRegularPhone()
         }
     }
 }
+
+function checkRegularEmail()
+{
+    if (!empty($_POST)) {
+        if (!preg_match('/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $_POST['email'])) {
+            return 'Строка с полем для email не соответствует паттерну!';
+        }
+    }
+}
 ?>
