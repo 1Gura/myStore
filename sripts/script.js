@@ -204,6 +204,12 @@ if (dropMenu) {
     dropMenu.addEventListener('mouseover', selectMenuItem);
 }
 
+/*Маска для телефона*/
+const selector = document.querySelectorAll('input[type="tel"]');
+const im = new Inputmask('+7 (999) 999 99 99');
+im.mask(selector);
+/*Маска для телефона*/
+
 // Валидация email
 
 // const validationEmail = (event) => {
@@ -256,11 +262,7 @@ if (dropMenu) {
 //     }
 // }
 //
-// /*Маска для телефона*/
-// const selector = document.querySelectorAll('input[type="tel"]');
-// const im = new Inputmask('+7 (999) 999 99 99');
-// im.mask(selector);
-// /*Маска для телефона*/
+
 //
 // /*Обработка отправки*/
 // const personalArea = document.querySelectorAll('#personal-area-form');

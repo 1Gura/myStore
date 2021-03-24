@@ -17,4 +17,12 @@ function checkRegularSurName()
     }
 }
 
+function checkRegularPhone()
+{
+    if (!empty($_POST)) {
+        if (!preg_match('/^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]/', $_POST['phone'])) {
+            return 'Строка с полем для телефона не соответствует паттерну!';
+        }
+    }
+}
 ?>

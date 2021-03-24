@@ -28,28 +28,14 @@ require('./header.php');
     <h1 class="title">Регистрация</h1>
     <?var_dump($_POST)?>
     <form id='personal-area-form' action="./registration.php" method="post" class="personal-area el-hover">
-        <?php
-        $nameStr = checkRegularName();
-        if (strlen($nameStr) > 0) { ?>
-            <label class="error" for="name"><?= $nameStr ?></label>
-        <?php } else { ?>
-            <label for="name">Имя</label>
-        <?php } ?>
-
-
+        <label class = "<?=checkRegularName() ? 'error' : '' ?>" for="name"><?=checkRegularName() ?? 'Имя' ?></label>
         <input id="name" name="name" placeholder="Введите Имя" maxlength="40" type="text"
                value="<?=!empty($_POST['name']) ? $_POST['name'] : '' ?>"
         >
-        <?php
-        $surnameStr = checkRegularSurName();
-        if(strlen($surnameStr) > 0) {?>
-            <label class="error" for="name"><?= $surnameStr ?></label>
-        <?php } else {?>
-            <label for="name">Фамилия</label>
-        <?php } ?>
+        <label class = "<?=checkRegularSurname() ? 'error' : '' ?>" for="surname"><?=checkRegularSurname() ?? 'Фамилия' ?></label>
         <input id="surname" name='surname' value="<?=!empty($_POST['surname']) ? $_POST['surname'] : '' ?>" placeholder="Введите Фамилию" type="text" maxlength="40">
-        <label for="phone">Телефон</label>
-        <input id="phone" name="phone" placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
+        <label class = "<?=checkRegularPhone() ? 'error' : '' ?>" for="phone"><?=checkRegularPhone() ?? 'Телефон' ?></label>
+        <input id="phone" name="phone" value = '<?=!empty($_POST['phone']) ? $_POST['phone'] : '' ?>' placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
         <label for="email">Email</label>
         <input id="email" name="email" placeholder="Введите @email" maxlength="40" type="text">
         <label for="password">Пароль</label>
