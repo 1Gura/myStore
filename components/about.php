@@ -63,6 +63,20 @@ require('./header.php');
             </li>
         </ul>
     </div>
+    <div class="file-size">
+        <h1>Подсчёт размера файла</h1>
+        <form action="" method="GET">
+            <label for="">Введите путь</label>
+            <input type="text" value = "<?=$_GET['path'] ?? ''?>" name = "path" placeholder="path...">
+            <input type="submit">
+        </form>
+        <div>
+        <?var_dump($_GET)?>
+        <span>Результат: </span>
+        <?= !empty($_GET['path']) ?  getFilesSize($_GET['path']) : ''?>
+        </div>
+        
+    </div>
 </div>
 
 <?php

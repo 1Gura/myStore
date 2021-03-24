@@ -1,5 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
+include $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
 ?>
 
 <header class = "header wow fadeInDown">
