@@ -34,4 +34,19 @@ function checkRegularEmail()
         }
     }
 }
+
+function checkRegularPassword() {
+    if (!empty($_POST)) {
+        if (!preg_match(    '/[0-9a-zA-Z!@#$%^&*]{6,}/', $_POST['password'])) {
+            return 'Строка с полем для пароля не соответствует паттерну!';
+        }
+    }
+}
+function comparisonOfPasswords() {
+    if (!empty($_POST)) {
+        if ($_POST['password'] !== $_POST['password2']) {
+            return 'Пароли не совпадают!';
+        }
+    }
+}
 ?>

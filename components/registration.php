@@ -26,7 +26,6 @@ require('./header.php');
         <span class="link"><a href="./registration.php">Регистрация</a></span>
     </div>
     <h1 class="title">Регистрация</h1>
-    <?var_dump($_POST)?>
     <form id='personal-area-form' action="./registration.php" method="post" class="personal-area el-hover">
         <label class = "<?=checkRegularName() ? 'error' : '' ?>" for="name"><?=checkRegularName() ?? 'Имя' ?></label>
         <input id="name" name="name" placeholder="Введите Имя" maxlength="40" type="text"
@@ -38,11 +37,10 @@ require('./header.php');
         <input id="phone" name="phone" value = '<?=!empty($_POST['phone']) ? $_POST['phone'] : '' ?>' placeholder="+7(999)-999-99-99" maxlength="40" type="tel">
         <label class = "<?=checkRegularEmail() ? 'error' : '' ?>" for="email"><?=checkRegularEmail() ?? 'email' ?></label>
         <input id="email" name="email" value="<?=!empty($_POST['email']) ? $_POST['email'] : '' ?>" placeholder="Введите @email" maxlength="40" type="text">
-        <label for="password">Пароль</label>
-        <input id="password" name="password" placeholder="Введите пароль" type="password" maxlength="40">
-        <label for="password2">Подтвердите пароль</label>
-        <input id="password2" name="password2" placeholder="Введите пароль" type="password" maxlength="40">
-
+        <label class = "<?=checkRegularPassword() ? 'error' : '' ?>" for="password"><?=checkRegularPassword() ?? 'Пароль' ?></label>
+        <input id="password" name="password" value="<?=!empty($_POST['password']) ? $_POST['password'] : '' ?>" placeholder="Введите пароль" type="password" maxlength="40">
+        <label class = "<?=comparisonOfPasswords() ? 'error' : '' ?>" for="password2"><?=comparisonOfPasswords() ?? 'Подтвердите пароль' ?></label>
+        <input id="password2" name="password2" value="<?=!empty($_POST['password2']) ? $_POST['password2'] : '' ?>" placeholder="Введите пароль" type="password" maxlength="40">
         <button class="personal-area__btn">
             Регистрация
         </button>
