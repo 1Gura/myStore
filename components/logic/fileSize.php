@@ -11,18 +11,23 @@ function getFilesSize($path = '')
     $root = $_SERVER['DOCUMENT_ROOT'];
     $fullPath = $root . $path;
     if (file_exists($fullPath)) {
-        if (strlen($fullPath) > 0) {
-            $fileSize = 0;
+        $fileSize = 0;
+        if (is_dir($fullPath)) {
             $dir = scandir($fullPath);
-            foreach ($dir as $file) {
-                if (($file != '.') && ($file != '..'))
-                    if (is_dir($fullPath . '/' . $file))
-                        /*Файл в данном случае будет являться директорией*/
-                        $fileSize += getFilesSize($path . '/' . $file);
-                    else
-                        $fileSize += filesize($fullPath . '/' . $file);
+            if (!empty($dir)) {
+                foreach ($dir as $file) {
+                    if (($file != '.') && ($file != '..'))
+                        if (is_dir($fullPath . '/' . $file))
+                            /*Файл в данном случае будет являться директорией*/
+                            $fileSize += getFilesSize($path . '/' . $file);
+                        else
+                            $fileSize += filesize($fullPath . '/' . $file);
+                }
+                return $fileSize;
             }
-            return $fileSize;
+
+        } else {
+            return filesize($fullPath);
         }
     }
 }
