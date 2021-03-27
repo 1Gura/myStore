@@ -1032,3 +1032,9 @@ body .background-active {
 .file-size input[type="text"]{
     width: 300px;
 }
+
+.form-success {
+    color: #CAC97A;
+    font-size: 20px;
+    text-align: center;
+}

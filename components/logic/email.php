@@ -2,13 +2,13 @@
 
 class Email
 {
-    public $name;
-    public $surname;
-    public $phone;
-    public $email;
-    public $subject;
-    public $message;
-    public $feed;
+    public string $name;
+    public string $surname;
+    public string $phone;
+    public string $email;
+    public string $subject;
+    public string $message;
+    public string $feed;
 
 
     public function __construct($name = '', $surname = '', $phone = '', $email = '', $subject = '', $message = '', $feed = '')
@@ -40,7 +40,6 @@ class Email
 
     public function submit()
     {
-        var_dump('SUBMIT');
         $this->stringFormation();
         mail("{$this->email}", "{$this->subject}", "{$this->message}");
 

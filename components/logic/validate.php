@@ -1,69 +1,96 @@
 <?php
 
-function checkRegularName()
+function checkRegularName(): bool
 {
     if (!empty($_POST)) {
         if (!preg_match('/^[а-я]{2,}+$/iu', trim($_POST['name']))) {
-            return 'Только символы кириллицы!';
+            return true;
         }
     }
+    return false;
+
 }
-function checkRegularSurName()
+function checkRegularSurName(): bool
 {
     if (!empty($_POST)) {
         if (!preg_match('/^[а-я]{2,}+$/iu', trim($_POST['surname']))) {
             return 'Только символы кириллицы!';
         }
     }
+    return false;
+
 }
 
-function checkRegularPhone()
+function checkRegularPhone(): bool
 {
     if (!empty($_POST)) {
         if (!preg_match('/^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]/', $_POST['phone'])) {
-            return 'Формат телефона +7(999)-999-99-99';
+            return true;
         }
     }
+    return false;
 }
 
-function checkRegularEmail()
+function checkRegularEmail(): bool
 {
     if (!empty($_POST)) {
         if (!preg_match('/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $_POST['email'])) {
-            return 'Формат email: gura.ilya2011@yandex.ru';
+            return true;
         }
     }
+    return false;
+
 }
 
-function checkRegularPassword() {
+function checkRegularPassword(): bool
+{
     if (!empty($_POST)) {
         if (!preg_match(    '/[0-9a-zA-Z!@#$%^&*]{6,}/', $_POST['password'])) {
-            return 'Минимальная длина пароля 6 символов!';
+            return true;
         }
     }
+    return false;
+
 }
-function comparisonOfPasswords() {
+function comparisonOfPasswords(): bool
+{
     if (!empty($_POST)) {
         if ($_POST['password'] !== $_POST['password2']) {
-            return 'Пароли не совпадают!';
+            return true;
         }
     }
+    return false;
 }
 
-function checkSubject() {
+function checkSubject(): bool
+{
     if(!empty($_POST)) {
         if(strlen($_POST['subject']) < 5) {
-            return 'Минимальная длина сообщения 5 символов!';
+            return true;
         }
     }
+    return false;
+
 }
 
-function checkTextBox() {
+function checkTextBox(): bool
+{
     if(!empty($_POST)) {
         if(strlen($_POST['message']) < 30) {
-            return 'Минимальная длина сообщения 30 символов!';
+            return true;
         }
     }
+    return false;
+
 }
+
+function success(): bool
+{
+    foreach ($_POST as &$value) {
+        $value = '';
+    }
+    return true;
+}
+
 
 ?>
