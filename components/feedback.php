@@ -20,6 +20,8 @@ if (!empty($_POST)) {
 
 }
 ?>
+
+<h1 class="title">Форма обратной связи</h1>
 <?php
 if ($flagSuccess) { ?>
     <div class="form-success">Форма успешно отправлена!</div>

@@ -1,5 +1,3 @@
-<?php?>
-
 <div class="slider wow fadeInDown">
     <div class="slider__item">
         <h1>Классическая одежда для мужчин и&nbsp;женщин</h1>

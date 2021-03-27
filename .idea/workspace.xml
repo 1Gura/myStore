@@ -5,8 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/feedback.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/logic/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/slider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,7 @@
       <workItem from="1616522407251" duration="2846000" />
       <workItem from="1616603244854" duration="5932000" />
       <workItem from="1616702336846" duration="26000" />
-      <workItem from="1616829803693" duration="22026000" />
+      <workItem from="1616829803693" duration="23124000" />
     </task>
     <servers />
   </component>

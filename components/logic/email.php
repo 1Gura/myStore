@@ -42,7 +42,6 @@ class Email
     {
         $this->stringFormation();
         mail("{$this->email}", "{$this->subject}", "{$this->message}");
-
     }
 }
 

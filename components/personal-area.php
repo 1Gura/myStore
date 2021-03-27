@@ -1,6 +1,10 @@
 <?php
 require('./header.php');
 ?>
+<?php
+$email = checkRegularEmail();
+$password = checkRegularPassword();
+?>
 
 <div class="container wow fadeInDown">
     <div class="links">
@@ -9,13 +13,15 @@ require('./header.php');
         <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
     </div>
     <h1 class="title">Вход в кабинет покупателя</h1>
-    <form id='personal-area-form' class="personal-area el-hover">
-        <label for="email">Email</label>
-        <input id="email" placeholder="Введите @email" data-validate-field="email" onkeyup="validationEmail(event)"
-               onkeydown="validationEmail(event)" required maxlength="40" type="text">
-        <label for="password">Пароль</label>
-        <input id="password" placeholder="Введите пароль" data-validate-field="password" type="password" required
-               maxlength="40" type="text">
+    <form method="post" id='personal-area-form' class="personal-area el-hover">
+        <label class="<?= $email ? 'error' : '' ?>"
+               for="email"><?= $email ? 'Формат email: gura.ilya2011@yandex.ru' : 'email' ?></label>
+        <input id="email" name="email" value="<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>"
+               placeholder="Введите @email" maxlength="40" type="text">
+        <label class="<?= $password ? 'error' : '' ?>"
+               for="password"><?= $password ? 'Неккоректный пароль' :'Пароль' ?></label>
+        <input id="password" name="password" value="<?= !empty($_POST['password']) ? $_POST['password'] : '' ?>"
+               placeholder="Введите пароль" type="password" maxlength="40">
         <button type="submit" class="personal-area__btn">
             Войти
         </button>
