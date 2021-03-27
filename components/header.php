@@ -1,8 +1,22 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
-include $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/redirect.php';
 ?>
-
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php
+    include $_SERVER['DOCUMENT_ROOT'] . './components/links.php';
+    ?>
+    <title>Интернет магазин</title>
+</head>
+<body>
 <header class = "header wow fadeInDown">
     <button class="header_btn-menu">
         <span></span>
@@ -17,7 +31,7 @@ include $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
             <li class = "header__item"><a href="../components/about.php">О магазине</a></li>
             <li class = "header__item"><a href="#">Блог</a></li>
             <li class = "header__item"><a href="#">Личный кабинет</a></li>
-            <li class = "header__item"><a href="#">Обратная связь</a></li>
+            <li class = "header__item"><a href="../components/feedback.php">Обратная связь</a></li>
         </ul>
     </nav>
 </header>

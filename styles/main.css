@@ -36,6 +36,10 @@ button {
     outline: none;
 }
 
+textarea {
+    resize: none;
+}
+
 .me {
     color: #C0BABD;
     text-align: center;
@@ -696,8 +700,17 @@ button {
      height: 50px;
      border: 1px solid black;
      font-size: 20px;
-     padding: 10px;
+    padding: 10px;
      width: 100%;
+}
+
+.personal-area  textarea{
+    min-width: 100%;
+    min-height: 150px;
+    height: fit-content;
+    position: relative;
+    padding: 5px;
+    font-size: 18px;
 }
 
 .personal-area button {
@@ -953,6 +966,9 @@ body .background-active {
     background-size: 5%;
     background-position: 98%;
 }
+
+
+
 /*advertising
 Реклама*/
 

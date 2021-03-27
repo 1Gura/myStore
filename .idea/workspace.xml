@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/feedback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/logic/email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/logic/redirect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/mail-approve.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/fileSize.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/fileSize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/catalog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/foot.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/foot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logic/temp/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +43,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\myStore\components" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -60,6 +79,8 @@
       <workItem from="1615195305881" duration="4343000" />
       <workItem from="1616522407251" duration="2846000" />
       <workItem from="1616603244854" duration="5932000" />
+      <workItem from="1616702336846" duration="26000" />
+      <workItem from="1616829803693" duration="13381000" />
     </task>
     <servers />
   </component>

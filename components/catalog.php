@@ -1,5 +1,3 @@
-<?php?>
-
 <div class="store__catalog container wow fadeInDown">
     <h1>Каталог товаров</h1>
     <div class="catalog">

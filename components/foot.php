@@ -1,5 +1,3 @@
-<?php?>
-
 <footer class="footer wow fadeInDown">
     <div class="container">
         <ul class="footer__main-list">
@@ -54,3 +52,8 @@
         <div class="me">Сайт сделан Гура Ильёй Сергеевичем</div>
     </div>
 </footer>
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . './components/scripts.php';
+?>
+</body>
+</html>
