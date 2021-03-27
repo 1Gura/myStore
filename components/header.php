@@ -3,6 +3,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/redirect.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/titleChange.php';
 ?>
 <!doctype html>
 <html lang="ru">
@@ -14,29 +15,33 @@ include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/redirect.php';
     <?php
     include $_SERVER['DOCUMENT_ROOT'] . './components/links.php';
     ?>
-    <title>Интернет магазин</title>
+    <title>
+        <?=
+        titleChange()
+        ?>
+    </title>
 </head>
 <body>
-<header class = "header wow fadeInDown">
+<header class="header wow fadeInDown">
     <button class="header_btn-menu">
         <span></span>
         <span></span>
         <span></span>
     </button>
-    <nav class = "header__nav container">
-        <ul class = "header__menu">
-            <li class = "header__item"><a href="../components/collection.php">Каталог</a></li>
-            <li class = "header__item"><a href="#">Оплата</a></li>
-            <li class = "header__item"><a href="#">Доставка</a></li>
-            <li class = "header__item"><a href="../components/about.php">О магазине</a></li>
-            <li class = "header__item"><a href="#">Блог</a></li>
-            <li class = "header__item"><a href="#">Личный кабинет</a></li>
-            <li class = "header__item"><a href="../components/feedback.php">Обратная связь</a></li>
+    <nav class="header__nav container">
+        <ul class="header__menu">
+            <li class="header__item"><a href="../components/collection.php">Каталог</a></li>
+            <li class="header__item"><a href="#">Оплата</a></li>
+            <li class="header__item"><a href="#">Доставка</a></li>
+            <li class="header__item"><a href="../components/about.php">О магазине</a></li>
+            <li class="header__item"><a href="#">Блог</a></li>
+            <li class="header__item"><a href="#">Личный кабинет</a></li>
+            <li class="header__item"><a href="../components/feedback.php">Обратная связь</a></li>
         </ul>
     </nav>
 </header>
 <?php
-    include_once __DIR__ . './drop-down-menu.php';
+include_once __DIR__ . './drop-down-menu.php';
 ?>
 <div class="up-menu container wow fadeInDown">
     <div class="info">
@@ -81,7 +86,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/redirect.php';
     </div>
     <div class="info__line"></div>
 </div>
-
 <div class="products container wow fadeInDown">
     <ul class="products__product-list item__flex el-hover">
         <li class="products__item"><a href="#">Свитшоты</a></li>
