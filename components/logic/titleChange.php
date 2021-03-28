@@ -11,10 +11,9 @@ function titleChange(): string
         return 'Каталог';
     } else if (stripos($_SERVER['REQUEST_URI'], 'feedback')) {
         return 'Обратная связь';
-    }else if (stripos($_SERVER['REQUEST_URI'], 'about')) {
-    return 'О нас';
-}
-    else {
+    } else if (stripos($_SERVER['REQUEST_URI'], 'about')) {
+        return 'О нас';
+    } else {
         return 'Интернет магазин';
     }
 
