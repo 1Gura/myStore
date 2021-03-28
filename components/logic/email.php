@@ -40,8 +40,10 @@ class Email
 
     public function submit()
     {
+        $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/plain; charset=utf-8\r\n";
+        $this->subject = "=?utf-8?B?".base64_encode($this->subject)."?=";
         $this->stringFormation();
-        mail("{$this->email}", "{$this->subject}", "{$this->message}");
+        mail("{$this->email}", "{$this->subject}", "{$this->message}","{$headers}");
     }
 }
 

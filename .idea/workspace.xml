@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/collection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/feedback.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/logic/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/fileSize.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/fileSize.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1oyxrxVvVCxfNgotfAQX6RRbMQ6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,7 +78,8 @@
       <workItem from="1616603244854" duration="5932000" />
       <workItem from="1616702336846" duration="26000" />
       <workItem from="1616829803693" duration="25733000" />
-      <workItem from="1616908570148" duration="3608000" />
+      <workItem from="1616908570148" duration="3623000" />
+      <workItem from="1616956689140" duration="896000" />
     </task>
     <servers />
   </component>
