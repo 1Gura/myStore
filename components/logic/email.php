@@ -24,8 +24,8 @@ class Email
 
     public function stringFormation()
     {
-        $this->message =
-            "Пользователь:{$this->surname} {$this->name}
+        $this->message = "
+            Пользователь:{$this->surname} {$this->name}
             Номер телефона: {$this->phone}
             Почта отправителя: {$this->email}
             Сообщение:

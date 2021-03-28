@@ -2,7 +2,6 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/redirect.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/titleChange.php';
 ?>
 <!doctype html>

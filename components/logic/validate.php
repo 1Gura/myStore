@@ -93,4 +93,3 @@ function success(): bool
 }
 
 
-?>

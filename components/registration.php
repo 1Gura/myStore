@@ -54,5 +54,4 @@ $password2 = comparisonOfPasswords();
 <?php
 require('./foot.php');
 ?>
-</body>
-</html>
+
