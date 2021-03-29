@@ -2,25 +2,16 @@
 require('./header.php');
 ?>
 <?php
-if (!empty($_POST)) {
-    $name = checkRegularName();
-    $surname = checkRegularSurName();
-    $phone = checkRegularPhone();
-    $email = checkRegularEmail();
-    $subject = checkSubject();
-    $message = checkTextBox();
-    $flagSuccess = false;
-    if (!$name && !$surname && !$phone && !$email && !$subject && !$message) {
-        $mail = new Email($_POST['name'], $_POST['surname'], $_POST['phone'], $_POST['email'], $_POST['subject'], $_POST['message']);
-        $mail->submit();
-        $flagSuccess = success();
-    } else {
-        $flagSuccess = false;
-    }
 
+if(!empty($_POST)) {
+       if(!empty ($_POST["OK"])) {
+              header("Location: http://{$_SERVER['DOCUMENT_ROOT']}/components/index.php");
+              exit;
+       }
 }
 ?>
 <h1 class="title">Форма обратной связи</h1>
+
 <?php
 if ($flagSuccess) { ?>
     <div class="form-success">Форма успешно отправлена!</div>

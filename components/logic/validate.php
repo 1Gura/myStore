@@ -34,7 +34,7 @@ function checkRegularPhone(): bool
 function checkRegularEmail(): bool
 {
     if (!empty($_POST)) {
-        if (!preg_match('/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $_POST['email'])) {
+        if (!preg_match('/^[a-z]([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $_POST['email'])) {
             return true;
         }
     }

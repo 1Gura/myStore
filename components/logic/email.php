@@ -2,13 +2,13 @@
 
 class Email
 {
-    public string $name;
-    public string $surname;
-    public string $phone;
-    public string $email;
-    public string $subject;
-    public string $message;
-    public string $feed;
+    private string $name;
+    private string $surname;
+    private string $phone;
+    private string $email;
+    private string $subject;
+    private string $message;
+    private string $feed;
 
 
     public function __construct($name = '', $surname = '', $phone = '', $email = '', $subject = '', $message = '', $feed = '')
@@ -25,11 +25,14 @@ class Email
     public function stringFormation()
     {
         $this->message = "
-            Пользователь:{$this->surname} {$this->name}
-            Номер телефона: {$this->phone}
-            Почта отправителя: {$this->email}
-            Сообщение:
-            {$this->message}
+        <p>
+        Пользователь:{$this->surname} {$this->name} <br/>
+        Номер телефона: {$this->phone}<br/>
+        Почта отправителя: {$this->email}<br/>
+        </p>
+        <p>Сообщение:
+        {$this->message}
+        </p>    
         ";
     }
 
@@ -40,11 +43,33 @@ class Email
 
     public function submit()
     {
-        $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/plain; charset=utf-8\r\n";
+        $forman = "Название:значение\r\n";
+        $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/html; charset=utf-8\r\n";
         $this->subject = "=?utf-8?B?".base64_encode($this->subject)."?=";
         $this->stringFormation();
         mail("{$this->email}", "{$this->subject}", "{$this->message}","{$headers}");
+
+        header("Location: http://{$_SERVER['HTTP_HOST']}/index.php?ok=ok");
+        exit;
     }
+}
+
+if (!empty($_POST)) {
+    $name = checkRegularName();
+    $surname = checkRegularSurName();
+    $phone = checkRegularPhone();
+    $email = checkRegularEmail();
+    $subject = checkSubject();
+    $message = checkTextBox();
+    $flagSuccess = false;
+    if (!$name && !$surname && !$phone && !$email && !$subject && !$message) {
+        $mail = new Email($_POST['name'], $_POST['surname'], $_POST['phone'], $_POST['email'], $_POST['subject'], $_POST['message']);
+        $mail->submit();
+        $flagSuccess = success();
+    } else {
+        $flagSuccess = false;
+    }
+
 }
 
 ?>
