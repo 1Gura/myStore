@@ -36,23 +36,19 @@ class Email
         ";
     }
 
-    public function out()
-    {
-        return serialize($this);
-    }
-
     public function submit()
     {
         $forman = "Название:значение\r\n";
         $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/html; charset=utf-8\r\n";
-        $this->subject = "=?utf-8?B?".base64_encode($this->subject)."?=";
+        $this->subject = "=?utf-8?B?" . base64_encode($this->subject) . "?=";
         $this->stringFormation();
-        mail("{$this->email}", "{$this->subject}", "{$this->message}","{$headers}");
+        mail("{$this->email}", "{$this->subject}", "{$this->message}", "{$headers}");
 
-        header("Location: http://{$_SERVER['HTTP_HOST']}/index.php?ok=ok");
+        header("Location: http://{$_SERVER['HTTP_HOST']}/components/feedback.php?ok=ok");
         exit;
     }
 }
+
 
 if (!empty($_POST)) {
     $name = checkRegularName();
@@ -69,7 +65,6 @@ if (!empty($_POST)) {
     } else {
         $flagSuccess = false;
     }
-
 }
 
 ?>

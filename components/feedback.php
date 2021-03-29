@@ -1,22 +1,15 @@
 <?php
 require('./header.php');
 ?>
-<?php
 
-if(!empty($_POST)) {
-       if(!empty ($_POST["OK"])) {
-              header("Location: http://{$_SERVER['DOCUMENT_ROOT']}/components/index.php");
-              exit;
-       }
-}
-?>
 <h1 class="title">Форма обратной связи</h1>
 
 <?php
-if ($flagSuccess) { ?>
+if (!empty($_GET)) {
+    if($_GET['ok']==="ok") {?>
     <div class="form-success">Форма успешно отправлена!</div>
     <?php
-}
+}}
 ?>
 <form id='personal-area-form' action="./feedback.php" method="post" class="personal-area el-hover">
     <label class="<?= $name ? 'error' : '' ?>" for="name"><?= $name ? "Только символы кириллицы!" : 'Имя' ?></label>
