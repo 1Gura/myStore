@@ -12,12 +12,12 @@ const advertising = document.querySelector('.advertising');
 const dateTime = document.querySelector('.date-time');
 const personalAreaBtn = document.querySelector('.personal-area__btn');
 
-/*Реклама*/
-const appearanceAdvertising = () => {
-    setTimeout(() => {
-        advertising.classList.remove('display-none')
-    }, 3000)
-}
+// /*Реклама*/
+// const appearanceAdvertising = () => {
+//     setTimeout(() => {
+//         advertising.classList.remove('display-none')
+//     }, 3000)
+// }
 
 interval();
 
