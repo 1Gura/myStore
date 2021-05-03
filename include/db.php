@@ -19,9 +19,9 @@ function getAllSlidePost()
     if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
     $mysql->set_charset('utf-8');
     $result = $mysql->query("
-    select name, img_path
+    select *
     from content
-    Where (content.id_clothes is null or id_clothes = '')");
+    where Id>0 and Id<6");
     $mysql->close();
     return $result;
 }
@@ -49,6 +49,42 @@ function getNews()
     from content
     where name = 'Совет1'
     or name = 'Совет2'");
+    $mysql->close();
+    return $result;
+}
+
+function getIcons() {
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+    select *
+    from content
+    where name like 'Иконка'");
+    $mysql->close();
+    return $result;
+}
+
+function getIconSocial() {
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+    select *
+    from content
+    where name = 'icon-social-network'");
+    $mysql->close();
+    return $result;
+}
+
+function getSocial() {
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+    select *
+    from  content
+    where name ='social'");
     $mysql->close();
     return $result;
 }

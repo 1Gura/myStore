@@ -19,33 +19,17 @@ require('./header.php');
     <div class="title">Наши преимущества</div>
     <div class="about display-flex-center">
         <ul class="about__list">
-            <li class="about__item display-flex-center">
-                <p class="display-flex-center">
-                    <img src="https://static-sl.insales.ru/files/1/2649/12323417/original/Group_190.png" alt="">
-                    <span>ЛУЧШЕЕ КАЧЕСТВО</span>
-                </p>
-            </li>
-
-            <li class="about__item display-flex-center">
-                <p class="display-flex-center">
-                    <img src="https://static-sl.insales.ru/files/1/2651/12323419/original/Group_189.png" alt="">
-                    <span>БЕСПЛАТНАЯ ДОСТАВКА</span>
-                </p>
-            </li>
-
-            <li class="about__item display-flex-center">
-                <p class="display-flex-center">
-                    <img src="https://static-sl.insales.ru/files/1/2649/12323417/original/Group_190.png" alt="">
-                    <span>НАТУРАЛЬНЫЕ ТКАНИ</span>
-                </p>
-            </li>
-
-            <li class="about__item display-flex-center">
-                <p class="display-flex-center">
-                    <img src="https://static-sl.insales.ru/files/1/2651/12323419/original/Group_189.png" alt="">
-                    <span>НАКОПИТЕЛЬНАЯ СИСТЕМА БОНУСОВ</span>
-                </p>
-            </li>
+            <?php
+            $result = getIcons();
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <li class="about__item display-flex-center">
+                    <p class="display-flex-center">
+                        <img src="<?= $row['img_path'] ?>" alt="">
+                    <p><?= $row['paragraph'] ?></p>
+                    </p>
+                </li>
+            <?php } ?>
         </ul>
     </div>
     <div class="file-size">
@@ -57,7 +41,7 @@ require('./header.php');
         </form>
         <div>
             <span>Результат: </span>
-            <?= !empty($_GET) ? getRes($_GET['path'])  : '' ?>
+            <?= !empty($_GET) ? getRes($_GET['path']) : '' ?>
         </div>
 
     </div>

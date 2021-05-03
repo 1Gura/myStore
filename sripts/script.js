@@ -21,16 +21,16 @@ const personalAreaBtn = document.querySelector('.personal-area__btn');
 
 interval();
 
-const advertisingBtn = document.querySelector('.advertising__btn');
-
-if (advertisingBtn) {
-    advertisingBtn.addEventListener('click', () => {
-        advertising.remove();
-    })
-}
-if (advertising) {
-    appearanceAdvertising();
-}
+// const advertisingBtn = document.querySelector('.advertising__btn');
+//
+// if (advertisingBtn) {
+//     advertisingBtn.addEventListener('click', () => {
+//         advertising.remove();
+//     })
+// }
+// if (advertising) {
+//     appearanceAdvertising();
+// }
 
 /*Реклама*/
 
@@ -210,103 +210,103 @@ const im = new Inputmask('+7 (999) 999 99 99');
 im.mask(selector);
 /*Маска для телефона*/
 
-// Валидация email
+//Валидация email
 
-// const validationEmail = (event) => {
-//     const target = event.target;
-//     const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-//     validation(target, pattern);
-// }
-//
-// const validationPassword = (event) => {
-//     const target = event.target;
-//     const pattern = /[0-9a-zA-Z!@#$%^&*]{6,}/;
-//     validation(target, pattern);
-// }
-//
-// const comparisonPasswords = (ev) => {
-//     const pas1 = document.querySelector('#password');
-//     const pas2 = document.querySelector('#password2');
-//     if (pas1 && pas2) {
-//         if (pas1.value !== pas2.value) {
-//             ev.preventDefault();
-//             alert('Пароли не совпадают!')
-//             return false;
-//         } else {
-//             return true;
-//         }
-//     }
-// }
-//
-// personalAreaBtn.addEventListener('click', comparisonPasswords);
-//
-// const validationName = (event) => {
-//     const target = event.target;
-//     const patternName = /^[a-zа-яA-ZА-Я0-9_-]{3,16}$/;
-//     validation(target, patternName);
-// }
-//
-// const validationTel = (event) => {
-//     const target = event.target;
-//     const patternName = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-//     validation(target, patternName);
-// }
-//
-// const validation = (target, pattern = '') => {
-//     if (target.value.match(pattern)) {
-//         target.classList.add('valid');
-//         target.classList.remove('invalid');
-//     } else {
-//         target.classList.remove('valid');
-//         target.classList.add('invalid');
-//     }
-// }
-//
+const validationEmail = (event) => {
+    const target = event.target;
+    const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    validation(target, pattern);
+}
 
-//
-// /*Обработка отправки*/
-// const personalArea = document.querySelectorAll('#personal-area-form');
-// if (personalArea) {
-//     let validateForms = (selector, rules) => {
-//         new window.JustValidate(selector, {
-//             rules: rules,
-//         })
-//     }
-//
-//     validateForms('#personal-area-form',
-//         {
-//             email: {
-//                 required: true,
-//                 email: true
-//             },
-//             tel: {
-//                 required: true,
-//                 strength: {
-//                     custom: '^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$'
-//                 }
-//             },
-//             name: {
-//                 required: true,
-//                 minLength: 3
-//             },
-//             surname: {
-//                 required: true,
-//                 minLength: 3
-//             },
-//             password: {
-//                 required: true,
-//                 minLength: 6
-//             },
-//             repeatPassword: {
-//                 required: true,
-//                 minLength: 6
-//             }
-//         },
-//         '.thanks-popup',
-//         'send goal'
-//     );
-// }
-// /*Обработка отправки*/
+const validationPassword = (event) => {
+    const target = event.target;
+    const pattern = /[0-9a-zA-Z!@#$%^&*]{6,}/;
+    validation(target, pattern);
+}
+
+const comparisonPasswords = (ev) => {
+    const pas1 = document.querySelector('#password');
+    const pas2 = document.querySelector('#password2');
+    if (pas1 && pas2) {
+        if (pas1.value !== pas2.value) {
+            ev.preventDefault();
+            alert('Пароли не совпадают!')
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+personalAreaBtn.addEventListener('click', comparisonPasswords);
+
+const validationName = (event) => {
+    const target = event.target;
+    const patternName = /^[a-zа-яA-ZА-Я0-9_-]{3,16}$/;
+    validation(target, patternName);
+}
+
+const validationTel = (event) => {
+    const target = event.target;
+    const patternName = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    validation(target, patternName);
+}
+
+const validation = (target, pattern = '') => {
+    if (target.value.match(pattern)) {
+        target.classList.add('valid');
+        target.classList.remove('invalid');
+    } else {
+        target.classList.remove('valid');
+        target.classList.add('invalid');
+    }
+}
+
+
+
+/*Обработка отправки*/
+const personalArea = document.querySelectorAll('#personal-area-form');
+if (personalArea) {
+    let validateForms = (selector, rules) => {
+        new window.JustValidate(selector, {
+            rules: rules,
+        })
+    }
+
+    validateForms('#personal-area-form',
+        {
+            email: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true,
+                strength: {
+                    custom: '^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$'
+                }
+            },
+            name: {
+                required: true,
+                minLength: 3
+            },
+            surname: {
+                required: true,
+                minLength: 3
+            },
+            password: {
+                required: true,
+                minLength: 6
+            },
+            repeatPassword: {
+                required: true,
+                minLength: 6
+            }
+        },
+        '.thanks-popup',
+        'send goal'
+    );
+}
+/*Обработка отправки*/
 
 /*Дата, интервал*/
 

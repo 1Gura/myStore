@@ -11,96 +11,21 @@ require('./table.php');
         <span class="link"><a href="collection.php">Каталог</a></span>
     </div>
     <ul class="collection__list">
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки синие</p>
-                    <p>2550.00 руб</p>
-                    <a href="#">В корзину</a>
+        <?php
+        $result = getAllCatalog();
+        while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <li class="collection__item">
+                <div class="collection__info">
+                    <div class="collection__container">
+                        <p><?= $row['name'] ?></p>
+                        <p><?= $row['price'] ?></p>
+                        <a href="#">В корзину</a>
+                    </div>
                 </div>
-            </div>
-            <img src="../img/photo1.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки серые</p>
-                    <p>2380.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo2.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки чёрные</p>
-                    <p>3790.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo3.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Кроссовки белые</p>
-                    <p>3820.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo4.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Кроссовки красные</p>
-                    <p>2960.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo5.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Кроссовки серые</p>
-                    <p>2990.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo6.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки синие</p>
-                    <p>2550.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo1.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки серые</p>
-                    <p>2380.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo2.jpg" alt="">
-        </li>
-        <li class="collection__item">
-            <div class="collection__info">
-                <div class="collection__container">
-                    <p>Брюки чёрные</p>
-                    <p>2380.00 руб</p>
-                    <a href="#">В корзину</a>
-                </div>
-            </div>
-            <img src="../img/photo3.jpg" alt="">
-        </li>
+                <img src="<?= $row['img_path'] ?>" alt="">
+            </li>
+        <?php } ?>
     </ul>
 </div>
 

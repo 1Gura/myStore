@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -20,7 +21,7 @@ h2, h3 {
 
 ul {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 button {
@@ -48,18 +49,18 @@ textarea {
 
 /*Кастомное подчёркивание*/
 
-.el-hover a{
+.el-hover a {
     position: relative;
     color: black; /*задаём цвет ссылки*/
     cursor: pointer;
     line-height: 1; /*задаём высоту строки*/
 }
 
-.el-hover a:after{
+.el-hover a:after {
     display: block;
     position: absolute;
     left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    width: 0;/*задаём длинну линии до наведения курсора*/
+    width: 0; /*задаём длинну линии до наведения курсора*/
     height: 2px; /*задаём ширину линии*/
     background-color: #95C5F6; /*задаём цвет линии*/
     content: "";
@@ -104,27 +105,27 @@ textarea {
     align-items: center;
 }
 
- .header__item a{
+.header__item a {
     color: #FFFFFF;
-     font-size: 18px;
+    font-size: 18px;
 }
 
- .header_btn-menu {
-     width: 50px;
-     height: 50px;
-     background-color: black;
-     z-index: 3;
-     position: absolute;
-     margin: 10px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-evenly;
-     transition: all .3s ease-in-out;
-     border-radius: 10px;
- }
+.header_btn-menu {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    z-index: 3;
+    position: absolute;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+}
 
-.header_btn-menu span{
+.header_btn-menu span {
     background-color: white;
     width: 30px;
     height: 5px;
@@ -140,56 +141,64 @@ textarea {
 }
 
 
- /*верхнее меню*/
+/*верхнее меню*/
 
- .info {
-     width: 100%;
-     height: 130px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     position: relative;
+.info {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 
- }
-
-.info__line {
-     height: 1px;
-     margin: 0 auto;
-     border-bottom: 1px solid black;
-     opacity: 0.4;
- }
-
- .item__flex {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     position: relative;
- }
-
- .info__left-side {
-     width: 380px;
- }
-
- .info__telephone {
-     display: flex;
-     align-items: center;
- }
-
-.info__telephone img{
-   width: 20px;
 }
 
- .info__search {
+.info__line {
+    height: 1px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    opacity: 0.4;
+}
+
+.item__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.info__left-side {
+    width: 380px;
+}
+
+.info__telephone {
+    display: flex;
+    align-items: center;
+}
+
+.info__telephone img {
+    width: 20px;
+}
+
+.info__search {
     display: flex;
     align-items: center;
     position: relative;
- }
+}
 
-.info__search input{
+.info__search input {
     padding: 5px;
 }
 
-.info__search button{
+.info__search button {
     width: 20px;
     position: absolute;
     left: 86%;
@@ -198,15 +207,15 @@ textarea {
     cursor: pointer;
 }
 
-.info__search img{
+.info__search img {
     width: 100%;
 }
 
- .info .info__img {
-     width: 180px;
- }
+.info .info__img {
+    width: 180px;
+}
 
-.info .info__img img{
+.info .info__img img {
     width: 100%;
 }
 
@@ -215,11 +224,11 @@ textarea {
     position: relative;
 }
 
-.info__account a{
+.info__account a {
     font-size: 14px;
 }
 
-.info__account img{
+.info__account img {
     width: 30px;
 }
 
@@ -234,7 +243,7 @@ textarea {
 
 }
 
-.info .info__basket img{
+.info .info__basket img {
     width: 30px;
 }
 
@@ -262,18 +271,18 @@ textarea {
     cursor: pointer;
 }
 
-.slider .slider__item h1{
+.slider .slider__item h1 {
     text-align: center;
     font-size: 40px;
     color: #FFFFFF;
     position: absolute;
     z-index: 11;
-    top:40%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.slider .slider__item a{
+.slider .slider__item a {
     background-color: #FAFAFA;
     text-align: center;
     font-size: 20px;
@@ -282,19 +291,19 @@ textarea {
     border-radius: 5%;
     position: absolute;
     z-index: 21;
-    top:55%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
 }
 
-.slider .slider__item a:hover{
+.slider .slider__item a:hover {
     opacity: 1;
 }
 
 
-.slider .slider__item img{
+.slider .slider__item img {
     width: 100%;
 
     filter: brightness(60%);
@@ -302,9 +311,9 @@ textarea {
 
 .slider .slick-arrow {
     position: absolute;
-    top:50%;
+    top: 50%;
     margin: -50px 0 0 0;
-    z-index:10;
+    z-index: 10;
     font-size: 0;
     width: 50px;
     height: 50px;
@@ -314,7 +323,7 @@ textarea {
     transition: all 0.3s ease-out;
 }
 
-.slider .slick-arrow:hover{
+.slider .slick-arrow:hover {
     opacity: 1;
 }
 
@@ -332,13 +341,15 @@ textarea {
     overflow: hidden;
     height: 100%;
 }
+
 /* Лента слайдов */
-.slick-track{
+.slick-track {
     display: flex;
     align-items: flex-start;
     height: 100%;
 }
-.slider .slick-dots{
+
+.slider .slick-dots {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -348,27 +359,31 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
 }
-.slider .slick-dots li{
+
+.slider .slick-dots li {
     list-style: none;
     margin: 0 10px;
 
 }
 
-.slider .slick-dots li.slick-active button{
+.slider .slick-dots li.slick-active button {
     background: #95C5F6;
     border: 1px solid #95C5F6;
 }
+
 /* Элемент точки */
-.slider .slick-dots li button{
+.slider .slick-dots li button {
     font-size: 0;
-    width:15px;
+    width: 15px;
     height: 15px;
     color: #FFFFFF;
     border-radius: 50%;
     border: none;
 }
+
 /* Активная точка */
-.slick-dots li.slick-active{}
+.slick-dots li.slick-active {
+}
 
 
 /*Стили для каталога*/
@@ -377,15 +392,17 @@ textarea {
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
 .store__catalog h1 {
     text-align: center;
 }
+
 .catalog {
     position: relative;
     height: 300px;
 }
 
-.store__catalog h1   {
+.store__catalog h1 {
     margin-bottom: 30px;
 }
 
@@ -396,26 +413,26 @@ textarea {
     text-align: center;
 }
 
-.catalog .slider__item img{
-    width:245px;
+.catalog .slider__item img {
+    width: 245px;
     height: 200px;
     object-fit: cover;
 }
 
-.catalog .slider__item a:hover{
+.catalog .slider__item a:hover {
     opacity: 1;
 }
 
 
-.catalog .slider__item img{
+.catalog .slider__item img {
     object-fit: cover;
 }
 
 .catalog .slick-arrow {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
-    z-index:10;
+    z-index: 10;
     font-size: 0;
     width: 20px;
     height: 35px;
@@ -425,7 +442,7 @@ textarea {
     transition: all 0.3s ease-out;
 }
 
-.catalog .slick-arrow:hover{
+.catalog .slick-arrow:hover {
     opacity: 1;
 }
 
@@ -447,15 +464,17 @@ textarea {
     overflow: hidden;
     height: 100%;
 }
+
 /* Лента слайдов */
-.slick-track{
+.slick-track {
     display: flex;
     align-items: center;
     height: 100%;
 }
+
 /* Слайд */
 
-.catalog .slick-dots{
+.catalog .slick-dots {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -465,27 +484,31 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
 }
-.catalog .slick-dots li{
+
+.catalog .slick-dots li {
     list-style: none;
     margin: 0 10px;
 
 }
 
-.catalog .slick-dots li.slick-active button{
+.catalog .slick-dots li.slick-active button {
     background: #95C5F6;
     border: 1px solid #95C5F6;
 }
+
 /* Элемент точки */
-.catalog .slick-dots li button{
+.catalog .slick-dots li button {
     font-size: 0;
-    width:15px;
+    width: 15px;
     height: 15px;
     color: #FFFFFF;
     border-radius: 50%;
     border: none;
 }
+
 /* Активная точка */
-.slick-dots li.slick-active{}
+.slick-dots li.slick-active {
+}
 
 
 /*footer*/
@@ -497,6 +520,7 @@ textarea {
     padding-top: 20px;
     background-color: #FAFAFA;
 }
+
 .footer .footer__main-list {
     display: flex;
     justify-content: space-between;
@@ -516,23 +540,24 @@ textarea {
     width: 100%;
     text-align: center;
 }
+
 .footer .footer__main-list .footer__list .social-network {
     width: 60px;
 }
 
-.footer .footer__main-list .footer__list li a{
+.footer .footer__main-list .footer__list li a {
     text-align: center;
 }
 
-.footer .footer__main-list .footer__list li a img{
+.footer .footer__main-list .footer__list li a img {
     width: 100%;
 }
 
-.footer .footer__main-list .footer__list .footer__item-list{
+.footer .footer__main-list .footer__list .footer__item-list {
     padding: 10px;
 }
 
-.footer .footer__main-list .footer__list .footer__item-list >img{
+.footer .footer__main-list .footer__list .footer__item-list > img {
     width: 25px;
     padding-right: 5px;
 }
@@ -545,18 +570,18 @@ textarea {
 }
 
 
-.footer__info-store li{
+.footer__info-store li {
     position: relative;
     width: 170px;
     padding: 0 20px 0 20px;
 }
 
-.footer__info-store li a{
+.footer__info-store li a {
     font-size: 18px;
     font-weight: bold;
 }
 
-.footer__info-store li a img{
+.footer__info-store li a img {
     width: 100%;
 }
 
@@ -568,7 +593,7 @@ textarea {
     padding: 30px;
 }
 
-.news h1{
+.news h1 {
     text-align: center;
     padding-bottom: 20px;
 }
@@ -576,13 +601,13 @@ textarea {
 .news .news__block1 {
 }
 
-.news >* p {
+.news > * p {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.news img{
+.news img {
     padding: 10px;
 }
 
@@ -598,6 +623,7 @@ textarea {
 .links * {
     padding: 0 5px;
 }
+
 .links img {
 
     width: 30px;
@@ -614,20 +640,20 @@ textarea {
     background-color: #FAFAFA;
 }
 
-.collection .collection__list .collection__item{
+.collection .collection__list .collection__item {
     position: relative;
     width: 22%;
     height: 10%;
     margin: 10px;
 }
 
-.collection .collection__list .collection__item .collection__info{
+.collection .collection__list .collection__item .collection__info {
     transition: all 0.3s ease-in-out;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity:0;
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -640,11 +666,11 @@ textarea {
     align-items: center;
 }
 
-.collection .collection__list .collection__item .collection__info .collection__container *{
+.collection .collection__list .collection__item .collection__info .collection__container * {
     padding: 10px;
 }
 
-.collection .collection__list .collection__item .collection__info a{
+.collection .collection__list .collection__item .collection__info a {
     background-color: #95C5F6;
     border-radius: 10px;
     width: 100px;
@@ -654,17 +680,16 @@ textarea {
     transition: all 0.3s ease-in-out;
 }
 
-.collection .collection__list .collection__item .collection__info a:hover{
-    background-color:#3E65D2;
+.collection .collection__list .collection__item .collection__info a:hover {
+    background-color: #3E65D2;
 }
 
 
-
-.collection .collection__list .collection__item .collection__info:hover{
+.collection .collection__list .collection__item .collection__info:hover {
     opacity: 0.9;
 }
 
-.collection .collection__list .collection__item img{
+.collection .collection__list .collection__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -675,7 +700,7 @@ textarea {
 .personal-area {
     width: 550px;
     height: fit-content;
-    padding:20px;
+    padding: 20px;
     margin: 50px auto;
     background-color: #FFFFFF;
     border: 1px solid #E6E9EA;
@@ -696,14 +721,14 @@ textarea {
 
 .personal-area input {
     position: relative;
-     height: 50px;
-     border: 1px solid black;
-     font-size: 20px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 20px;
     padding: 10px;
-     width: 100%;
+    width: 100%;
 }
 
-.personal-area  textarea{
+.personal-area textarea {
     min-width: 100%;
     min-height: 150px;
     height: fit-content;
@@ -750,15 +775,20 @@ textarea {
     padding: 20px;
 }
 
-.about .about__list .about__item{
+.about .about__list .about__item {
     width: 260px;
     height: 190px;
     background-color: #FFFFFF;
     font-weight: bold;
 }
 
-.about .about__list .about__item p *{
+.about .about__list .about__item p * {
     padding: 10px;
+}
+
+.about .about__list .about__item img {
+    width: 70px;
+    height: 70px;
 }
 
 .intro {
@@ -785,7 +815,7 @@ textarea {
 
 /*Таблица*/
 
- .table-size {
+.table-size {
     width: 100%;
     height: 54px;
     background-color: white;
@@ -795,25 +825,25 @@ textarea {
     position: absolute;
 }
 
- .table-size * {
-     height: 30px;
- }
+.table-size * {
+    height: 30px;
+}
 
 
- .tr__head {
-     display: flex;
- }
+.tr__head {
+    display: flex;
+}
 
- .table__tr >*{
-     text-align: center;
- }
+.table__tr > * {
+    text-align: center;
+}
 
- .table-size__table__td:hover {
-     color: white;
-     background-color: black;
- }
+.table-size__table__td:hover {
+    color: white;
+    background-color: black;
+}
 
-.table-size tbody{
+.table-size tbody {
     width: 100%;
 }
 
@@ -869,7 +899,7 @@ textarea {
     transition: all .3s ease-in-out;
 }
 
-.drop-down-menu > *{
+.drop-down-menu > * {
     padding-top: 20px;
 }
 
@@ -892,7 +922,7 @@ textarea {
     font-weight: bold;
 }
 
-.drop-down-menu .drop-down-menu__list li{
+.drop-down-menu .drop-down-menu__list li {
     width: 100%;
     height: 50px;
     line-height: 50px;
@@ -905,7 +935,7 @@ textarea {
     padding: 0 10px 10px 10px;
 }
 
-.drop-down-menu__container img{
+.drop-down-menu__container img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -916,21 +946,21 @@ body .drop-active {
 }
 
 body .background-active {
- display: block;
+    display: block;
 }
 
-.drop-down-menu .drop-down-menu__main-content{
+.drop-down-menu .drop-down-menu__main-content {
     display: flex;
     justify-content: space-around;
     position: relative;
     width: 0;
     height: 100%;
     background-color: white;
-    border-left:1px solid black;
+    border-left: 1px solid black;
     transition: all .3s ease-in-out;
 }
 
-.drop-down-menu__active{
+.drop-down-menu__active {
     width: 50%;
 }
 
@@ -938,7 +968,7 @@ body .background-active {
     background-color: #95C5F6;
 }
 
-.active-link a{
+.active-link a {
     color: white;
 }
 
@@ -949,7 +979,7 @@ body .background-active {
     background-size: 100%;
     background-image: url("../img/close.png");
     background-repeat: no-repeat;
-    background-color:transparent;
+    background-color: transparent;
     z-index: 999;
     margin: 5px;
 }
@@ -965,7 +995,6 @@ body .background-active {
     background-size: 5%;
     background-position: 98%;
 }
-
 
 
 /*advertising
@@ -991,7 +1020,7 @@ body .background-active {
 
 }
 
-.advertising .advertising__content h2{
+.advertising .advertising__content h2 {
     position: absolute;
     color: white;
     left: 35px;
@@ -999,7 +1028,7 @@ body .background-active {
     transform: rotate(-30deg);
 }
 
-.advertising .advertising__content img{
+.advertising .advertising__content img {
     width: 100%;
     height: 100%;
 }
@@ -1028,7 +1057,7 @@ body .background-active {
     color: red;
 }
 
-.file-size input[type="text"]{
+.file-size input[type="text"] {
     width: 300px;
 }
 

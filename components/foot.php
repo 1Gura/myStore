@@ -17,24 +17,27 @@
                 <li class="footer__item-list"><a href="#">Акции</a></li>
             </ul>
             <ul class="footer__list">
-                <li class="footer__item-list social-network">
-                    <a href="https://vk.com/i_gura" target="_blank"><img src="../img/vk.png" alt=""></a>
-                </li>
-                <li class="footer__item-list social-network">
-                    <a href="https://www.instagram.com/i._gura/?hl=ru" target="_blank"><img src="../img/inst.png" alt=""></a>
-                </li>
-                <address class="footer__item-list item__flex">
-                    <img src="../img/phone.png" alt="">
-                    <span>
-                        <a href="tel:+79511575115">+7(999)123-11-22</a>
-                    </span>
-                </address>
-                <address class="footer__item-list item__flex">
-                    <img src="../img/mail.png" alt="">
-                    <span>
-                        <a href="mailto:gura.ilya2011@yandex.ru">gura.ilya2011@yandex.ru</a>
-                    </span>
-                </address>
+                <?php
+                $result = getIconSocial();
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <li class="footer__item-list social-network">
+                        <a href="<?= $row['link'] ?>" target="_blank"><img src="<?= $row['img_path'] ?>" alt=""></a>
+                    </li>
+                <?php } ?>
+                <?php
+                $result = getSocial();
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <li class="footer__item-list social-container">
+                        <address class="footer__item-list item__flex">
+                            <img src="<?= $row['img_path'] ?>" alt="">
+                            <span>
+                                <a href="<?= $row['link'] ?>"><?= $row['paragraph'] ?></a>
+                            </span>
+                        </address>
+                    </li>
+                <?php } ?>
             </ul>
         </ul>
         <div class="info__line"></div>
