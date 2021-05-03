@@ -39,7 +39,6 @@ function checkRegularEmail(): bool
         }
     }
     return false;
-
 }
 
 function checkRegularPassword(): bool
