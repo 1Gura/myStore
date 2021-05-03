@@ -1,41 +1,16 @@
 <div class="slider wow fadeInDown">
-    <div class="slider__item">
-        <h1>Классическая одежда для мужчин и&nbsp;женщин</h1>
-        <img src="../img/clothes1.jpg" alt="">
-        <a href="#">
-            Перейти
-        </a>
-    </div>
-
-    <div class="slider__item">
-        <h1>Костюмы по&nbsp;привлекательным ценам</h1>
-        <img src="../img/clothes2.jpg" alt="">
-        <a href="#">
-            Перейти
-        </a>
-    </div>
-
-    <div class="slider__item">
-        <h1>Огромный выбор калстуков</h1>
-        <img src="../img/clothes5.jpg" alt="">
-        <a href="#">
-            Перейти
-        </a>
-    </div>
-
-    <div class="slider__item">
-        <h1>Одежда на каждый день</h1>
-        <img src="../img/clothes4.jpg" alt="">
-        <a href="#">
-            Перейти
-        </a>
-    </div>
-
-    <div class="slider__item top">
-        <h1>Большой выбор повседневной одежды для мужчин</h1>
-        <img src="../img/clothes6.jpg" alt="">
-        <a href="#">
-            Перейти
-        </a>
-    </div>
+    <?php
+    $result = getAllSlidePost();
+    while ($row = mysqli_fetch_assoc($result)) {
+        if (empty($row['id_clothes'])) {
+            ?>
+            <div class="slider__item">
+                <h1><?= $row['name'] ?></h1>
+                <img src="<?= $row['img_path'] ?>" alt="">
+                <a href="#">
+                    Перейти
+                </a>
+            </div>
+        <?php }
+    } ?>
 </div>
