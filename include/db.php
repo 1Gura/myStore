@@ -89,4 +89,3 @@ function getSocial() {
     return $result;
 }
 
-
