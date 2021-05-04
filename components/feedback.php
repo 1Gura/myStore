@@ -1,5 +1,6 @@
 <?php
 require('./header.php');
+
 ?>
 
 <h1 class="title">Форма обратной связи</h1>

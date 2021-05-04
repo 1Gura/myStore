@@ -238,7 +238,7 @@ const comparisonPasswords = (ev) => {
     }
 }
 
-personalAreaBtn.addEventListener('click', comparisonPasswords);
+//personalAreaBtn.addEventListener('click', comparisonPasswords);
 
 const validationName = (event) => {
     const target = event.target;
