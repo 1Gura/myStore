@@ -1066,3 +1066,9 @@ body .background-active {
     font-size: 20px;
     text-align: center;
 }
+
+.form-not-success {
+    color: #E12C3E;
+    font-size: 20px;
+    text-align: center;
+}

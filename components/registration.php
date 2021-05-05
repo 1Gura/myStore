@@ -28,6 +28,9 @@ $password2 = comparisonOfPasswords();
             <?php
         }}
     ?>
+    <?php
+    var_dump($_SESSION);
+    ?>
     <form id='personal-area-form'
           action="./authorize.php" method="post"
           class="personal-area el-hover" enctype="multipart/form-data">

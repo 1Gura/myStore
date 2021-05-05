@@ -91,10 +91,25 @@ function getSocial()
 
 function addNewUser($name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null)
 {
+    $password = md5($password);
     $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
     $mysql->set_charset('utf-8');
     $result = $mysql->query("INSERT INTO `users` (`surname`, `name`, `phone`,`email`, `password`, `avatar`) VALUES ('$surname', '$name', '$phone', '$email', '$password', '$avatar')");
+    $mysql->close();
+    return $result;
+}
+
+function checkUser($email, $password)
+{
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+        SELECT *
+        FROM `users`
+        WHERE `email` = '$email'
+        AND `password` = '$password'");
     $mysql->close();
     return $result;
 }
