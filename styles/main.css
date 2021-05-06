@@ -753,6 +753,11 @@ textarea {
     color: white;
 }
 
+.personal-area .personal-area-img {
+    width: 75px;
+    height: 75px;
+}
+
 
 .title {
     text-align: center;

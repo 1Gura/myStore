@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!empty($_SESSION['user'])) {
+    header('Location: ./personal-office.php');
+}
 require('./header.php');
 ?>
 

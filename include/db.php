@@ -29,9 +29,9 @@ function getAllCatalog()
     if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
     $mysql->set_charset('utf-8');
     $result = $mysql->query("
-        select price,name,img_path
-        from clothes
-        inner join content c on clothes.Id = c.id_clothes");
+        select cl.*, c.img_path
+        from clothes cl
+        inner join content c on cl.Id = c.id_clothes;");
     $mysql->close();
     return $result;
 }
@@ -112,6 +112,11 @@ function checkUser($email, $password)
         AND `password` = '$password'");
     $mysql->close();
     return $result;
+}
+
+function outUser()
+{
+    session_unset();
 }
 
 //Логика авторизации

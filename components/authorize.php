@@ -25,20 +25,11 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         move_uploaded_file($_FILES['avatar']['tmp_name'], $path);
     }
     addNewUser($_POST['name'], $_POST['surname'], $_POST['phone'], $_POST['email'], $_POST['password'], $name);
-//    include_once $_SERVER['DOCUMENT_ROOT'] . './components/header.php';
     session_destroy();
-//    include_once $_SERVER['DOCUMENT_ROOT'] . './components/header.php';
     header("Location: ./registration.php?ok=ok");
     exit();
-////    ?>
-    <!---->
-    <!--    <div class="personal-area el-hover">-->
-    <!--        <h1 class="title">Авторизация прошла успешно!</h1>-->
-    <!--        <img src="../img/ok.png" width="50" height="50" alt="">-->
-    <!--        <a href="../index.php">Нажмите, чтобы вернуться на главную!</a>-->
-    <!--    </div>-->
-    <!--    --><?php
-//    include_once $_SERVER['DOCUMENT_ROOT'] . './components/foot.php';
+  ?>
+    <?php
 }
 
 

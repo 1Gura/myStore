@@ -14,7 +14,9 @@ if (mysqli_num_rows($check) > 0) {
         'id'=> $user['id'],
         'email'=> $user['email'],
         'surname' => $user['surname'],
+        'phone' => $user['phone'],
         'name' => $user['name'],
+        'password' => $user['password'],
         'avatar' => $user['avatar']
 
     ];
@@ -23,7 +25,6 @@ if (mysqli_num_rows($check) > 0) {
 } else {
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['password'] = $_POST['password'];
-//    var_dump($_SESSION['email'], $_SESSION['password']);
     header("Location: ./personal-area.php?ok=no");
     exit();
 }

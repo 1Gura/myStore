@@ -1,10 +1,10 @@
 <?php
+session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
 //include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/titleChange.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/db.php';
-
 ?>
 <!doctype html>
 <html lang="ru">
@@ -70,9 +70,9 @@ include_once __DIR__ . './drop-down-menu.php';
             </div>
 
             <div class="info__account ">
-                <a class="item__flex" href="../components/personal-area.php">
+                <a title="<?= $_SESSION['user']['name'] . ' ' . $_SESSION['user']['surname']?>" class="item__flex" href="../components/personal-area.php">
                     <span>Личный кабинет</span>
-                    <img src="../img/icon-men.png" alt="аккаунт">
+                    <img src="<?=!empty($_SESSION['user']) ? '../uploads/' . $_SESSION['user']['avatar']  :'../img/icon-men.png'?>" alt="аккаунт">
                 </a>
             </div>
 
