@@ -38,7 +38,6 @@ class Email
 
     public function submit()
     {
-        $forman = "Название:значение\r\n";
         $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/html; charset=utf-8\r\n";
         $this->subject = "=?utf-8?B?" . base64_encode($this->subject) . "?=";
         $this->stringFormation();
@@ -51,10 +50,10 @@ class Email
 
 
 if (!empty($_POST)) {
-    $name = checkRegularName();
-    $surname = checkRegularSurName();
-    $phone = checkRegularPhone();
-    $email = checkRegularEmail();
+    $name = checkRegularName($_POST['name']);
+    $surname = checkRegularSurName($_POST['surname']);
+    $phone = checkRegularPhone($_POST['phone']);
+    $email = checkRegularEmail($_POST['email']);
     $subject = checkSubject();
     $message = checkTextBox();
     $flagSuccess = false;

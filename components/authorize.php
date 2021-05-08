@@ -8,12 +8,12 @@ $_SESSION['phone'] = $_POST['phone'];
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['password'] = $_POST['password'];
 $_SESSION['password2'] = $_POST['password2'];
-$name_check = checkRegularName();
-$surname_check = checkRegularSurName();
-$phone_check = checkRegularPhone();
-$email_check = checkRegularEmail();
-$password_check = checkRegularPassword();
-$password2_check = comparisonOfPasswords();
+$name_check = checkRegularName($_POST['name']);
+$surname_check = checkRegularSurName($_POST['surname']);
+$phone_check = checkRegularPhone($_POST['phone']);
+$email_check = checkRegularEmail($_POST['email']);
+$password_check = checkRegularPassword($_POST['password']);
+$password2_check = comparisonOfPasswords($_POST['password'],$_POST['password2']);
 if ($name_check || $surname_check || $phone_check || $email_check || $password_check || $password2_check) {
     header("Location: ./registration.php");
     exit();

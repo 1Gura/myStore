@@ -737,7 +737,7 @@ textarea {
     font-size: 18px;
 }
 
-.personal-area button {
+.personal-area button, .edit {
     background-color: #95C5F6;
     padding: 5px;
     font-size: 20px;
@@ -745,12 +745,13 @@ textarea {
     transition: all .3s ease-in-out;
 }
 
-.personal-area button:hover {
+.personal-area button:hover, .edit:hover {
     background-color: #4399EF;
     padding: 5px;
     font-size: 20px;
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 
 .personal-area .personal-area-img {
@@ -1077,3 +1078,4 @@ body .background-active {
     font-size: 20px;
     text-align: center;
 }
+

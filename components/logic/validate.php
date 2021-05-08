@@ -1,19 +1,20 @@
 <?php
 
-function checkRegularName(): bool
+function checkRegularName($name): bool
 {
-    if (!empty($_SESSION)) {
-        if (!preg_match('/^[а-я]{2,}+$/iu', trim($_SESSION['name']))) {
+    if (!empty($name)) {
+        if (!preg_match('/^[а-я]{2,}+$/iu', trim($name))) {
             return true;
         }
     }
     return false;
 
 }
-function checkRegularSurName(): bool
+
+function checkRegularSurName($surname): bool
 {
-    if (!empty($_SESSION)) {
-        if (!preg_match('/^[а-я]{2,}+$/iu', trim($_SESSION['surname']))) {
+    if (!empty($surname)) {
+        if (!preg_match('/^[а-я]{2,}+$/iu', trim($surname))) {
             return 'Только символы кириллицы!';
         }
     }
@@ -21,40 +22,41 @@ function checkRegularSurName(): bool
 
 }
 
-function checkRegularPhone(): bool
+function checkRegularPhone($phone): bool
 {
-    if (!empty($_SESSION)) {
-        if (!preg_match('/^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]/', $_SESSION['phone'])) {
+    if (!empty($phone)) {
+        if (!preg_match('/^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]/', $phone)) {
             return true;
         }
     }
     return false;
 }
 
-function checkRegularEmail(): bool
+function checkRegularEmail($email): bool
 {
-    if (!empty($_SESSION)) {
-        if (!preg_match('/^[a-z]([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $_SESSION['email'])) {
+    if (!empty($email)) {
+        if (!preg_match('/^[a-z]([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $email)) {
             return true;
         }
     }
     return false;
 }
 
-function checkRegularPassword(): bool
+function checkRegularPassword($password): bool
 {
-    if (!empty($_SESSION)) {
-        if (!preg_match(    '/[0-9a-zA-Z!@#$%^&*]{6,}/', $_SESSION['password'])) {
+    if (!empty($password)) {
+        if (!preg_match('/[0-9a-zA-Z!@#$%^&*]{6,}/', $password)) {
             return true;
         }
     }
     return false;
 
 }
-function comparisonOfPasswords(): bool
+
+function comparisonOfPasswords($password, $password2): bool
 {
-    if (!empty($_SESSION)) {
-        if ($_SESSION['password'] !== $_SESSION['password2']) {
+    if (!empty($password) && !empty($password2)) {
+        if ($password !== $password2) {
             return true;
         }
     }
@@ -63,8 +65,8 @@ function comparisonOfPasswords(): bool
 
 function checkSubject(): bool
 {
-    if(!empty($_SESSION)) {
-        if(strlen($_SESSION['subject']) < 5) {
+    if (!empty($_SESSION)) {
+        if (strlen($_SESSION['subject']) < 5) {
             return true;
         }
     }
@@ -74,8 +76,8 @@ function checkSubject(): bool
 
 function checkTextBox(): bool
 {
-    if(!empty($_SESSION)) {
-        if(strlen($_SESSION['message']) < 30) {
+    if (!empty($_SESSION)) {
+        if (strlen($_SESSION['message']) < 30) {
             return true;
         }
     }

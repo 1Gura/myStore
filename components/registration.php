@@ -7,12 +7,12 @@ require('./header.php');
 ?>
 
 <?php
-$name = checkRegularName();
-$surname = checkRegularSurName();
-$phone = checkRegularPhone();
-$email = checkRegularEmail();
-$password = checkRegularPassword();
-$password2 = comparisonOfPasswords();
+$name = checkRegularName($_SESSION['name']);
+$surname = checkRegularSurName($_SESSION['surname']);
+$phone = checkRegularPhone($_SESSION['phone']);
+$email = checkRegularEmail($_SESSION['email']);
+$password = checkRegularPassword($_SESSION['password']);
+$password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']);
 ?>
 
 <div class="container wow fadeInDown">

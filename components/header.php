@@ -66,13 +66,12 @@ include_once __DIR__ . './drop-down-menu.php';
                 <button>
                     <img src="../img/search.png" alt="">
                 </button>
-
             </div>
 
             <div class="info__account ">
                 <a title="<?= $_SESSION['user']['name'] . ' ' . $_SESSION['user']['surname']?>" class="item__flex" href="../components/personal-area.php">
                     <span>Личный кабинет</span>
-                    <img src="<?=!empty($_SESSION['user']) ? '../uploads/' . $_SESSION['user']['avatar']  :'../img/icon-men.png'?>" alt="аккаунт">
+                    <img src="<?=!empty($_SESSION['user']['avatar']) ? '../uploads/' . $_SESSION['user']['avatar']  :'../img/icon-men.png'?>" alt="аккаунт">
                 </a>
             </div>
 
