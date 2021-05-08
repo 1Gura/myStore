@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(!empty($_SESSION['user'])) {
+if (!empty($_SESSION['user'])) {
     header('Location: ./personal-office.php');
 }
 require('./header.php');
 ?>
 <?php
-if(!strpos($_SERVER['HTTP_REFERER'],'personal-area')) {
+if (!strpos($_SERVER['HTTP_REFERER'], 'personal-area')) {
     unset($_SESSION['email']);
     unset($_SESSION['password']);
 }

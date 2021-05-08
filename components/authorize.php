@@ -19,6 +19,11 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
     exit();
 
 } else {
+    $checkEmail = checkEmail($_POST['email']);
+    if (mysqli_num_rows($checkEmail) > 0) {
+        header("Location: ./registration.php?ok=email");
+        exit();
+    }
     if(!empty($_FILES['avatar']['name'])) {
         $name = time() . $_FILES['avatar']['name'];
         $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $name;

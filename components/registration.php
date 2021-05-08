@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(!empty($_SESSION['user'])) {
+if (!empty($_SESSION['user'])) {
     header('Location: ./personal-office.php');
 }
 require('./header.php');
 ?>
 
 <?php
-if(!strpos($_SERVER['HTTP_REFERER'],'registration')) {
+if (!strpos($_SERVER['HTTP_REFERER'], 'registration')) {
     session_unset();
 }
 $name = checkRegularName($_SESSION['name']);
@@ -29,10 +29,14 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
     <h1 class="title">Регистрация</h1>
     <?php
     if (!empty($_GET)) {
-        if($_GET['ok']==="ok") {?>
+        if ($_GET['ok'] === "ok") { ?>
             <div class="form-success">Регистрация прошла успешно!</div>
             <?php
-        }}
+        } else if ($_GET['ok'] === 'email') { ?>
+            <div class="form-not-success">Пользователь с таким email уже есть!</div>
+
+        <?php }
+    }
     ?>
     <form id='personal-area-form'
           action="./authorize.php" method="post"
@@ -59,7 +63,8 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
                placeholder="Введите пароль" type="password" maxlength="40">
         <label class="<?= $password2 ? 'error' : '' ?>"
                for="password2"><?= $password2 ? 'Пароли не совпали!' : 'Подтвердите пароль' ?></label>
-        <input id="password2" name="password2" value="<?= !empty($_SESSION['password2']) ? $_SESSION['password2'] : '' ?>"
+        <input id="password2" name="password2"
+               value="<?= !empty($_SESSION['password2']) ? $_SESSION['password2'] : '' ?>"
                placeholder="Введите пароль" type="password" maxlength="40">
         <label class=""
                for="">Изображение пользователя</label>

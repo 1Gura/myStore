@@ -89,16 +89,30 @@ function getSocial()
     return $result;
 }
 
-function addNewUser($name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null)
+function addNewUser($name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null, $role = 0)
 {
     $password = md5($password);
     $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
     $mysql->set_charset('utf-8');
-    $result = $mysql->query("INSERT INTO `users` (`surname`, `name`, `phone`,`email`, `password`, `avatar`) VALUES ('$surname', '$name', '$phone', '$email', '$password', '$avatar')");
+    $result = $mysql->query("INSERT INTO `users` (`surname`, `name`, `phone`,`email`, `password`, `avatar`, `role`) VALUES ('$surname', '$name', '$phone', '$email', '$password', '$avatar', '$role')");
     $mysql->close();
     return $result;
 }
+
+function checkEmail($email = ''){
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+        select email
+        from users
+        where email like '$email'
+        ");
+    $mysql->close();
+    return $result;
+}
+
 
 function checkUser($email, $password)
 {
