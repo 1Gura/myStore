@@ -55,11 +55,10 @@ function checkRegularPassword($password): bool
 
 function comparisonOfPasswords($password, $password2): bool
 {
-    if (isset($password) && isset($password2)) {
-        if ($password !== $password2) {
-            return true;
-        }
+    if ($password !== $password2) {
+        return true;
     }
+
     return false;
 }
 

@@ -34,9 +34,6 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
             <?php
         }}
     ?>
-    <?php
-    var_dump($_SESSION);
-    ?>
     <form id='personal-area-form'
           action="./authorize.php" method="post"
           class="personal-area el-hover" enctype="multipart/form-data">

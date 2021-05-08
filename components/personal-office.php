@@ -34,9 +34,6 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
         <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
     </div>
     <?php
-//    echo '<pre>';
-//    var_dump($_SESSION);
-//    echo '</pre>';
     ?>
     <form class="personal-area el-hover" action="./editUser.php" method="post" enctype="multipart/form-data">
         <h1 class="title">Личный кабинет</h1>
@@ -64,7 +61,7 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
         <label class="<?= $oldPassword ? 'error' : '' ?> <?= $edit ? '' : 'display-none' ?>"
                for="password"><?= $oldPassword ? 'Неккоректный пароль' : 'Старый пароль' ?></label>
         <input id="password" name="oldPassword" value="<?=!empty($_SESSION['oldPassword']) ? $_SESSION['oldPassword']:''?>"
-               placeholder="Введите старый пароль" <?= $edit ? 'type="password"' : 'type="hidden"' ?> maxlength="40">
+               placeholder="Введите старый пароль" <?= $edit ? 'type="password"' : 'type="hidden"' ?> maxlength="40" title="Можно не менять">
 
         <label class="<?= $password ? 'error' : '' ?> <?= $edit ? '' : 'display-none' ?>"
                for="password"><?= $password ? 'Неккоректный пароль' : 'Пароль' ?></label>
@@ -72,7 +69,7 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
                placeholder="Введите новый пароль" <?= $edit ? 'type="password"' : 'type="hidden"' ?> maxlength="40">
 
         <label class="<?= $password2 ? 'error' : '' ?> <?= $edit ? '' : 'display-none' ?>"
-               for="password2"><?= $password2 ? 'Пароли не совпали' : 'Пароль' ?></label>
+               for="password2"><?= $password2 ? 'Пароли не совпали' : 'Повторить пароль' ?></label>
         <input id="password2" name="password2" value="<?=!empty($_SESSION['password2']) ? $_SESSION['password2']:''?>"
                placeholder="Повторите пароль" <?= $edit ? 'type="password"' : 'type="hidden"' ?> maxlength="40">
         <label class="<?= $edit ? '' : 'display-none' ?>"

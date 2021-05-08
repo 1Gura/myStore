@@ -7,7 +7,8 @@ require('./header.php');
 ?>
 <?php
 if(!strpos($_SERVER['HTTP_REFERER'],'personal-area')) {
-    session_unset();
+    unset($_SESSION['email']);
+    unset($_SESSION['password']);
 }
 $email = checkRegularEmail($_SESSION['email']);
 $password = checkRegularPassword($_SESSION['password']);

@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/editUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/logic/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/editUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/personal-office.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-office.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620242582avatarka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620321783prikolnaya-avatarka-dlya-patsanov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620484289avatarka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620484309prikolnaya-avatarka-dlya-patsanov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620486717avatarka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1620487170avatarka.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
