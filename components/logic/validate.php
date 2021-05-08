@@ -2,7 +2,7 @@
 
 function checkRegularName($name): bool
 {
-    if (!empty($name)) {
+    if (isset($name)) {
         if (!preg_match('/^[а-я]{2,}+$/iu', trim($name))) {
             return true;
         }
@@ -13,7 +13,7 @@ function checkRegularName($name): bool
 
 function checkRegularSurName($surname): bool
 {
-    if (!empty($surname)) {
+    if (isset($surname)) {
         if (!preg_match('/^[а-я]{2,}+$/iu', trim($surname))) {
             return 'Только символы кириллицы!';
         }
@@ -24,7 +24,7 @@ function checkRegularSurName($surname): bool
 
 function checkRegularPhone($phone): bool
 {
-    if (!empty($phone)) {
+    if (isset($phone)) {
         if (!preg_match('/^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9] [0-9][0-9] [0-9][0-9]/', $phone)) {
             return true;
         }
@@ -34,7 +34,7 @@ function checkRegularPhone($phone): bool
 
 function checkRegularEmail($email): bool
 {
-    if (!empty($email)) {
+    if (isset($email)) {
         if (!preg_match('/^[a-z]([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i', $email)) {
             return true;
         }
@@ -44,7 +44,7 @@ function checkRegularEmail($email): bool
 
 function checkRegularPassword($password): bool
 {
-    if (!empty($password)) {
+    if (isset($password)) {
         if (!preg_match('/[0-9a-zA-Z!@#$%^&*]{6,}/', $password)) {
             return true;
         }
@@ -55,7 +55,7 @@ function checkRegularPassword($password): bool
 
 function comparisonOfPasswords($password, $password2): bool
 {
-    if (!empty($password) && !empty($password2)) {
+    if (isset($password) && isset($password2)) {
         if ($password !== $password2) {
             return true;
         }
@@ -65,7 +65,7 @@ function comparisonOfPasswords($password, $password2): bool
 
 function checkSubject(): bool
 {
-    if (!empty($_SESSION)) {
+    if (isset($_SESSION)) {
         if (strlen($_SESSION['subject']) < 5) {
             return true;
         }
@@ -76,7 +76,7 @@ function checkSubject(): bool
 
 function checkTextBox(): bool
 {
-    if (!empty($_SESSION)) {
+    if (isset($_SESSION)) {
         if (strlen($_SESSION['message']) < 30) {
             return true;
         }

@@ -11,7 +11,7 @@ if (mysqli_num_rows($check) > 0) {
     session_unset();
     $user = mysqli_fetch_assoc($check);
     $_SESSION['user'] = [
-        'id'=> $user['id'],
+        'id'=> $user['Id'],
         'email'=> $user['email'],
         'surname' => $user['surname'],
         'phone' => $user['phone'],

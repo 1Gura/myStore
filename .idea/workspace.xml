@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/editUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/logic/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/authorize.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/authorize.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/logic/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/logic/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/validate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/personal-office.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-office.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +105,9 @@
       <workItem from="1620238077684" duration="4752000" />
       <workItem from="1620319503119" duration="1240000" />
       <workItem from="1620321075596" duration="2867000" />
-      <workItem from="1620461240111" duration="6661000" />
+      <workItem from="1620461240111" duration="12348000" />
+      <workItem from="1620480384452" duration="5609000" />
+      <workItem from="1620486196503" duration="1502000" />
     </task>
     <servers />
   </component>

@@ -114,9 +114,18 @@ function checkUser($email, $password)
     return $result;
 }
 
-function outUser()
+function editUser($id = null, $name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null)
 {
-    session_unset();
+    $password = md5($password);
+    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
+    $mysql->set_charset('utf-8');
+    $result = $mysql->query("
+    REPLACE INTO `users` (`Id`,`surname`, `name`, `phone`, `email`, `password`, `avatar`)
+    VALUES ('$id','$surname', '$name', '$phone', '$email', '$password', '$avatar')
+    ");
+    $mysql->close();
+    return $result;
 }
 
 //Логика авторизации

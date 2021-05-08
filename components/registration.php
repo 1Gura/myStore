@@ -7,6 +7,9 @@ require('./header.php');
 ?>
 
 <?php
+if(!strpos($_SERVER['HTTP_REFERER'],'registration')) {
+    session_unset();
+}
 $name = checkRegularName($_SESSION['name']);
 $surname = checkRegularSurName($_SESSION['surname']);
 $phone = checkRegularPhone($_SESSION['phone']);

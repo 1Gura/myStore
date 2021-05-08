@@ -1,14 +1,16 @@
 <?php
+session_start();
 if(!empty($_SESSION['user'])) {
     header('Location: ./personal-office.php');
 }
 require('./header.php');
 ?>
 <?php
-var_dump($_POST);
-var_dump($_SESSION);
-$email = checkRegularEmail($_POST['email']);
-$password = checkRegularPassword($_POST['password']);
+if(!strpos($_SERVER['HTTP_REFERER'],'personal-area')) {
+    session_unset();
+}
+$email = checkRegularEmail($_SESSION['email']);
+$password = checkRegularPassword($_SESSION['password']);
 ?>
 
 <div class="container wow fadeInDown">
@@ -31,11 +33,11 @@ $password = checkRegularPassword($_POST['password']);
     <form method="post" action="./signin.php" id='personal-area-form' class="personal-area el-hover">
         <label class="<?= $email ? 'error' : '' ?>"
                for="email"><?= $email ? 'Формат email: gura.ilya2011@yandex.ru' : 'email' ?></label>
-        <input id="email" name="email" value="<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>"
+        <input id="email" name="email" value="<?= !empty($_SESSION['email']) ? $_SESSION['email'] : '' ?>"
                placeholder="Введите @email" maxlength="40" type="text">
         <label class="<?= $password ? 'error' : '' ?>"
                for="password"><?= $password ? 'Неккоректный пароль' : 'Пароль' ?></label>
-        <input id="password" name="password" value="<?= !empty($_POST['password']) ? $_POST['password'] : '' ?>"
+        <input id="password" name="password" value="<?= !empty($_SESSION['password']) ? $_SESSION['password'] : '' ?>"
                placeholder="Введите пароль" type="password" maxlength="40">
         <button type="submit" class="personal-area__btn">
             Войти
