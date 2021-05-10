@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/addClothes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/deleteClothes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/addNewClothes.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/addNewClothes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/changeClothes.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/changeClothes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/editClothes.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/editClothes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/photo1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/include/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +108,8 @@
       <workItem from="1620634445234" duration="1054000" />
       <workItem from="1620635831017" duration="8318000" />
       <workItem from="1620650281032" duration="1673000" />
-      <workItem from="1620652625979" duration="8819000" />
+      <workItem from="1620652625979" duration="9482000" />
+      <workItem from="1620673139153" duration="1738000" />
     </task>
     <servers />
   </component>

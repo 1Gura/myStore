@@ -167,23 +167,21 @@ function editClothes(
     return $result;
 }
 
+function findClothes()
+{
+
+}
+
 function addClothes(
-    $id = null,
     $title = null,
     $price = null,
     $count = null,
     $img_path = null)
 {
     $mysql = connect();
-    $result = $mysql->query("
-    update clothes
-    set title = '$title',
-        price = '$price',
-        count = '$count'
-    where Id = '$id'
-");
+    $mysql->query("insert into clothes (title, price, count) values ('$title','$price','$count')");
+    $mysql->query("insert into content (img_path, id_clothes) values ('$img_path','$mysql->insert_id')");
     $mysql->close();
-    return $result;
 }
 
 
@@ -215,6 +213,18 @@ function deleteUser($idUser = 0)
         where Id = '$idUser'");
     $mysql->close();
     return $result;
+}
+
+function deleteClothes($idClothes = 0)
+{
+    $mysql = connect();
+    $mysql->query("
+        delete from content
+        where id_clothes = '$idClothes';");
+    $mysql->query("
+        delete from clothes
+        where Id = '$idClothes';");
+    $mysql->close();
 }
 
 

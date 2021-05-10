@@ -69,7 +69,7 @@ require('./header.php');
                         <p>Цена: <?= $row['price'] ?></p>
                         <p>Количество на складе:<?= $row['count'] ?></p>
                         <a href="./editClothes.php?id=<?= $row['Id'] ?>">Редактировать</a>
-                        <a href="./deleteСlothes.php?id=<?= $row['Id'] ?>">Удалить</a>
+                        <a href="./deleteClothes.php?id=<?= $row['Id'] ?>">Удалить</a>
                     </div>
                 <?php } ?>
             </div>
