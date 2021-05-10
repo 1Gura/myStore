@@ -11,9 +11,10 @@ function connect()
     return $mysql;
 }
 
-function clearSession() {
-    foreach($_SESSION as $key=>$value) {
-        if($key!='user') {
+function clearSession()
+{
+    foreach ($_SESSION as $key => $value) {
+        if ($key != 'user') {
             unset($_SESSION[$key]);
         }
     }
@@ -37,6 +38,18 @@ function getAllCatalog()
         select cl.*, c.img_path
         from clothes cl
         inner join content c on cl.Id = c.id_clothes;");
+    $mysql->close();
+    return $result;
+}
+
+function getCatalogItem($id = null)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        select cl.*, c.img_path
+        from clothes cl
+        inner join content c on cl.Id = c.id_clothes
+        where cl.Id = '$id'");
     $mysql->close();
     return $result;
 }
@@ -130,6 +143,26 @@ function editUser($id = null, $name = null, $surname = null, $phone = null, $ema
     $mysql->close();
     return $result;
 }
+
+function editClothes(
+    $id = null,
+    $title = null,
+    $price = null,
+    $count = null,
+    $img_path = null)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+    update clothes
+    set title = '$title',
+        price = '$price',
+        count = '$count'
+    where Id = '$id'
+");
+    $mysql->close();
+    return $result;
+}
+
 
 function getAllUsers()
 {

@@ -44,7 +44,7 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']),
         $name,
-    0);
+        $_SESSION['user']['role']);
     $check = checkUser($_POST['email'], empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']));
     if (mysqli_num_rows($check) > 0) {
         session_unset();

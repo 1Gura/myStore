@@ -18,7 +18,7 @@ require('./table.php');
             <li class="collection__item">
                 <div class="collection__info">
                     <div class="collection__container">
-                        <p><?= $row['name'] ?></p>
+                        <p><?= $row['title'] ?></p>
                         <p><?= $row['price'] ?></p>
                         <a href="#">В корзину</a>
                     </div>

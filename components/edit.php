@@ -29,14 +29,12 @@ $email = checkRegularEmail($_SESSION['email']);
 $password = !empty($_SESSION['password']) && checkRegularPassword($_SESSION['password']);
 $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']);
 ?>
-
     <div class="container">
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>
             <span><img src="../img/strlka.png" alt="стрелка"></span>
             <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
         </div>
-        <?php var_dump($_SESSION); ?>
         <form class="personal-area el-hover" action="./changeUser.php" method="post" enctype="multipart/form-data">
             <h1 class="title">Редактирование пользователя</h1>
             <img src="<?= !empty($_SESSION['avatar']) ? '../uploads/' . $_SESSION['avatar'] : '../img/icon-men.png' ?>"

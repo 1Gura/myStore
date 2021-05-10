@@ -7,7 +7,7 @@
             ?>
             <div class="slider__item">
                 <img src="<?= $row['img_path'] ?>" alt="">
-                <p><?= $row['name'] ?></p>
+                <p><?= $row['title'] ?></p>
                 <p><?= $row['price'] ?></p>
             </div>
         <?php } ?>

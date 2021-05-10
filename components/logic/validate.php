@@ -8,7 +8,6 @@ function checkRegularName($name): bool
         }
     }
     return false;
-
 }
 
 function checkRegularSurName($surname): bool
@@ -81,7 +80,6 @@ function checkTextBox(): bool
         }
     }
     return false;
-
 }
 
 function success(): bool
@@ -90,6 +88,22 @@ function success(): bool
         $value = '';
     }
     return true;
+}
+
+function checkNumber($text) {
+    if(strlen($text) > 0 && is_numeric($text)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function check($text) {
+    if(strlen($text) > 0) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 

@@ -18,9 +18,9 @@ require('./header.php');
     </div>
     <?php
     //    var_dump($_SESSION);
-//    echo '<pre>';
-//    var_dump($_GET);
-//    echo '</pre>';
+    //    echo '<pre>';
+    //    var_dump($_GET);
+    //    echo '</pre>';
     ?>
     <div class="personal-area el-hover">
         <h1>Админка</h1>
@@ -36,9 +36,8 @@ require('./header.php');
             <a class="add" href="./addNewUser.php">Добавить пользователя.</a>
             <div class="admin-list">
                 <?php
-            while ($row = mysqli_fetch_assoc($users)) {
-                ?>
-
+                while ($row = mysqli_fetch_assoc($users)) {
+                    ?>
                     <div class="admin__item el-hover">
                         <div class="img-container"><img
                                     src="<?= !empty($row['avatar']) ? '../uploads/' . $row['avatar'] : '../img/icon-men.png' ?>"
@@ -47,31 +46,36 @@ require('./header.php');
                         <p><?= $row['surname'] ?></p>
                         <p><?= $row['phone'] ?></p>
                         <p><?= $row['email'] ?></p>
-                        <a href="./edit.php?id=<?=$row['Id']?>">Редактировать</a>
-                        <a href="./delete.php?id=<?=$row['Id']?>">Удалить</a>
+                        <a href="./edit.php?id=<?= $row['Id'] ?>">Редактировать</a>
+                        <a href="./delete.php?id=<?= $row['Id'] ?>">Удалить</a>
                     </div>
                 <?php } ?>
-                </div>
+            </div>
             <?php
             break;
         case !empty($_GET['clothes']):
             $clothes = getAllCatalog();
-            while ($row = mysqli_fetch_assoc($clothes)) {
-                ?>
-                <div class="admin-list">
-                    <div class="admin__item">
-                        <div class='img-container'><img
+            ?>
+            <a class="add" href="./add.php">Добавить одежду.</a>
+            <div class="admin-list">
+                <?php
+                while ($row = mysqli_fetch_assoc($clothes)) {
+                    ?>
+                    <div class="admin__item el-hover">
+                        <div class="img-container"><img
                                     src="<?= !empty($row['img_path']) ? '../img/' . $row['img_path'] : '../img/icon-men.png' ?>"
                                     alt="аватарка"></div>
-                        <p>Наименование:<?= $row['name'] ?></p>
+                        <p>Наименование:<?= $row['title'] ?></p>
                         <p>Цена: <?= $row['price'] ?></p>
                         <p>Количество на складе:<?= $row['count'] ?></p>
+                        <a href="./editClothes.php?id=<?= $row['Id'] ?>">Редактировать</a>
+                        <a href="./deleteСlothes.php?id=<?= $row['Id'] ?>">Удалить</a>
                     </div>
-                </div>
-            <?php }
+                <?php } ?>
+            </div>
+            <?php
             break;
         case !empty($_GET['content']):
-
             break;
         default:
             ?>

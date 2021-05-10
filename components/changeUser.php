@@ -23,7 +23,7 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $name = time() . $_FILES['avatar']['name'];
         $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $name;
         $oldPath = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $_SESSION['avatar'];
-        if(file_exists($oldPath)) {
+        if(file_exists($oldPath) && !empty($_SESSION['avatar'])) {
             unlink($oldPath);
         }
         move_uploaded_file($_FILES['avatar']['tmp_name'], $path);
@@ -35,8 +35,8 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['phone'],
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['oldPassword'] : md5($_POST['password']),
-        $name,
-    0);
+        !empty($_FILES['avatar']['name']) ? $name : $_SESSION['avatar'],
+        $_SESSION['user']['role']);
     header("Location: ./admin.php");
     exit();
 }
