@@ -31,7 +31,7 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $name = time() . $_FILES['avatar']['name'];
         $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $name;
         $oldPath = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $_SESSION['user']['avatar'];
-        if(file_exists($oldPath)) {
+        if(file_exists($oldPath) && !empty($_SESSION['user']['avatar'])) {
             unlink($oldPath);
         }
         move_uploaded_file($_FILES['avatar']['tmp_name'], $path);
@@ -43,7 +43,8 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['phone'],
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']),
-        $name);
+        $name,
+    0);
     $check = checkUser($_POST['email'], empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']));
     if (mysqli_num_rows($check) > 0) {
         session_unset();

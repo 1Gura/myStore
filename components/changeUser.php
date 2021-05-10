@@ -35,7 +35,8 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['phone'],
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['oldPassword'] : md5($_POST['password']),
-        $name);
+        $name,
+    0);
     header("Location: ./admin.php");
     exit();
 }
