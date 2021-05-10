@@ -56,7 +56,7 @@ require('./header.php');
         case !empty($_GET['clothes']):
             $clothes = getAllCatalog();
             ?>
-            <a class="add" href="./add.php">Добавить одежду.</a>
+            <a class="add" href="./editClothes.php?add=ok">Добавить одежду.</a>
             <div class="admin-list">
                 <?php
                 while ($row = mysqli_fetch_assoc($clothes)) {

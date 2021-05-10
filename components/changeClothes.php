@@ -16,7 +16,7 @@ if ($name || $price || $count){
         $name = time() . $_FILES['img_path']['name'];
         $path = $_SERVER['DOCUMENT_ROOT'] . '/img/' . $name;
         $oldPath = $_SERVER['DOCUMENT_ROOT'] . '/img/' . $_SESSION['clothes']['img_path'];
-        if(file_exists($oldPath)) {
+        if(file_exists($oldPath)&& !empty($_SESSION['img_path'])) {
             unlink($oldPath);
         }
         move_uploaded_file($_FILES['img_path']['tmp_name'], $path);
@@ -26,7 +26,7 @@ if ($name || $price || $count){
         $_POST['title'],
         $_POST['price'],
         $_POST['count'],
-        $_POST['img_path']);
+        !empty($_FILES['img_path']['name']) ? $name : $_SESSION['clothes']['img_path']);
     header("Location: ./admin.php");
     exit();
 }

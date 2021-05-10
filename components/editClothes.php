@@ -7,16 +7,17 @@ require('./header.php');
 ?>
 <?php
 if (strpos($_SERVER['HTTP_REFERER'], 'admin')) {
-    var_dump($_SERVER['HTTP_REFERER']);
     if(!empty($_GET['id'])) {
         $clothes = getCatalogItem($_GET['id']);
+        $clothes = mysqli_fetch_assoc($clothes);
+        $_SESSION['clothes']['id'] = $clothes['Id'];
+        $_SESSION['clothes']['title'] = $clothes['title'];
+        $_SESSION['clothes']['price'] = $clothes['price'];
+        $_SESSION['clothes']['count'] = $clothes['count'];
+        $_SESSION['clothes']['img_path'] = $clothes['img_path'];
+    } else if(!empty($_GET['add'])) {
+        $_SESSION['clothes']['addClothes'] = true;
     }
-    $clothes = mysqli_fetch_assoc($clothes);
-    $_SESSION['clothes']['id'] = $clothes['Id'];
-    $_SESSION['clothes']['title'] = $clothes['title'];
-    $_SESSION['clothes']['price'] = $clothes['price'];
-    $_SESSION['clothes']['count'] = $clothes['count'];
-    $_SESSION['clothes']['img_path'] = $clothes['img_path'];
 }
     $name = check($_SESSION['clothes']['title']);
     $price = checkNumber($_SESSION['clothes']['price']);

@@ -157,6 +157,29 @@ function editClothes(
     set title = '$title',
         price = '$price',
         count = '$count'
+    where Id = '$id';
+");
+    $mysql->query("
+    update content
+    set img_path = '$img_path'
+    where id_clothes = $id ;");
+    $mysql->close();
+    return $result;
+}
+
+function addClothes(
+    $id = null,
+    $title = null,
+    $price = null,
+    $count = null,
+    $img_path = null)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+    update clothes
+    set title = '$title',
+        price = '$price',
+        count = '$count'
     where Id = '$id'
 ");
     $mysql->close();

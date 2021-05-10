@@ -22,6 +22,11 @@ if ($name || $price || $count){
         }
         move_uploaded_file($_FILES['img_path']['tmp_name'], $path);
     }
+    if($_SESSION['clothes']['addClothes']) {
+
+        header("Location: ./admin.php");
+        exit();
+    }
     editClothes(
         $_SESSION['clothes']['id'],
         $_POST['title'],
