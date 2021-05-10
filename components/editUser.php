@@ -66,11 +66,4 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         exit();
     }
 }
-//    header("Location: ./personal-office.php");
-//    exit();
-//
-//    $_SESSION['email'] = $_POST['email'];
-//    $_SESSION['password'] = $_POST['password'];
-//    header("Location: ./personal-area.php?ok=no");
-//    exit();
 

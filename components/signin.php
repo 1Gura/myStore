@@ -17,7 +17,8 @@ if (mysqli_num_rows($check) > 0) {
         'phone' => $user['phone'],
         'name' => $user['name'],
         'password' => $user['password'],
-        'avatar' => $user['avatar']
+        'avatar' => $user['avatar'],
+        'role' => $user['role']
 
     ];
     header("Location: ./personal-office.php");

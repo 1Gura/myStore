@@ -3,18 +3,25 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'mystore');
-//function connect()
-//{
-//    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-//    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-//    $mysql->set_charset('utf-8');
-//}
-
-function getAllSlidePost()
+function connect()
 {
     $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
     $mysql->set_charset('utf-8');
+    return $mysql;
+}
+
+function clearSession() {
+    foreach($_SESSION as $key=>$value) {
+        if($key!='user') {
+            unset($_SESSION[$key]);
+        }
+    }
+}
+
+function getAllSlidePost()
+{
+    $mysql = connect();
     $result = $mysql->query("
     select *
     from content
@@ -25,9 +32,7 @@ function getAllSlidePost()
 
 function getAllCatalog()
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
         select cl.*, c.img_path
         from clothes cl
@@ -38,9 +43,7 @@ function getAllCatalog()
 
 function getNews()
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
     select *
     from content
@@ -52,9 +55,7 @@ function getNews()
 
 function getIcons()
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
     select *
     from content
@@ -65,9 +66,7 @@ function getIcons()
 
 function getIconSocial()
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
     select *
     from content
@@ -78,9 +77,7 @@ function getIconSocial()
 
 function getSocial()
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
     select *
     from  content
@@ -92,18 +89,15 @@ function getSocial()
 function addNewUser($name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null, $role = 0)
 {
     $password = md5($password);
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("INSERT INTO `users` (`surname`, `name`, `phone`,`email`, `password`, `avatar`, `role`) VALUES ('$surname', '$name', '$phone', '$email', '$password', '$avatar', '$role')");
     $mysql->close();
     return $result;
 }
 
-function checkEmail($email = ''){
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+function checkEmail($email = '')
+{
+    $mysql = connect();
     $result = $mysql->query("
         select email
         from users
@@ -116,9 +110,7 @@ function checkEmail($email = ''){
 
 function checkUser($email, $password)
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
         SELECT *
         FROM `users`
@@ -130,9 +122,7 @@ function checkUser($email, $password)
 
 function editUser($id = null, $name = null, $surname = null, $phone = null, $email = null, $password = null, $avatar = null)
 {
-    $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($mysql->connect_errno) exit('Ошибка подключения к бд!');
-    $mysql->set_charset('utf-8');
+    $mysql = connect();
     $result = $mysql->query("
     REPLACE INTO `users` (`Id`,`surname`, `name`, `phone`, `email`, `password`, `avatar`)
     VALUES ('$id','$surname', '$name', '$phone', '$email', '$password', '$avatar')
@@ -141,6 +131,47 @@ function editUser($id = null, $name = null, $surname = null, $phone = null, $ema
     return $result;
 }
 
+function getAllUsers()
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        select *
+        from users");
+    $mysql->close();
+    return $result;
+}
+
+function getAllClothes()
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        select *
+        from clothes");
+    $mysql->close();
+    return $result;
+}
+
+function deleteUser($idUser = 0)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        delete from users
+        where Id = '$idUser'");
+    $mysql->close();
+    return $result;
+}
+
+
+function getUser($idUser = null)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        select *
+        from users
+        where id='$idUser'");
+    $mysql->close();
+    return $result;
+}
 //Логика авторизации
 
 

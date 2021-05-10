@@ -1,14 +1,12 @@
 <?php
 session_start();
-if (!empty($_SESSION['user'])) {
-    header('Location: ./personal-office.php');
-}
 require('./header.php');
 ?>
 
 <?php
-if (!strpos($_SERVER['HTTP_REFERER'], 'registration')) {
-//    session_unset();
+if(strpos($_SERVER['HTTP_REFERER'], 'admin') ) {
+    clearSession();
+    var_dump($_SESSION);
 }
 $name = checkRegularName($_SESSION['name']);
 $surname = checkRegularSurName($_SESSION['surname']);
@@ -26,7 +24,7 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
         <span><img src="../img/strlka.png" alt="стрелка"></span>
         <span class="link"><a href="./registration.php">Регистрация</a></span>
     </div>
-    <h1 class="title">Регистрация</h1>
+    <h1 class="title">Добавление пользователя</h1>
     <?php
     if (!empty($_GET)) {
         if ($_GET['ok'] === "ok") { ?>
@@ -70,7 +68,7 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
                for="">Изображение пользователя</label>
         <input id="" type="file" name="avatar">
         <button type="submit" class="personal-area__btn">
-            Регистрация
+            Добавить
         </button>
     </form>
 </div>

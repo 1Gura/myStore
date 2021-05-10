@@ -1,9 +1,8 @@
 <?php
-session_start();
+require('./header.php');
 if (empty($_SESSION['user'])) {
     header('Location: ../index.php');
 }
-require('./header.php');
 ?>
 <?php
 $edit = false;
@@ -33,10 +32,9 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
         <span><img src="../img/strlka.png" alt="стрелка"></span>
         <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
     </div>
-    <?php
-    ?>
     <form class="personal-area el-hover" action="./editUser.php" method="post" enctype="multipart/form-data">
         <h1 class="title">Личный кабинет</h1>
+        <?=$_SESSION['user']['role'] === '1' ? '<a href="admin.php">Страница Админа</a>' : '' ?>
         <img src="<?= !empty($_SESSION['user']['avatar']) ? '../uploads/' . $_SESSION['user']['avatar'] : '../img/icon-men.png' ?>"
              class="personal-area-img" alt="">
         <label class="<?= $name ? 'error' : '' ?>" for="name"><?= $name ? "Только символы кириллицы!" : 'Имя' ?></label>

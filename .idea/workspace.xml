@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/addNewUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/changeUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/authorize.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/authorize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/editUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/personal-area.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/personal-office.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/personal-office.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +112,10 @@
       <workItem from="1620461240111" duration="12348000" />
       <workItem from="1620480384452" duration="5609000" />
       <workItem from="1620486196503" duration="1502000" />
+      <workItem from="1620634445234" duration="1054000" />
+      <workItem from="1620635831017" duration="8318000" />
+      <workItem from="1620650281032" duration="1673000" />
+      <workItem from="1620652625979" duration="639000" />
     </task>
     <servers />
   </component>

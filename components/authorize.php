@@ -15,12 +15,20 @@ $email_check = checkRegularEmail($_POST['email']);
 $password_check = checkRegularPassword($_POST['password']);
 $password2_check = comparisonOfPasswords($_POST['password'],$_POST['password2']);
 if ($name_check || $surname_check || $phone_check || $email_check || $password_check || $password2_check) {
+    if(strpos($_SERVER['HTTP_REFERER'], 'addNewUser')) {
+        header("Location: ./addNewUser.php");
+        exit();
+    }
     header("Location: ./registration.php");
     exit();
 
 } else {
     $checkEmail = checkEmail($_POST['email']);
     if (mysqli_num_rows($checkEmail) > 0) {
+        if(strpos($_SERVER['HTTP_REFERER'], 'addNewUser')) {
+            header("Location: ./addNewUser.php?ok=email");
+            exit();
+        }
         header("Location: ./registration.php?ok=email");
         exit();
     }
@@ -30,6 +38,10 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         move_uploaded_file($_FILES['avatar']['tmp_name'], $path);
     }
     addNewUser($_POST['name'], $_POST['surname'], $_POST['phone'], $_POST['email'], $_POST['password'], $name);
+    if(strpos($_SERVER['HTTP_REFERER'], 'addNewUser')) {
+        header("Location: ./admin.php");
+        exit();
+    }
     session_destroy();
     header("Location: ./registration.php?ok=ok");
     exit();
