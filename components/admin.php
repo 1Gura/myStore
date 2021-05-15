@@ -16,12 +16,7 @@ require('./header.php');
         <span><img src="../img/strlka.png" alt="стрелка"></span>
         <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
     </div>
-    <?php
-    //    var_dump($_SESSION);
-    //    echo '<pre>';
-    //    var_dump($_GET);
-    //    echo '</pre>';
-    ?>
+
     <div class="personal-area el-hover">
         <h1>Админка</h1>
         <a href="./admin.php?users=ok">Пользователи</a>
@@ -63,7 +58,7 @@ require('./header.php');
                     ?>
                     <div class="admin__item el-hover">
                         <div class="img-container"><img
-                                    src="<?= !empty($row['img_path']) ? '../img/' . $row['img_path'] : '../img/icon-men.png' ?>"
+                                    src="<?= !empty($row['img_path']) ? '../clothes/' . $row['img_path'] : '../img/icon-men.png' ?>"
                                     alt="аватарка"></div>
                         <p>Наименование:<?= $row['title'] ?></p>
                         <p>Цена: <?= $row['price'] ?></p>

@@ -29,10 +29,9 @@ if (isset($_SESSION['clothes']['title'])) {
         <div class="links">
             <span class="link"><a href="../index.php">Главная</a></span>
         </div>
-        <?php var_dump($_SESSION); ?>
         <form class="personal-area el-hover" action="./changeClothes.php" method="post" enctype="multipart/form-data">
             <h1 class="title">Редактирование одежды</h1>
-            <img src="<?= !empty($_SESSION['clothes']['img_path']) ? '../img/' . $_SESSION['clothes']['img_path'] : '../img/icon-men.png' ?>"
+            <img src="<?= !empty($_SESSION['clothes']['img_path']) ? '../clothes/' . $_SESSION['clothes']['img_path'] : '../img/icon-men.png' ?>"
                  class="personal-area-img" alt="">
             <label class="<?= $name ? 'error' : '' ?>"
                    for="name"><?= $name ? "Минимальная длина 1 символ" : 'Имя' ?></label>

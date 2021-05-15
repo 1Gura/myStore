@@ -14,9 +14,9 @@ if ($name || $price || $count) {
 } else {
     if (!empty($_FILES['img_path']['name'])) {
         $name = time() . $_FILES['img_path']['name'];
-        $path = $_SERVER['DOCUMENT_ROOT'] . '/img/' . $name;
-        $oldPath = $_SERVER['DOCUMENT_ROOT'] . '/img/' . $_SESSION['clothes']['img_path'];
-        if (file_exists($oldPath) && !empty($_SESSION['img_path'])) {
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/clothes/' . $name;
+        $oldPath = $_SERVER['DOCUMENT_ROOT'] . '/clothes/' . $_SESSION['clothes']['img_path'];
+        if (file_exists($oldPath) && !empty($_SESSION['clothes']['img_path'])) {
             unlink($oldPath);
         }
         move_uploaded_file($_FILES['img_path']['tmp_name'], $path);

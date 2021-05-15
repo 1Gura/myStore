@@ -43,7 +43,7 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['phone'],
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']),
-        $name,
+        !empty($_FILES['avatar']['name']) ? $name : $_SESSION['user']['avatar'],
         $_SESSION['user']['role']);
     $check = checkUser($_POST['email'], empty($_POST['password']) ? $_SESSION['user']['password'] : md5($_POST['password']));
     if (mysqli_num_rows($check) > 0) {
@@ -56,8 +56,8 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
             'phone' => $user['phone'],
             'name' => $user['name'],
             'password' => $user['password'],
-            'avatar' => $user['avatar']
-
+            'avatar' => $user['avatar'],
+            'role' => $user['role']
         ];
         unset($_SESSION['edit']);
         header("Location: ./personal-office.php");
