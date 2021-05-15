@@ -6,7 +6,6 @@ require('./header.php');
 <?php
 if(strpos($_SERVER['HTTP_REFERER'], 'admin') ) {
     clearSession();
-    var_dump($_SESSION);
 }
 $name = checkRegularName($_SESSION['name']);
 $surname = checkRegularSurName($_SESSION['surname']);

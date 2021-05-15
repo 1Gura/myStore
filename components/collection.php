@@ -23,7 +23,7 @@ require('./table.php');
                         <a href="#">В корзину</a>
                     </div>
                 </div>
-                <img src="<?= $row['img_path'] ?>" alt="">
+                <img src="../clothes/<?= $row['img_path'] ?>" alt="">
             </li>
         <?php } ?>
     </ul>

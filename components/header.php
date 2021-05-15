@@ -2,7 +2,6 @@
 session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
-//include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/titleChange.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/db.php';
 ?>

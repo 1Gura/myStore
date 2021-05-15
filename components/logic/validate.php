@@ -61,10 +61,10 @@ function comparisonOfPasswords($password, $password2): bool
     return false;
 }
 
-function checkSubject(): bool
+function checkSubject($subject): bool
 {
-    if (isset($_SESSION)) {
-        if (strlen($_SESSION['subject']) < 5) {
+    if (isset($subject)) {
+        if (strlen($subject) < 5) {
             return true;
         }
     }
@@ -72,10 +72,10 @@ function checkSubject(): bool
 
 }
 
-function checkTextBox(): bool
+function checkTextBox($message): bool
 {
-    if (isset($_SESSION)) {
-        if (strlen($_SESSION['message']) < 30) {
+    if (isset($message)) {
+        if (strlen($message) < 30) {
             return true;
         }
     }

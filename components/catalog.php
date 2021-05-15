@@ -6,7 +6,7 @@
         while ($row = mysqli_fetch_assoc($result)) {
             ?>
             <div class="slider__item">
-                <img src="<?= $row['img_path'] ?>" alt="">
+                <img src="../clothes/<?= $row['img_path'] ?>" alt="">
                 <p><?= $row['title'] ?></p>
                 <p><?= $row['price'] ?></p>
             </div>

@@ -728,6 +728,14 @@ textarea {
     width: 100%;
 }
 
+.personal-area .personal-area__btn-disable {
+    background-color:#6C6B6C;
+}
+
+.personal-area .personal-area__btn-disable:hover {
+    background-color:#7E7D7D;
+}
+
 .personal-area textarea {
     min-width: 100%;
     min-height: 150px;
