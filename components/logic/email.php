@@ -46,9 +46,8 @@ class Email
         ";
     }
 
-    public function submit(int $idUser)
+    public function submit()
     {
-        setMessage($this, $idUser);
         $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/html; charset=utf-8\r\n";
         $this->subject = "=?utf-8?B?" . base64_encode($this->subject) . "?=";
         $this->stringFormation();

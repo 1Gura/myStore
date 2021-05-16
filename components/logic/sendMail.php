@@ -9,7 +9,8 @@ if (!empty($_POST)) {
     if (!$subject && !$message) {
         $mail = new Email($_SESSION['user']['name'], $_SESSION['user']['surname'], $_SESSION['user']['phone'], $_SESSION['user']['email'], $_POST['subject'], $_POST['message']);
         unset($_SESSION['mail']);
-        $mail->submit($_SESSION['user']['id']);
+        setMessage($mail, $_SESSION['user']['id']);
+        $mail->submit();
         header("Location: http://{$_SERVER['HTTP_HOST']}/components/feedback.php?ok=ok");
         exit;
     } else {
@@ -22,7 +23,7 @@ if (!empty($_POST)) {
     $message = getMessage($_GET['id']);
     $message = mysqli_fetch_assoc($message);
     $mail = new Email($message['name'], $message['surname'], $message['phone'], $message['email'], $message['subject'], $message['message']);
-    $mail->submit($message['userId']);
+    $mail->submit();
     header("Location: http://{$_SERVER['HTTP_HOST']}/components/admin.php");
     exit();
 }
