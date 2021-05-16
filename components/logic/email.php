@@ -1,5 +1,6 @@
 <?php
-
+include_once $_SERVER['DOCUMENT_ROOT'] . './include/db.php';
+const emailHost = 'gura.ilya2011@yandex.ru';
 class Email
 {
     private string $name;
@@ -22,6 +23,15 @@ class Email
         $this->feed = trim($feed);
     }
 
+    public function getSubject(): string
+    {
+        return $this->subject;
+    }
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
     public function stringFormation()
     {
         $this->message = "
@@ -36,14 +46,13 @@ class Email
         ";
     }
 
-    public function submit()
+    public function submit(int $idUser)
     {
+        setMessage($this, $idUser);
         $headers = "From: $this->email\r\nReplay-to: gura.ilya2468@gmail.com\r\nContent-type: text/html; charset=utf-8\r\n";
         $this->subject = "=?utf-8?B?" . base64_encode($this->subject) . "?=";
         $this->stringFormation();
-        mail("{$this->email}", "{$this->subject}", "{$this->message}", "{$headers}");
-        header("Location: http://{$_SERVER['HTTP_HOST']}/components/feedback.php?ok=ok");
-        exit;
+        mail(emailHost, "{$this->subject}", "{$this->message}", "{$headers}");
     }
 }
 

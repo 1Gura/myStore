@@ -1104,6 +1104,11 @@ body .background-active {
 .admin__item {
     min-width: 200px;
     padding: 20px;
+    height: fit-content;
+}
+
+.message {
+    width: 500px;
 }
 
 .admin-list img {

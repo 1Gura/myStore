@@ -4,24 +4,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/email.php';
 
 if (!empty($_POST)) {
-    $name = checkRegularName($_POST['name']);
-    $surname = checkRegularSurName($_POST['surname']);
-    $phone = checkRegularPhone($_POST['phone']);
-    $email = checkRegularEmail($_POST['email']);
     $subject = checkSubject($_POST['subject']);
     $message = checkTextBox($_POST['message']);
-    if (!$name && !$surname && !$phone && !$email && !$subject && !$message) {
-        $mail = new Email($_POST['name'], $_POST['surname'], $_POST['phone'], $_POST['email'], $_POST['subject'], $_POST['message']);
+    if (!$subject && !$message) {
+        $mail = new Email($_SESSION['user']['name'], $_SESSION['user']['surname'], $_SESSION['user']['phone'], $_SESSION['user']['email'], $_POST['subject'], $_POST['message']);
         unset($_SESSION['mail']);
-        $mail->submit();
+        $mail->submit($_SESSION['user']['id']);
+        header("Location: http://{$_SERVER['HTTP_HOST']}/components/feedback.php?ok=ok");
+        exit;
     } else {
-        $_SESSION['mail']['name'] = $_POST['name'];
-        $_SESSION['mail']['surname'] = $_POST['surname'];
-        $_SESSION['mail']['phone'] = $_POST['phone'];
-        $_SESSION['mail']['email'] = $_POST['email'];
         $_SESSION['mail']['subject'] = $_POST['subject'];
         $_SESSION['mail']['message'] = $_POST['message'];
         header("Location: http://{$_SERVER['HTTP_HOST']}/components/feedback.php");
         exit();
     }
+} else {
+    $message = getMessage($_GET['id']);
+    $message = mysqli_fetch_assoc($message);
+    $mail = new Email($message['name'], $message['surname'], $message['phone'], $message['email'], $message['subject'], $message['message']);
+    $mail->submit($message['userId']);
+    header("Location: http://{$_SERVER['HTTP_HOST']}/components/admin.php");
+    exit();
 }

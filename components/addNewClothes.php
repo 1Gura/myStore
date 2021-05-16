@@ -6,7 +6,6 @@ $name = check($_POST['name']);
 $price = checkNumber($_POST['price']);
 $count = checkNumber($_POST['count']);
 if ($name || $price || $count){
-    var_dump('qwd');
     $_SESSION['clothes']['name'] = $_POST['name'];
     $_SESSION['clothes']['price'] = $_POST['price'];
     $_SESSION['clothes']['count'] = $_POST['count'];

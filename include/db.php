@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'mystore');
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_PASSWORD = 'root';
+const DB_NAME = 'mystore';
 function connect()
 {
     $mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -184,6 +184,12 @@ function addClothes(
     $mysql->close();
 }
 
+function setMessage(Email $mailMessage, int $idUser) {
+    $mysql = connect();
+    $mysql->query("insert into messages (subject, message, userid) values ('{$mailMessage->getSubject()}', '{$mailMessage->getMessage()}','$idUser');");
+    $mysql->close();
+}
+
 
 function getAllUsers()
 {
@@ -201,6 +207,26 @@ function getAllClothes()
     $result = $mysql->query("
         select *
         from clothes");
+    $mysql->close();
+    return $result;
+}
+
+function getAllMessages()
+{
+    $mysql = connect();
+    $result = $mysql->query("
+        select *, m.Id from messages m
+        join users u on u.Id = m.userId");
+    $mysql->close();
+    return $result;
+}
+
+function getMessage($idMessage) {
+    $mysql = connect();
+    $result = $mysql->query("
+        select *, m.Id from messages m
+        join users u on u.Id = m.userId
+        where m.Id = '$idMessage'");
     $mysql->close();
     return $result;
 }
