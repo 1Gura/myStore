@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (empty($_SESSION['user'])) {
+if ($_SESSION['user']['role'] !== '1') {
     header('Location: ../index.php');
 }
 require('./header.php');
@@ -15,7 +15,9 @@ if (strpos($_SERVER['HTTP_REFERER'], 'admin')) {
         $_SESSION['clothes']['price'] = $clothes['price'];
         $_SESSION['clothes']['count'] = $clothes['count'];
         $_SESSION['clothes']['img_path'] = $clothes['img_path'];
+        unset($_SESSION['clothes']['addClothes']);
     } else if (!empty($_GET['add'])) {
+        unset($_SESSION['clothes']);
         $_SESSION['clothes']['addClothes'] = true;
     }
 }
@@ -30,7 +32,7 @@ if (isset($_SESSION['clothes']['title'])) {
             <span class="link"><a href="./admin.php">Админка</a></span>
         </div>
         <form class="personal-area el-hover" action="./changeClothes.php" method="post" enctype="multipart/form-data">
-            <h1 class="title">Редактирование одежды</h1>
+            <h1 class="title"><?= $_SESSION['clothes']['addClothes'] === true ? "Добавление одежды" : "Редактирование одежды" ?> </h1>
             <img src="<?= !empty($_SESSION['clothes']['img_path']) ? '../clothes/' . $_SESSION['clothes']['img_path'] : '../img/icon-men.png' ?>"
                  class="personal-area-img" alt="">
             <label class="<?= $name ? 'error' : '' ?>"
