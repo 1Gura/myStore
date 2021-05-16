@@ -3,13 +3,12 @@ require('./header.php');
 
 if (empty($_SESSION['user'])) {
     header('Location: ../index.php');
+    exit();
 }
-?>
-<?php
-//if($_SESSION['id']) {
-//    clearSession($_SESSION);
-//
-//}
+if ($_SESSION['user']['role'] !== '1') {
+    header('Location: ../index.php');
+    exit();
+}
 if (strpos($_SERVER['HTTP_REFERER'], 'admin')) {
     $user = getUser($_GET['id']);
     $user = mysqli_fetch_assoc($user);
