@@ -184,7 +184,8 @@ function addClothes(
     $mysql->close();
 }
 
-function setMessage(Email $mailMessage, int $idUser) {
+function setMessage(Email $mailMessage, int $idUser)
+{
     $mysql = connect();
     $mysql->query("insert into messages (subject, message, userid) values ('{$mailMessage->getSubject()}', '{$mailMessage->getMessage()}','$idUser');");
     $mysql->close();
@@ -221,7 +222,8 @@ function getAllMessages()
     return $result;
 }
 
-function getMessage($idMessage) {
+function getMessage($idMessage)
+{
     $mysql = connect();
     $result = $mysql->query("
         select *, m.Id from messages m
@@ -237,6 +239,16 @@ function deleteUser($idUser = 0)
     $result = $mysql->query("
         delete from users
         where Id = '$idUser'");
+    $mysql->close();
+    return $result;
+}
+
+function deleteMessage($idMessage)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+    delete from messages
+    where Id = '$idMessage'");
     $mysql->close();
     return $result;
 }

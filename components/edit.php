@@ -32,9 +32,7 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
 ?>
     <div class="container">
         <div class="links">
-            <span class="link"><a href="../index.php">Главная</a></span>
-            <span><img src="../img/strlka.png" alt="стрелка"></span>
-            <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
+            <span class="link"><a href="./admin.php">Админка</a></span>
         </div>
         <form class="personal-area el-hover" action="./changeUser.php" method="post" enctype="multipart/form-data">
             <h1 class="title">Редактирование пользователя</h1>

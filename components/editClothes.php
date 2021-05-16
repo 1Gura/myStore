@@ -27,7 +27,7 @@ if (isset($_SESSION['clothes']['title'])) {
 ?>
     <div class="container">
         <div class="links">
-            <span class="link"><a href="../index.php">Главная</a></span>
+            <span class="link"><a href="./admin.php">Админка</a></span>
         </div>
         <form class="personal-area el-hover" action="./changeClothes.php" method="post" enctype="multipart/form-data">
             <h1 class="title">Редактирование одежды</h1>

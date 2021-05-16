@@ -17,11 +17,7 @@ $password2 = comparisonOfPasswords($_SESSION['password'], $_SESSION['password2']
 
 <div class="container wow fadeInDown">
     <div class="links">
-        <span class="link"><a href="../index.php">Главная</a></span>
-        <span><img src="../img/strlka.png" alt="стрелка"></span>
-        <span class="link"><a href="../components/personal-area.php">Вход в личный кабинет</a></span>
-        <span><img src="../img/strlka.png" alt="стрелка"></span>
-        <span class="link"><a href="./registration.php">Регистрация</a></span>
+        <span class="link"><a href="./admin.php">Админка</a></span>
     </div>
     <h1 class="title">Добавление пользователя</h1>
     <?php

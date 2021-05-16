@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16757a15-25f1-41e5-b0cb-17cd3a6fbac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/logic/deleteMessage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/logic/sendMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/logic/sendMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/addNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/addNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/editClothes.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/editClothes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +113,7 @@
       <workItem from="1621086035338" duration="2749000" />
       <workItem from="1621088802767" duration="4685000" />
       <workItem from="1621094263006" duration="335000" />
-      <workItem from="1621151009213" duration="6895000" />
+      <workItem from="1621151009213" duration="7684000" />
     </task>
     <servers />
   </component>

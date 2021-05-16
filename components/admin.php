@@ -84,7 +84,7 @@ require('./header.php');
                         <p>Тема сообщения:<?= $row['subject'] ?></p>
                         <p>Сообщение: <?= $row['message'] ?></p>
                         <a href="./logic/sendMail.php?id=<?= $row['Id'] ?>">Отправить повторно</a>
-                        <a href="./deleteClothes.php?id=<?= $row['Id'] ?>">Удалить</a>
+                        <a href="./logic/deleteMessage.php?id=<?= $row['Id'] ?>">Удалить</a>
                     </div>
                 <?php } ?>
             </div>
