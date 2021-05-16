@@ -9,6 +9,7 @@ $email_check = checkRegularEmail($_POST['email']);
 $empty = !empty($_POST['password'])  || !empty($_POST['password2']);
 $password_check = $empty && checkRegularPassword($_POST['password']);
 $password2_check = $empty && comparisonOfPasswords($_POST['password'], $_POST['password2']);
+//var_dump($_POST);
 if ($name_check || $surname_check || $phone_check || $email_check || $password_check || $password2_check ){
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['surname'] = $_POST['surname'];
@@ -36,7 +37,7 @@ if ($name_check || $surname_check || $phone_check || $email_check || $password_c
         $_POST['email'],
         empty($_POST['password']) ? $_SESSION['oldPassword'] : md5($_POST['password']),
         !empty($_FILES['avatar']['name']) ? $name : $_SESSION['avatar'],
-        $_SESSION['user']['role']);
+        $_POST['admin'] ? 1 : 0);
     header("Location: ./admin.php");
     exit();
 }

@@ -32,6 +32,7 @@ require('./header.php');
             <div class="admin-list">
                 <?php
                 while ($row = mysqli_fetch_assoc($users)) {
+                    if($row['Id'] !== $_SESSION['user']['id']) {
                     ?>
                     <div class="admin__item el-hover">
                         <div class="img-container"><img
@@ -44,7 +45,7 @@ require('./header.php');
                         <a href="./edit.php?id=<?= $row['Id'] ?>">Редактировать</a>
                         <a href="./delete.php?id=<?= $row['Id'] ?>">Удалить</a>
                     </div>
-                <?php } ?>
+                <?php } } ?>
             </div>
             <?php
             break;

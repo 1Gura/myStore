@@ -20,6 +20,7 @@ if (strpos($_SERVER['HTTP_REFERER'], 'admin')) {
     $_SESSION['email'] = $user['email'];
     $_SESSION['oldPassword'] = $user['password'];
     $_SESSION['avatar'] = $user['avatar'];
+    $_SESSION['role'] = $user['role'];
 }
 $edit = true;
 $name = checkRegularName($_SESSION['name']);
@@ -39,9 +40,10 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
             <h1 class="title">Редактирование пользователя</h1>
             <img src="<?= !empty($_SESSION['avatar']) ? '../uploads/' . $_SESSION['avatar'] : '../img/icon-men.png' ?>"
                  class="personal-area-img" alt="">
-            <label class="<?= $name ? 'error' : '' ?>" for="name"><?= $name ? "Только символы кириллицы!" : 'Имя' ?></label>
+            <label class="<?= $name ? 'error' : '' ?>"
+                   for="name"><?= $name ? "Только символы кириллицы!" : 'Имя' ?></label>
             <input id="name" name="name" placeholder="Введите Имя"
-                   value="<?= !empty($_SESSION['name']) ? $_SESSION['name']: ''?>"
+                   value="<?= !empty($_SESSION['name']) ? $_SESSION['name'] : '' ?>"
                    maxlength="40" type="text"
             >
             <label class="<?= $surname ? 'error' : '' ?>"
@@ -58,7 +60,8 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
                    placeholder="Введите @email" maxlength="40" type="text">
             <label class="<?= $password ? 'error' : '' ?>"
                    for="password"><?= $password ? 'Неккоректный пароль' : 'Пароль' ?></label>
-            <input id="password" name="password" value="<?= !empty($_SESSION['password']) ? $_SESSION['password'] : '' ?>"
+            <input id="password" name="password"
+                   value="<?= !empty($_SESSION['password']) ? $_SESSION['password'] : '' ?>"
                    placeholder="Введите пароль" type="password" maxlength="40">
             <label class="<?= $password2 ? 'error' : '' ?>"
                    for="password2"><?= $password2 ? 'Пароли не совпали!' : 'Подтвердите пароль' ?></label>
@@ -68,7 +71,8 @@ $password2 = !empty($_SESSION['password2']) && comparisonOfPasswords($_SESSION['
             <label class=""
                    for="">Изображение пользователя</label>
             <input class="" id="" type="file" name="avatar">
-
+            <label for="">Сделать админом</label>
+            <input type="checkbox" name="admin" <?= $_SESSION['role'] === '1' ? 'checked' : '' ?> >
             <input type="submit" name='edit' class="edit" value="Изменить">
         </form>
     </div>
