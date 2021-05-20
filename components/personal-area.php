@@ -4,6 +4,7 @@ session_start();
 if (!empty($_SESSION['user'])) {
     header('Location: ./personal-office.php');
 }
+$title = $_SESSION['pages'][1]['name'];
 require('./header.php');
 ?>
 <?php

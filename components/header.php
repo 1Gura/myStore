@@ -4,6 +4,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/validate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/fileSize.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . './components/logic/titleChange.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/db.php';
+if (empty($_SESSION['pages'])) {
+    $pages = getPages();
+    while ($row = mysqli_fetch_assoc($pages)) {
+        $_SESSION['pages'][] = $row;
+    }
+}
+//echo '<pre>';
+//var_dump($_SESSION['pages'][0]['name']);
+//echo '</pre>';
+
 ?>
 <!doctype html>
 <html lang="ru">
@@ -17,7 +27,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/db.php';
     ?>
     <title>
         <?=
-        titleChange()
+        $title
         ?>
     </title>
 </head>
@@ -68,9 +78,11 @@ include_once __DIR__ . './drop-down-menu.php';
             </div>
 
             <div class="info__account ">
-                <a title="<?= $_SESSION['user']['name'] . ' ' . $_SESSION['user']['surname']?>" class="item__flex" href="../components/personal-area.php">
+                <a title="<?= $_SESSION['user']['name'] . ' ' . $_SESSION['user']['surname'] ?>" class="item__flex"
+                   href="../components/personal-area.php">
                     <span>Личный кабинет</span>
-                    <img src="<?=!empty($_SESSION['user']['avatar']) ? '../uploads/' . $_SESSION['user']['avatar']  :'../img/icon-men.png'?>" alt="аккаунт">
+                    <img src="<?= !empty($_SESSION['user']['avatar']) ? '../uploads/' . $_SESSION['user']['avatar'] : '../img/icon-men.png' ?>"
+                         alt="аккаунт">
                 </a>
             </div>
 

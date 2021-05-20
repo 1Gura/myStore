@@ -276,6 +276,13 @@ function getUser($idUser = null)
     $mysql->close();
     return $result;
 }
+
+function getPages() {
+    $mysql = connect();
+    $result = $mysql->query("select * from pages");
+    $mysql->close();
+    return $result;
+}
 //Логика авторизации
 
 
