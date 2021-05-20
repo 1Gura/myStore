@@ -10,11 +10,7 @@ if (empty($_SESSION['pages'])) {
         $_SESSION['pages'][] = $row;
     }
     var_dump($_SESSION['pages']);
-
 }
-//echo '<pre>';
-//var_dump($_SESSION['pages'][0]['name']);
-//echo '</pre>';
 ?>
 <!doctype html>
 <html lang="ru">

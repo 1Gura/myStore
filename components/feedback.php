@@ -3,9 +3,7 @@ session_start();
 $title = $_SESSION['pages'][4]['name'];
 require('./header.php');
 ?>
-
 <h1 class="title">Форма обратной связи</h1>
-
 <?php
 if (!empty($_GET)) {
     if ($_GET['ok'] === "ok") { ?>
@@ -13,7 +11,6 @@ if (!empty($_GET)) {
         <?php
     }
 }
-
 $name = checkRegularName($_SESSION['mail']['name']);
 $surname = checkRegularSurName($_SESSION['mail']['surname']);
 $phone = checkRegularPhone($_SESSION['mail']['phone']);
