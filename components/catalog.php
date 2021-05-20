@@ -8,7 +8,7 @@
             <div class="slider__item">
                 <img src="../clothes/<?= $row['img_path'] ?>" alt="">
                 <p><?= $row['title'] ?></p>
-                <p><?= $row['price'] ?></p>
+                <p>Цена:  <?= $row['price'] ?> руб.</p>
             </div>
         <?php } ?>
     </div>
