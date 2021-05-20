@@ -277,9 +277,21 @@ function getUser($idUser = null)
     return $result;
 }
 
-function getPages() {
+function getPages()
+{
     $mysql = connect();
     $result = $mysql->query("select * from pages");
+    $mysql->close();
+    return $result;
+}
+
+function changePage($idPage, $namePage)
+{
+    $mysql = connect();
+    $result = $mysql->query("
+    update pages
+    set name = '$namePage'
+    where Id = '$idPage';");
     $mysql->close();
     return $result;
 }

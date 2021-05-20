@@ -1,4 +1,6 @@
 <?php
+session_start();
+$title = $_SESSION['pages'][7]['name'];
 require('./header.php');
 if (empty($_SESSION['user'])) {
     header('Location: ../index.php');

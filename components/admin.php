@@ -8,6 +8,7 @@ if ($_SESSION['user']['role'] !== '1') {
     header('Location: ../index.php');
     exit();
 }
+$title = $_SESSION['pages'][6]['name'];
 require('./header.php');
 ?>
 <div class="container">
@@ -22,6 +23,7 @@ require('./header.php');
         <a href="./admin.php?users=ok">Пользователи</a>
         <a href="./admin.php?clothes=ok">Одежда</a>
         <a href="./admin.php?messages=ok">Сообщения</a>
+        <a href="./admin.php?pages=ok">Названия страниц</a>
     </div>
     <?php
     switch ($_GET) {
@@ -89,6 +91,22 @@ require('./header.php');
                 <?php } ?>
             </div>
             <?php
+            break;
+        case !empty($_GET['pages']):
+            $pages = getPages();
+            ?>
+            <div class="admin-list">
+                <?php
+                while ($row = mysqli_fetch_assoc($pages)) {
+                    ?>
+                    <form class="admin__item message el-hover" method="post" action="pages.php">
+                        <input type="hidden" name="id" value="<?=$row['Id']?>"/>
+                        <p>Название страницы:<input name="pageName" value="<?= $row['name']?>"></p>
+                        <input type="submit"  value="Изменить"/>
+                    </form>
+                <?php } ?>
+            </div>
+        <?php
             break;
         default:
             ?>

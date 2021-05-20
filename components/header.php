@@ -9,11 +9,12 @@ if (empty($_SESSION['pages'])) {
     while ($row = mysqli_fetch_assoc($pages)) {
         $_SESSION['pages'][] = $row;
     }
+    var_dump($_SESSION['pages']);
+
 }
 //echo '<pre>';
 //var_dump($_SESSION['pages'][0]['name']);
 //echo '</pre>';
-
 ?>
 <!doctype html>
 <html lang="ru">
@@ -27,7 +28,7 @@ if (empty($_SESSION['pages'])) {
     ?>
     <title>
         <?=
-        $title
+        $title && strlen($title) !== 0 ? $title : $_SESSION['pages'][0]['name']
         ?>
     </title>
 </head>
